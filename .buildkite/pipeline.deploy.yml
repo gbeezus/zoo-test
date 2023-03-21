@@ -37,16 +37,16 @@ steps:
       - forumone/artifact-push#v0.3.1:
           verbose: false
           source-directory: ${ARTIFACT_LOCATION}
-          remote: [ACQUIA GIT REPO]
+          remote: oregonzoo2@svn-45197.prod.hosting.acquia.com:oregonzoo2.git
           branches:
             - match: integration
               target: integration
             - match: main
-              target: main
+              target: master
             - match: live
               target: live
           ssh:
-            keyscan: [ACQUIA HOST]
+            keyscan: svn-45197.prod.hosting.acquia.com
           git:
             name: F1 Builder
             email: support+f1builder@forumone.com
