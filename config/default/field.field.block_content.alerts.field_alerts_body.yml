@@ -1,0 +1,35 @@
+uuid: 17e6ecf7-708e-48e3-8451-5c7cf5d3b32a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alerts
+    - field.storage.block_content.field_alerts_body
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    alerts: alerts
+    plain_text: plain_text
+    standard_html: '0'
+    expert_html: '0'
+    script: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: vJMprihHT3RZr-Rn5YiafJE1Iadbf00IFP7hXuQinWQ
+id: block_content.alerts.field_alerts_body
+field_name: field_alerts_body
+entity_type: block_content
+bundle: alerts
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

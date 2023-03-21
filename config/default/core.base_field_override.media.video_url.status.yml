@@ -1,0 +1,24 @@
+uuid: 40db9040-5c2a-4f55-9382-239d7d1a55ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.video_url
+_core:
+  default_config_hash: _d_GnbUSVjTXB_Fw2-3tKUoZPxfuDFXXCDEc8FL1m9o
+id: media.video_url.status
+field_name: status
+entity_type: media
+bundle: video_url
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,33 @@
+extends:
+  - airbnb-base
+  - prettier
+  - plugin:prettier/recommended
+plugins:
+  - prettier
+  - jest
+env:
+  es6: true
+  browser: true
+  jest/globals: true
+globals:
+  expect: true
+  it: true
+  describe: true
+  Drupal: true
+  cy: true
+  drupalSettings: true
+ignorePatterns:
+  - generated-stories-entry.js
+  - storybook-init-framework-entry.js
+parser: '@babel/eslint-parser'
+rules:
+  strict: 0
+  import/no-extraneous-dependencies: 0
+  prettier/prettier: error
+overrides:
+  - files:
+      - '*.twig.test.js'
+    rules:
+      no-unused-vars: 0
+      no-shadow: 0
+root: true

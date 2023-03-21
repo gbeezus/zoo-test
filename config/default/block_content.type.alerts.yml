@@ -1,0 +1,10 @@
+uuid: 62d5b43a-3861-4620-acd5-1f864e1b927d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xPOcDStdrqjl-SyQHWo59SalxF98R6uHnA6B9eLPQfQ
+id: alerts
+label: Alerts
+revision: 1
+description: Alerts

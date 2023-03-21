@@ -1,0 +1,47 @@
+// Storybook styling
+.icons-demo {
+  color: var(--color--primary--p-100);
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
+  .icon {
+    height: 100px;
+    padding: minima-base-font-size();
+    width: 100px;
+  }
+
+  .icon-name-wrapper {
+    background-color: var(--color--core--background);
+    text-align: center;
+  }
+
+  .icon-name {
+    color: var(--color--core--text);
+    display: inline-flex;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 0.75rem;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.icons-demo__title {
+  font-family: 'ivystyle-sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.25em;
+  margin-bottom: 0;
+  margin-top: 1em;
+  padding-bottom: 0;
+}
+
+.icons-demo__item {
+  border: 1px solid var(--color--border--extra-light);
+  margin: minima-space(50);
+}
+
+// Flip icons for RTL languages, sometimes.
+.icon--mirror-icon[dir='rtl'] {
+  transform: scale(-1, 1);
+}

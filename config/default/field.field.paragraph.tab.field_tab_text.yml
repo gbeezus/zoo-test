@@ -1,0 +1,27 @@
+uuid: a23f5024-3c7e-47eb-b16f-7cfc32134a24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tab_text
+    - paragraphs.paragraphs_type.tab
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: 8quaNYULoToTEt3shcpAF2862cIahny5_YkpD2RgnHM
+id: paragraph.tab.field_tab_text
+field_name: field_tab_text
+entity_type: paragraph
+bundle: tab
+label: 'Tab text'
+description: 'The text that displays on this tab.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

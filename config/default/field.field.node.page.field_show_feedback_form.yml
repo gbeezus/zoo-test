@@ -1,0 +1,31 @@
+uuid: 5592a554-6cc9-447d-b728-2438c8e2b51f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_feedback_form
+    - node.type.page
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: cPRY2_Z_9lBiK5ebag7OhdOQRdjJKp47U4EJlbHjVCU
+id: node.page.field_show_feedback_form
+field_name: field_show_feedback_form
+entity_type: node
+bundle: page
+label: 'Show feedback form'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Show feedback form'
+  off_label: 'Hide feedback form'
+field_type: boolean

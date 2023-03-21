@@ -1,0 +1,23 @@
+_core:
+  default_config_hash: R3ta-_l1fB9D7tblQb1tEWwTQgTG5_tyfhxU7titXVU
+preset_accent_color: teal
+preset_focus_color: custom
+enable_darkmode: false
+classic_toolbar: vertical
+icon_default: true
+icon_path: ''
+high_contrast_mode: false
+third_party_settings:
+  shortcut:
+    module_link: true
+features:
+  node_user_picture: true
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+favicon:
+  use_default: true
+accent_color: ''
+focus_color: '#16a8b5'
+icon_upload: ''
+show_user_theme_settings: false

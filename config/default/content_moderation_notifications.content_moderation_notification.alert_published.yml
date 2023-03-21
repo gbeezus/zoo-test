@@ -1,0 +1,20 @@
+uuid: 37947691-6f4f-41b3-9d34-23ef21aeed0e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 00fdJJXFxaYL-xojkdXTsnkZlyOfkx90v3kypDZFmv0
+id: alert_published
+workflow: alerts
+transitions:
+  publish: publish
+roles:
+  alert_reviewer: alert_reviewer
+author: false
+site_mail: false
+emails: ''
+subject: 'New alert published on [site:name]'
+body:
+  value: "<p>Hello [user:display-name],</p>\r\n\r\n<p>A new alert has been published or an existing alert has been updated on the [site:name] site. To view a list of all the currently published alerts on this site, please visit: [site:url]admin/content/alerts</p>\r\n"
+  format: standard_html
+label: 'Alert published'

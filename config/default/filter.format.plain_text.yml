@@ -1,0 +1,16 @@
+uuid: 3ad7e676-604b-49df-b4eb-179f3fce7f3c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wFSSrHs-jJZH6rh919KpAZtj1M5WGesE8uLpbPvGZhI
+name: 'Plain text'
+format: plain_text
+weight: -7
+filters:
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: true
+    weight: -10
+    settings: {  }

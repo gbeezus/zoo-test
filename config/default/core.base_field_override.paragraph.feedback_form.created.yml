@@ -1,0 +1,20 @@
+uuid: 09671850-4634-410b-84ea-d043a829cdcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.feedback_form
+_core:
+  default_config_hash: uCEdcEY2V5Ud3QIIqSJAy4Bcuivj73LhOH7gXQmJxS8
+id: paragraph.feedback_form.created
+field_name: created
+entity_type: paragraph
+bundle: feedback_form
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

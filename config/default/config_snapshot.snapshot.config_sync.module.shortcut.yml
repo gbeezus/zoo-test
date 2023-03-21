@@ -1,0 +1,22 @@
+uuid: ed97931b-8414-436e-8d1f-debf85dd9c64
+langcode: en
+status: true
+dependencies:
+  module:
+    - shortcut
+id: config_sync.module.shortcut
+snapshotSet: config_sync
+extensionType: module
+extensionName: shortcut
+items:
+  -
+    collection: ''
+    name: shortcut.set.default
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: default
+      label: Default
+      _core:
+        default_config_hash: U5VlGjd_SfV0Qm_EfnaynOfc549cNscFAx48JfYoMRI

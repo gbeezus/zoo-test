@@ -1,0 +1,18 @@
+uuid: af8d4d82-9f1b-4ea2-b0d4-87b4de707139
+langcode: en
+status: true
+dependencies:
+  module:
+    - x_originating_ip
+id: config_sync.module.x_originating_ip
+snapshotSet: config_sync
+extensionType: module
+extensionName: x_originating_ip
+items:
+  -
+    collection: ''
+    name: x_originating_ip.settings
+    data:
+      x_originating_ip_header: X-Originating-IP
+      _core:
+        default_config_hash: GS7JwgZslUVE9J5DvCsU0AYZ-O3mrHU5VqokZrIoGHc

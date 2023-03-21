@@ -1,0 +1,51 @@
+uuid: cbd33eea-a79f-4ad0-a0df-ecd02630725d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.celebrated_venue
+    - field.field.block_content.celebrated_venue.field_link
+  module:
+    - link
+_core:
+  default_config_hash: TFAtt0kStLI6ilCGpt3eIVjj7yopvMs_fqY3AydnE_A
+id: block_content.celebrated_venue.default
+targetEntityType: block_content
+bundle: celebrated_venue
+mode: default
+content:
+  field_link:
+    type: link_default
+    weight: 101
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

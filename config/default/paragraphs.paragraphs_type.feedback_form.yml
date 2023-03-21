@@ -1,0 +1,12 @@
+uuid: a2c02c1f-f271-484b-8b42-31ec060a8175
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: LekbM3i224AL7CvqEHCbzI5lu-Irtopp1KcpYnm_m40
+id: feedback_form
+label: 'Feedback form'
+icon_uuid: null
+icon_default: null
+description: 'Stub for feedback form paragraph type.'
+behavior_plugins: {  }

@@ -1,0 +1,5 @@
+content:
+  field_embed_code:
+    third_party_settings:
+      maxlength:
+        maxlength_js_label: 'Содержание ограничено до @limit символов, осталось: <strong>@remaining</strong>'

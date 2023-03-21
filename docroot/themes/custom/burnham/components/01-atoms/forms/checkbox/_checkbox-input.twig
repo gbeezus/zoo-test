@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ *
+ * @see template_preprocess_input()
+ */
+#}
+{% set checkbox_item_disabled = checkbox_item_disabled|default(false) %}
+{% set checkbox_item_checked = checkbox_item_checked|default(false) %}
+{% set required = required|default(false) %}
+
+{% set checkbox_base_class = checkbox_base_class|default('checkbox') %}
+{% if checkbox_base_class == 'toggle' %}
+  {% set icon_name = 'radio-button-filled-in' %}
+{% endif %}
+
+<input {{ bem( checkbox_base_class, ['control'], 'form-item', ['unprocessed'] ) }}
+        {% if not attributes %}
+          type="checkbox" id="{{ checkbox_item_id }}"
+          {% if checkbox_item_checked %} checked="{{ checkbox_item_checked }}"{% endif %}
+          {% if checkbox_item_disabled %} disabled {% endif %}
+          {% if required %} aria-required="true" required="required" {% endif %}
+        {% endif %} />
+<span {{ bem( checkbox_base_class, ['pseudo-control'], 'form-item' ) }}>
+    <span {{ bem( checkbox_base_class, ['checkmark'], 'form-item' ) }}>
+      {% include '@atoms/icons/_icon.twig' with {
+        icon_name: icon_name|default('done'),
+        icon_modifiers: ['checked'],
+        icon_decorative: true,
+      } %}
+  </span>
+</span>
+{{ children }}
+

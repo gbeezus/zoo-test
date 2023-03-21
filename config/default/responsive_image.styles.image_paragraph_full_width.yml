@@ -1,0 +1,29 @@
+uuid: 043ef36d-db84-46bf-a77e-5ba1d7c20df5
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.scale_1350w
+    - image.style.scale_387w
+    - image.style.scale_480w
+    - image.style.scale_675w
+    - image.style.scale_960w
+_core:
+  default_config_hash: RYF4NiEi2Qt4yBZLlIm8fSihT9GhCl_EBDIr5puCFOY
+id: image_paragraph_full_width
+label: 'Image Paragraph Full Width'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '(max-width: 420px) 387px, (max-width: 512px) 480px, 1350px'
+      sizes_image_styles:
+        - scale_1350w
+        - scale_387w
+        - scale_480w
+        - scale_675w
+        - scale_960w
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+breakpoint_group: responsive_image
+fallback_image_style: scale_675w

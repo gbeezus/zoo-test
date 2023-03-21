@@ -1,0 +1,16 @@
+uuid: c02680a8-c0fa-46df-b724-e08133305f84
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_provider
+  module:
+    - user
+_core:
+  default_config_hash: MLl5jCWbztqcqOXdrGHA292uTzSMks5B72LHz0xluNI
+id: user_add_role_action.content_provider
+label: 'Add the Content provider role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: content_provider

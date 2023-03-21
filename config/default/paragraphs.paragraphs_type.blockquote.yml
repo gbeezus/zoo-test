@@ -1,0 +1,12 @@
+uuid: 0ce1cc32-4682-484f-920c-80a6b99c02ed
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8GNGBN2wl8UdvIYM3OeUzEovh0PjyBh3L121o6tU_vg
+id: blockquote
+label: Blockquote
+icon_uuid: null
+icon_default: null
+description: 'Allows entering a quote and a source to be displayed separate from the main text. '
+behavior_plugins: {  }

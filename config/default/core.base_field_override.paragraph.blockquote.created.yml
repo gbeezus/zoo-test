@@ -1,0 +1,20 @@
+uuid: 8db6ad36-c100-4fcc-a2b8-7628c4dae213
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.blockquote
+_core:
+  default_config_hash: _881YqU2BpTXDEGgaV5QbMFdVMdyfnuaHE89U8yYVRU
+id: paragraph.blockquote.created
+field_name: created
+entity_type: paragraph
+bundle: blockquote
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

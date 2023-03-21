@@ -1,0 +1,7 @@
+example_characters: |-
+  A-z:<br>
+  AĂÂBCČĆDĐEÊFGHIJKLMNOÔƠPQRSŠTUƯVWXYZŽ<br>
+  aăâbcčćdđeêfghijklmnoôơpqrsštuưvwxyzž<br><br>
+  Numbers and punctuation:<br>
+  1234567890‘?’“!”(%)[#]{@}/&\<br>
+  <-+÷×=>®©$€£¥¢:;,.*<br><br>

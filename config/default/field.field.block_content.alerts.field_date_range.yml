@@ -1,0 +1,28 @@
+uuid: 0dfa9d7c-2f35-4147-9c27-83851d5c91c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alerts
+    - field.storage.block_content.field_date_range
+  module:
+    - custom_add_another
+    - datetime_range
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: OjU4Vn7JLegH26KDnCZkNAwwglOUDo_4ZZ0mEG1XB2E
+id: block_content.alerts.field_date_range
+field_name: field_date_range
+entity_type: block_content
+bundle: alerts
+label: 'Date range'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

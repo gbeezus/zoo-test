@@ -1,0 +1,12 @@
+uuid: d1a24f9e-680f-4527-913e-921b480ce861
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vpnIbgdWojWdwK50pvkKI0-f3f31R3IEF-7Ax1f8ReI
+id: accordion
+label: Accordion
+icon_uuid: null
+icon_default: null
+description: 'Allows entering a collection of headers that reveal additional content when clicked.'
+behavior_plugins: {  }

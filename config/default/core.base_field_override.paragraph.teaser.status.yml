@@ -1,0 +1,24 @@
+uuid: d7dac033-e651-4d7c-96be-3520100d1929
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.teaser
+_core:
+  default_config_hash: p_FVr1JT2IWv7Aqc5jyuNHbY3fMJ0TSIlmsmdfUPMjU
+id: paragraph.teaser.status
+field_name: status
+entity_type: paragraph
+bundle: teaser
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

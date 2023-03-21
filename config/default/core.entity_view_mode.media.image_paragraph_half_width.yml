@@ -1,0 +1,12 @@
+uuid: baf55865-603b-418a-8add-987d5610242e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: iKtEa6wU7tA9x1OHFAoe15cRRSxF3uRTRL69YXr2x84
+id: media.image_paragraph_half_width
+label: 'Image Paragraph Half Width'
+targetEntityType: media
+cache: true

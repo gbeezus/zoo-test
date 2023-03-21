@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- TODO set checkForUnintentionallyCoveredCode="true" once https://www.drupal.org/node/2626832 is resolved. -->
+<!-- PHPUnit expects functional tests to be run with either a privileged user
+ or your current system user. See core/tests/README.md and
+ https://www.drupal.org/node/2116263 for details.
+-->
+<phpunit bootstrap="./vendor/weitzman/drupal-test-traits/src/bootstrap-fast.php" colors="true"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutChangesToGlobalState="true"
+         printerClass="\Drupal\Tests\Listeners\HtmlOutputPrinter">
+  <php>
+    <!-- Set error reporting to E_ALL. -->
+    <ini name="error_reporting" value="32767"/>
+    <!-- Do not limit the amount of memory tests take to run. -->
+    <ini name="memory_limit" value="-1"/>
+    <!-- Example SIMPLETEST_BASE_URL value: http://localhost -->
+    <env name="SIMPLETEST_BASE_URL" value="http://web"/>
+    <!-- Example BROWSERTEST_OUTPUT_DIRECTORY value: /path/to/webroot/sites/simpletest/browser_output -->
+    <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="docroot/sites/simpletest/browser_output"/>
+    <env name="SYMFONY_DEPRECATIONS_HELPER" value="disabled"/>
+  </php>
+  <!-- Enterprise Test suite paths are relative to the project root -->
+  <testsuites>
+    <!-- Unit tests for Galaxy profile, modules, submodules and theme -->
+    <testsuite name="unit">
+      <!-- Uncomment the line below when we have unit tests in that directory -->
+      <!-- <directory>docroot/profiles/galaxy/tests/src/Unit</directory> -->
+      <directory>docroot/profiles/galaxy/modules/custom/*/tests/src/Unit</directory>
+      <directory>docroot/profiles/galaxy/modules/custom/*/modules/*/tests/src/Unit</directory>
+      <directory>docroot/profiles/galaxy/themes/custom/*/tests/src/Unit</directory>
+    </testsuite>
+    <testsuite name="existing-site-javascript">
+      <!-- Assumes tests are namespaced as \Drupal\Tests\galaxy\ExistingSiteJavascript -->
+      <directory>docroot/profiles/galaxy/tests/src/ExistingSiteJavascript</directory>
+    </testsuite>
+  </testsuites>
+  <listeners>
+    <listener class="\Drupal\Tests\Listeners\DrupalListener">
+    </listener>
+    <!-- The Symfony deprecation listener has to come after the Drupal listener -->
+    <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener">
+    </listener>
+  </listeners>
+</phpunit>

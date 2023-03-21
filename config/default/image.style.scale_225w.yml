@@ -1,0 +1,17 @@
+uuid: 58d52989-8c3b-43cb-95a7-36e6d8ff9fee
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: LBLBQWGvvx8znywgGzMRUYaMFyubWRGzs8vfucTXfTg
+name: scale_225w
+label: 'Scale width 225'
+effects:
+  0141a0fa-03e5-45f7-9b00-28e7582eb43d:
+    uuid: 0141a0fa-03e5-45f7-9b00-28e7582eb43d
+    id: image_scale
+    weight: 1
+    data:
+      width: 225
+      height: null
+      upscale: false

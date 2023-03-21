@@ -1,0 +1,146 @@
+# Consolidate the common configuration for reuse across multiple steps.
+definitions:
+  # Configure some default step values.
+  step-defaults: &step-defaults
+    timeout_in_minutes: 15
+    retry:
+      manual:
+        permit_on_passed: true
+  plugins:
+    ecr: &ecr
+      ecr#v2.0.0:
+        login: true
+        no-include-email: true
+    aws-sm: &aws-sm
+      seek-oss/aws-sm#v2.0.0:
+        file:
+          - path: "./auth.json"
+            secret-id: "buildkite/github_access_token"
+
+  # Specify common agent queue parameters.
+  queues:
+    # Docker-based tasks should run in the Docker queue.
+    docker-agents: &docker-agents
+      agents:
+        queue: "docker-builders"
+env:
+  # If you do not declare buildkit:1 then arguments using for --target
+  # do not work correctly and they will build every steps.
+  DOCKER_BUILDKIT: 1
+  BUILDKIT_PROGRESS: plain
+
+  # Identify the address for the shared Buildkite ECR repository.
+  IMAGE_REPOSITORY: "165761832703.dkr.ecr.us-east-1.amazonaws.com"
+
+  # Define a common namespace for images to be published within the shared ECR repo.
+  ECR_NAMESPACE: "${IMAGE_REPOSITORY}/buildkite"
+
+
+  # Define service directory were the Dockerfile is used
+  DOCKERFILE_LOCATION: "./"
+
+  ARTIFACT_LOCATION: "./artifacts"
+steps:
+  - label: ":heavy_check_mark: :php: Lint PHPCS"
+    key: "lint_phpcs"
+    soft_fail:
+      - exit_status: 1
+    <<: *step-defaults
+    <<: *docker-agents
+    branches:
+      - "!main"
+      - "!live"
+    commands:
+      - 'echo "--- :docker: Build PHP_CodeSniffer Linting Docker Image"'
+      - "docker build --target php-linting -t ${ECR_NAMESPACE}:${BUILDKITE_PIPELINE_SLUG}-${BUILDKITE_COMMIT}-php-linting ${DOCKERFILE_LOCATION}"
+      - 'echo "--- :docker: Run PHP_CodeSniffer Linting"'
+      - "docker run --rm ${ECR_NAMESPACE}:${BUILDKITE_PIPELINE_SLUG}-${BUILDKITE_COMMIT}-php-linting composer phpcs"
+
+  - label: ":heavy_check_mark: :php: Lint PHPStan"
+    key: "lint_phpstan"
+    soft_fail:
+      - exit_status: 1
+    <<: *step-defaults
+    <<: *docker-agents
+    plugins:
+      - *ecr
+    branches:
+      - "!main"
+      - "!live"
+    commands:
+      - 'echo "--- :docker: Build PHPStan Linting Image"'
+      - "docker build --target php-linting -t ${ECR_NAMESPACE}:${BUILDKITE_PIPELINE_SLUG}-${BUILDKITE_COMMIT}-php-linting ${DOCKERFILE_LOCATION}"
+      - 'echo "--- :docker: Run PHPStan Linting"'
+      - "docker run --rm ${ECR_NAMESPACE}:${BUILDKITE_PIPELINE_SLUG}-${BUILDKITE_COMMIT}-php-linting composer php-stan"
+
+  - label: ":heavy_check_mark: :stylelint: Lint Stylelint"
+    key: "lint_stylelint"
+    soft_fail:
+      - exit_status: 1
+    <<: *step-defaults
+    <<: *docker-agents
+    branches:
+      - "!main"
+      - "!live"
+    commands:
+      - 'echo "--- :docker: Build Theme ESLint Linting Docker Image"'
+      - "docker build --target theme-base -t ${ECR_NAMESPACE}:${BUILDKITE_PIPELINE_SLUG}-${BUILDKITE_COMMIT}-theme-linting ${DOCKERFILE_LOCATION}"
+      - 'echo "--- :docker: Run Theme ESLint Linting"'
+      - "docker run --rm ${ECR_NAMESPACE}:${BUILDKITE_PIPELINE_SLUG}-${BUILDKITE_COMMIT}-theme-linting npm run stylelint"
+
+  - label: ":heavy_check_mark: :stylelint: Lint eslint"
+    key: "lint_eslint"
+    soft_fail:
+      - exit_status: 1
+    <<: *step-defaults
+    <<: *docker-agents
+    branches:
+      - "!main"
+      - "!live"
+    commands:
+      - 'echo "--- :docker: Build Theme StyleLint Linting Docker Image"'
+      - "docker build --target theme-base -t ${ECR_NAMESPACE}:${BUILDKITE_PIPELINE_SLUG}-${BUILDKITE_COMMIT}-theme-linting ${DOCKERFILE_LOCATION}"
+      - 'echo "--- :docker: Run Theme StyleLint Linting"'
+      - "docker run --rm ${ECR_NAMESPACE}:${BUILDKITE_PIPELINE_SLUG}-${BUILDKITE_COMMIT}-theme-linting npm run eslint"
+
+  - label: ":hammer: :docker: Building Docker Test Image"
+    key: "building-image-test"
+    <<: *step-defaults
+    <<: *docker-agents
+    branches:
+      - "!integration"
+      - "!main"
+      - "!live"
+    retry:
+      manual:
+        permit_on_passed: true
+    command:
+      - "docker build --target artifact -t ${ECR_NAMESPACE}:${BUILDKITE_PIPELINE_SLUG}-${BUILDKITE_COMMIT} ${DOCKERFILE_LOCATION}"
+    plugins:
+      - *aws-sm
+
+  - label: ":hammer: :docker: Building Docker image"
+    key: "building-image"
+    <<: *step-defaults
+    <<: *docker-agents
+    branches:
+      - "integration"
+      - "main"
+      - "live"
+    retry:
+      manual:
+        permit_on_passed: true
+    command:
+      - "docker build --target artifact -t ${ECR_NAMESPACE}:${BUILDKITE_PIPELINE_SLUG}-${BUILDKITE_COMMIT} ${DOCKERFILE_LOCATION}"
+      - "docker push ${ECR_NAMESPACE}:${BUILDKITE_PIPELINE_SLUG}-${BUILDKITE_COMMIT}"
+    plugins:
+      - *ecr
+      - *aws-sm
+
+  # Wait for images to finish building.
+  - wait: ~
+
+  - label: "Pulling deployment steps"
+    <<: *step-defaults
+    depends_on: "building-image"
+    command: "buildkite-agent pipeline upload .buildkite/pipeline.deploy.yml"

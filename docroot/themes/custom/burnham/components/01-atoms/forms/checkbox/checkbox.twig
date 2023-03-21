@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * This file is for creating a set of checkboxes in storybook.
+ *
+ * The actual drupal theme uses _checkboxes.twig.
+ */
+ #}
+{% set checkbox_base_class = checkbox_base_class|default('checkbox') %}
+
+<fieldset class="checkboxes--wrapper form-item form-fieldset">
+  <legend class="h2">Options as {{ checkbox_base_class == 'toggle' ? 'Toggles' : 'Checkboxes' }}</legend>
+  <div class="form-item__description form-item__description--fieldset">
+    <div class="webform-element-description">{{ description }}</div>
+  </div>
+  <ul class="form-item--checkboxes">
+  {% for key, checkbox in checkboxes %}
+   <li {{ bem( checkbox_base_class, ['item'], 'form-item', ['js-form-item', 'form-item']) }}>
+     {% include "@atoms/forms/checkbox/_checkbox-input.twig" with {
+        checkbox_base_class: checkbox_base_class,
+        checkbox_item_id: checkbox_base_class ~ "-" ~ key,
+        checkbox_item_disabled: checkbox.disabled,
+        checkbox_item_checked: checkbox.checked,
+        required: checkbox.required,
+      } %}
+      {% include "@atoms/forms/_form-label.twig" with {
+        title: checkbox.title,
+        required: checkbox.required,
+        label_for: checkbox_base_class ~ "-" ~ key,
+      } %}
+     <div {{ bem( 'description', ['checkbox'], 'form-item' ) }}>
+       {{ checkbox.description }}
+     </div>
+    </li>
+  {% endfor %}
+  </ul>
+</fieldset>

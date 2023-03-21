@@ -1,0 +1,24 @@
+uuid: cf9df3d9-a2a2-4239-abee-a0168452d6c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.feedback_form
+_core:
+  default_config_hash: dvcVW7Nk9W2az1VrLHkxz-I1eC0nk8qEoK766C47Jps
+id: paragraph.feedback_form.status
+field_name: status
+entity_type: paragraph
+bundle: feedback_form
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

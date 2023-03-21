@@ -1,0 +1,20 @@
+uuid: 125efacb-b62e-4a06-9ea5-a92491ec7c31
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alerts
+_core:
+  default_config_hash: ISRa8fFKwuDl7LfoY6XzIsBLm-LNJBVAXPH7cszdPWE
+id: block_content.alerts.info
+field_name: info
+entity_type: block_content
+bundle: alerts
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

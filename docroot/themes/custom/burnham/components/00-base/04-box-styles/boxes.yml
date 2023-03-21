@@ -1,0 +1,22 @@
+boxes_heading: 'Object/Box styles'
+variables:
+  - variable_heading: 'Box border'
+    styles:
+      - name: 'light'
+      - name: 'standard'
+      - name: 'dark - form field'
+      - name: 'primary-bold - CTA'
+  - variable_heading: 'Box shadow'
+    styles:
+      - name: '0'
+      - name: '1'
+      - name: '2'
+      - name: '3'
+      - name: '4'
+      - name: '5'
+  - variable_heading: 'Border radius'
+    styles:
+      - name: 'Minima standard 0'
+      - name: 'small'
+      - name: 'medium'
+      - name: 'large'

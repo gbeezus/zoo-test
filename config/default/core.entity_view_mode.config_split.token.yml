@@ -1,0 +1,12 @@
+uuid: 2b65023b-fcf1-4940-a6cf-36b0ef40c1c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_split
+_core:
+  default_config_hash: 1v9HNp_mdoSPAgEQDrG66XQmPMN1YDOiu_TW1OkwyLo
+id: config_split.token
+label: Token
+targetEntityType: config_split
+cache: true

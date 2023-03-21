@@ -1,0 +1,24 @@
+uuid: 150d8d6f-8167-48bc-9790-ce1ea99518a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sandbox
+_core:
+  default_config_hash: i_F6I8zrIbacS-GYtIzYwzzLouX7BQHYRLLxS275Ekc
+id: node.sandbox.status
+field_name: status
+entity_type: node
+bundle: sandbox
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,13 @@
+/** Additional default styles are defined in _forms.scss */
+
+textarea {
+  font-size: 15px;
+  min-width: 24em;
+  min-height: 8em;
+}
+
+.form-item__textarea--error {
+  textarea {
+    border: 2px solid var(--color--semantic--error);
+  }
+}

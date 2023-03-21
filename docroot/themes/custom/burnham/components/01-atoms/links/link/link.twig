@@ -1,0 +1,61 @@
+{#
+/**
+ * Available variables:
+ * - link_content - the content of the link (typically text)
+ * - link_url - the url this link should point to
+ * - link_icon - the icon type that follows the link
+ * - link_icon_mirror_rtl - should the icon flip if language is RTL
+ * - link_attributes - array of html a element attribute,value pairs
+ * - link_base_class - the base class name
+ * - link_modifiers - array of modifiers to add to the base classname
+ * - link_blockname - blockname prepended to the base classname
+ *
+ * Available blocks:
+ * - link_content - used to replace the content of the link
+ *     Example: to insert the image component
+ */
+#}
+
+{% set link_icon_mirror_rtl = link_icon_mirror_rtl|default(false) %}
+{% set link_base_class = link_base_class|default('link') %}
+{% set link_extra_class = link_attributes.class|default('') %}
+
+{% set link_attributes = link_attributes|default({}) %}
+{% set link_attributes_original = link_attributes %}
+{% set link_attributes = link_attributes|without('class') %}
+
+{% if is_rtl %}
+  {% set link_attributes = link_attributes|merge( {"dir": "rtl" } ) %}
+{% endif %}
+
+{# Set Open in New Tab icon only if there is no other icon #}
+{% if link_icon is empty and "_blank" in link_attributes %}
+  {% set link_icon = 'open-in-new' %}
+{% endif %}
+
+{%  if (link_url) %}
+  <a {{ add_attributes(link_attributes) }} {{ bem(link_base_class, link_modifiers, link_blockname, [link_extra_class]) }} href="{{ link_url }}" >
+  {% block link_content %}
+    <span class="link__text">{{ link_content }}</span>
+  {% endblock %}
+
+  {% block link_icon %}
+  {% if link_icon %}
+    <span class="link__icon" {% if is_rtl %}dir="rtl"{% endif %} >
+      {% include "@atoms/icons/_icon.twig" with {
+        icon_name: link_icon,
+        icon_modifiers: ['link'],
+        icon_decorative: true,
+        icon_mirror_rtl: link_icon_mirror_rtl,
+        is_rtl: is_rtl,
+      } %}
+    </span>
+  {% endif %}
+  {% endblock %}
+</a>
+{% else %}
+  <span class="link__text">{{ link_content }}</span>
+{% endif %}
+
+{# Storybook breaks if we do not reset attributes before processing this template again on hot-reload. #}
+{% set link_attributes = link_attributes_original %}

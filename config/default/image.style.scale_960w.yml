@@ -1,0 +1,17 @@
+uuid: 3f6176cc-4075-46c1-a8fe-e6427da6f10a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Jxh6AYr-2Qp6EYA3GueHz0rBHTa4VAaRjb4wR_3KjeQ
+name: scale_960w
+label: 'Scale width 960'
+effects:
+  b1c50b94-2674-4cb5-9b40-cdd5039adf55:
+    uuid: b1c50b94-2674-4cb5-9b40-cdd5039adf55
+    id: image_scale
+    weight: 1
+    data:
+      width: 960
+      height: null
+      upscale: false

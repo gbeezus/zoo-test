@@ -1,0 +1,4 @@
+label: 'Đã công bố'
+settings:
+  on_label: Bật
+  off_label: Tắt

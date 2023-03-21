@@ -1,0 +1,25 @@
+uuid: 1b730a8a-138d-4e33-ae46-ff5032144865
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.audio.field_audio_file
+    - paragraphs.paragraphs_type.audio
+_core:
+  default_config_hash: qYTJ31Ccp0JERg9cJIMyTUVlLyJ0tnYbc-RMUpxkDNs
+id: paragraph.audio.default
+targetEntityType: paragraph
+bundle: audio
+mode: default
+content:
+  field_audio_file:
+    type: entity_reference_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

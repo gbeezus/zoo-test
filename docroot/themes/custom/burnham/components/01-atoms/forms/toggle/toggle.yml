@@ -1,0 +1,6 @@
+checkbox_base_class: toggle
+checkboxes:
+  - title: Impulse engines
+  - title: Warp drive
+    checked: true
+  - title: Displacement-activated spore hub drive

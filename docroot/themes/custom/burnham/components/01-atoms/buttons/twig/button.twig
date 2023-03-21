@@ -1,0 +1,97 @@
+{#
+/**
+ * Use primary buttons for actions that go to the next step and use secondary
+ * or tertiary buttons for actions that happen on the current page.
+ *
+ * Available variables:
+ * - button_base_class (string) - the root of the button's CSS class
+ * - button_content (string) - the content of the button (typically text)
+ * - button_is_disabled (boolean) - whether or not the button is disaabled
+ * - button_size (string) - can be "large", "medium", "small"
+ * - button_theme (string) - can be "primary", "secondary", "tertiary", "danger"
+ * - button_type_attribute (string) - type attribute of button element
+ * - button_aria_label (string) - Aria label text for icon buttons
+ * - button_icon (string) - the icon to use with the button
+ * - button_icon_mirror_rtl (boolean) - Mirror the icon if the component direction is RTL
+ *
+ * Available blocks:
+ * - button_content - used to replace the content of the button with something other than text
+ */
+#}
+
+{#  defaults #}
+{% set button_base_class = button_base_class|default('button') %}
+{% set button_blockname = button_blockname|default('') %}
+{% set button_content = button_content|default('') %}
+{% set button_icon = button_icon|default('') %}
+{% set button_icon_mirror_rtl = button_icon_mirror_rtl|default(false) %}
+{% set button_is_disabled = button_is_disabled|default(false) %}
+{% set button_size = button_size|default('medium') %}
+{% set button_url = button_url|default(false) %}
+{% set button_theme = button_theme|default('primary') %}
+{% set button_modifiers = button_modifiers|default([])|merge([button_size, button_theme]) %}
+{% set rendered_icon = '' %}
+{% set rendered_button_content = '' %}
+
+{# Renders Button Icon with supporting markup #}
+{% if button_icon is not empty %}
+  {% set button_modifiers = button_modifiers|merge(['has-icon']) %}
+  {% set rendered_icon %}
+  <span class="button__icon" {% if is_rtl %} dir="rtl" {% endif %} >
+    {% include "@atoms/icons/_icon.twig" with
+          {
+            icon_name: button_icon,
+            icon_mirror_rtl: button_icon_mirror_rtl,
+            is_rtl: is_rtl,
+            icon_title: button_icon_title,
+          }
+        %}
+  </span>
+    {% endset %}
+{% endif %}
+
+{# Renders Button Text with supporting markup #}
+{% if button_content %}
+  {% set rendered_button_content %}
+    <span class="button__content">
+      {{ button_content }}
+    </span>
+  {% endset %}
+{% endif %}
+
+{% set additional_attributes = {
+  class: bem(button_base_class, button_modifiers, button_blockname, [modifier_classes]),
+  type: 'button',
+} %}
+
+{% if (button_attributes) %}
+  {% set additional_attributes = additional_attributes|merge(button_attributes) %}
+{% endif %}
+
+{% set icon_attributes = {
+  class: button_base_class ~ '--icon',
+} %}
+
+{% if is_rtl %}
+  {% set additional_attributes = additional_attributes|merge({"dir": "rtl" }) %}
+{% endif %}
+
+{# Set aria label for icon only buttons #}
+{% if button_aria_label %}
+  {% set additional_attributes = additional_attributes|merge({'aria-label': button_aria_label }) %}
+{% endif %}
+
+{# If compoent has a url property use an `a` tag with an href #}
+{% if button_url %}
+  <a  {{ add_attributes(additional_attributes) }}  role="button" href="{{ button_url }}">
+    {{ rendered_button_content }}{{ rendered_icon }}
+  </a>
+{% else %}
+  {% set additional_attributes = additional_attributes|merge({'type': button_type_attribute|default('button') }) %}
+
+  <button {{ add_attributes(additional_attributes) }}  {{ button_is_disabled ? 'disabled' : '' }} >
+      {% block button_content %}
+        {{ rendered_button_content }}{{ rendered_icon }}
+      {% endblock button_content %}
+  </button>
+{% endif %}

@@ -1,0 +1,26 @@
+uuid: 9a57df25-3cef-41c9-b4f9-5f3f2571d860
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - field_permissions
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: 7rqqoEqUvCTqvWGJGrSvawXVIWEDkQz4ER69VzNKvLg
+id: paragraph.field_cta_media
+field_name: field_cta_media
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

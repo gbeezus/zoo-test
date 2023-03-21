@@ -1,0 +1,20 @@
+uuid: c0274c2e-70b0-41d6-99b1-27191d0f836f
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.video_url
+_core:
+  default_config_hash: 0A42vmplD3wpqo1Y4MMJM9inJN-9F7tdWZXNp6KcBu0
+id: media.video_url.metatag
+field_name: metatag
+entity_type: media
+bundle: video_url
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

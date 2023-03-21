@@ -1,0 +1,43 @@
+uuid: 0c5cc439-f2ef-4394-9954-ef9a9aae6b96
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.content
+    - views.view.search_content
+  module:
+    - views
+    - search_api_autocomplete
+_core:
+  default_config_hash: ORAVNU7yoH5leSjg7afrnjLvqc5kBg_8cNKKhSGyzvo
+id: search_content
+label: 'Search Content'
+index_id: content
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    view_modes:
+      'entity:media':
+        document: ''
+      'entity:node':
+        page: ''
+    suggest_keys: false
+suggester_weights:
+  live_results: 0
+suggester_limits:
+  live_results: 3
+search_settings:
+  'views:search_content':
+    displays:
+      default: true
+      selected: {  }
+options:
+  limit: 10
+  min_length: null
+  show_count: false
+  delay: 150
+  submit_button_selector: ':submit'
+  autosubmit: true

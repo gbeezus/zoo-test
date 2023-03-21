@@ -1,0 +1,48 @@
+{# Set classes #}
+{% set base_class = 'language-picker-menu' %}
+{% set toggle_class = 'toggle' %}
+{% set button_theme='tertiary' %}
+{% set button_icon = 'translate' %}
+{% set button_attributes = {
+  'id': 'language-picker--button',
+  'aria-expanded': 'false',
+} %}
+
+<nav id="language-picker-menu" class="language-picker">
+
+  {# Button #}
+  {% embed "@atoms/buttons/twig/button.twig" with {
+    'modifier_classes': 'language-picker__button'
+  } %}
+    {% block button_content %}
+      <span id="language-picker--label" class="language-picker__label">{{  'View this page in another language'|t }}:</span>
+      <span {{ bem(toggle_class, [], base_class) }} aria-hidden="true">
+      {% include "@atoms/icons/_icon.twig" with {
+        icon_blockname: base_class,
+        icon_name: 'translate',
+      } %}
+      </span>
+      <span {{ bem( 'text', [], base_class) }}>
+        <span class="language-picker-menu__current-language" lang="{{ current_language.langcode }}">{{ 'Current language'|t }}: </span>
+          {{ current_language.text }}
+        </span>
+      <span {{ bem(toggle_class, ['expand-more'], base_class) }} aria-hidden="true">
+      {% include "@atoms/icons/_icon.twig" with {
+        icon_blockname: base_class,
+        icon_name: 'expand-more',
+      } %}
+      </span>
+      <span {{ bem(toggle_class, ['expand-less'], base_class) }} aria-hidden="true">
+        {% include "@atoms/icons/_icon.twig" with {
+          icon_blockname: base_class,
+          icon_name: 'expand-less',
+        } %}
+      </span>
+      </span>
+    {% endblock %}
+  {% endembed %}
+
+  {# List #}
+  {% include "@molecules/menus/language-picker/language-picker-list.twig" %}
+
+</nav>

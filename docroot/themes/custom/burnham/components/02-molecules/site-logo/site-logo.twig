@@ -1,0 +1,23 @@
+{#
+ # Available variables:
+ # - logo_src (string) - url or relative path to the image source
+ # - logo_blockname (string) - the block name for the logo, typically 'header' or 'footer'
+ # - logo_alt_text (array) - the alt text for the logo image
+ # - logo_link_url (string) - url that the logo links to (defaults to /)
+ #}
+
+{% set link_attributes = link_attributes ?: [] %}
+{% set link_attributes = link_attributes|merge({ rel: 'home' }) %}
+{% set link_base_class = 'logo-link' %}
+{% set link_url = logo_link_url|default('/') %}
+{% set link_blockname = logo_blockname %}
+
+{% extends "@atoms/links/link/link.twig" %}
+  {% block link_content %}
+    {% include "@atoms/images/image/responsive-image.twig" with {
+      output_image_tag: true,
+      image_src: logo_src,
+      image_alt: logo_alt_text,
+      responsive_image_blockname: 'logo',
+    } %}
+  {% endblock %}

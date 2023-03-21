@@ -1,0 +1,26 @@
+uuid: af697f19-4f52-49cd-9787-15a64630dcf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.alerts_block
+  module:
+    - views
+  theme:
+    - stable
+_core:
+  default_config_hash: S19KHvcXAuuOJDHAU9yeew0MGX3T0YiZMJvwiTT0_i8
+id: stable_alerts_view_block
+theme: stable
+region: header
+weight: 0
+provider: null
+plugin: 'views_block:alerts_block-block_1'
+settings:
+  id: 'views_block:alerts_block-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

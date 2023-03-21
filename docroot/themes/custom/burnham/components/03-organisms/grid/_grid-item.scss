@@ -1,0 +1,23 @@
+@mixin grid-item {
+  flex: 1 1 100%;
+  margin-bottom: minima-space(400);
+
+  @include large {
+    margin: 0 minima-space(400) 0 0;
+    flex-basis: 30%;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.grid__item {
+  @include grid-item;
+
+  /* This is just for the component library example */
+  &--example {
+    background-color: var(--color--core--background);
+    padding: minima-space(800);
+  }
+}

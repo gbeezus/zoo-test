@@ -1,0 +1,26 @@
+uuid: f4a15bd0-c4d7-40cf-916a-a866b0aee0d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - media
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: KBGt4IO5NpfJIkVrqRYJjjU79s6fR2T1qZ615YchHdQ
+id: paragraph.field_audio_file
+field_name: field_audio_file
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

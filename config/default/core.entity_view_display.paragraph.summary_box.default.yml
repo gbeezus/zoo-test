@@ -1,0 +1,34 @@
+uuid: 6a6eaa1f-a1d6-4cc8-9c0e-b64a439f4b43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.summary_box.field_body
+    - field.field.paragraph.summary_box.field_title
+    - paragraphs.paragraphs_type.summary_box
+  module:
+    - text
+_core:
+  default_config_hash: q6TfUy3pA7b0GBfmZ3FcS-gmVlexaPcokW8-GjHnIeE
+id: paragraph.summary_box.default
+targetEntityType: paragraph
+bundle: summary_box
+mode: default
+content:
+  field_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

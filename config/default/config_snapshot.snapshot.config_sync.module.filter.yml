@@ -1,0 +1,38 @@
+uuid: 569e478d-d298-4397-b19a-7c62357c05cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - filter
+id: config_sync.module.filter
+snapshotSet: config_sync
+extensionType: module
+extensionName: filter
+items:
+  -
+    collection: ''
+    name: filter.format.plain_text
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      name: 'Plain text'
+      format: plain_text
+      weight: -7
+      filters:
+        filter_html_escape:
+          id: filter_html_escape
+          provider: filter
+          status: true
+          weight: -10
+          settings: {  }
+      _core:
+        default_config_hash: wFSSrHs-jJZH6rh919KpAZtj1M5WGesE8uLpbPvGZhI
+  -
+    collection: ''
+    name: filter.settings
+    data:
+      fallback_format: plain_text
+      always_show_fallback_choice: false
+      _core:
+        default_config_hash: FiPjM3WdB__ruFA7B6TLwni_UcZbmek5G4b2dxQItxA

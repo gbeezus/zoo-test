@@ -1,0 +1,70 @@
+/**
+ * Toggles are just checkboxes with different styling. See _checkbox.scss for base styles.
+ */
+
+input[type='checkbox'] {
+  .form-item__toggle--pseudo-control {
+    background-color: var(--color--component--form--background);
+  }
+
+  &:checked ~ .form-item__toggle--pseudo-control {
+    background-color: var(--color--primary--p-25);
+    flex-direction: row-reverse;
+  }
+}
+
+.form-item__toggle:focus-within {
+  .form-item__toggle--pseudo-control::before {
+    content: ' ';
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 0 0 2px var(--color--ui--focus);
+    height: 26px;
+    width: 44px;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+  }
+}
+
+.form-item__toggle--pseudo-control {
+  align-self: center;
+  border: 2px solid currentColor;
+  border-radius: 32px;
+  display: flex;
+  height: 22px;
+  margin: 0;
+  position: relative;
+  width: 40px;
+}
+
+.form-item__toggle--checkmark {
+  color: currentColor;
+  display: inline-block;
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  top: -1px;
+}
+
+.form-item__toggle label {
+  padding-left: 3.5em;
+  margin: 0 0 0 -3em;
+}
+
+.form-item__toggle--description {
+  display: block;
+  margin: 0 0 0 3em;
+}
+
+[dir='rtl'] {
+  .form-item__toggle label {
+    padding-left: 0;
+    padding-right: 3.5em;
+    margin: 0 -3em 0 0;
+  }
+
+  .form-item__toggle--description {
+    margin: 0 3em 0 0;
+  }
+}

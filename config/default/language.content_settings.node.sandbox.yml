@@ -1,0 +1,20 @@
+uuid: a6e0eb72-0312-43f5-85aa-16c2773c9ee1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sandbox
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '1'
+_core:
+  default_config_hash: ZTyQPmZPPY5Fm1d_dp2DDlXY3loZ0eZDUkmcFyfRTYM
+id: node.sandbox
+target_entity_type_id: node
+target_bundle: sandbox
+default_langcode: site_default
+language_alterable: true

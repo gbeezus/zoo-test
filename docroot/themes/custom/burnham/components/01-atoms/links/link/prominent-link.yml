@@ -1,0 +1,26 @@
+- link_url: 'https://github.com/minima-ds/minima-design-system'
+  link_content: 'I am prominent but unfancy'
+  link_modifiers: ['prominent']
+- link_url: 'https://github.com/minima-ds/minima-design-system'
+  link_content: 'Read more'
+  link_icon: 'arrow-forward'
+  link_icon_mirror_rtl: true
+  link_modifiers: ['prominent']
+- link_url: 'https://github.com/minima-ds/minima-design-system'
+  link_content: 'Read more elsewhere'
+  link_icon: 'read-more'
+  link_icon_mirror_rtl: true
+  link_attributes:
+    'target': '_blank'
+  link_modifiers: ['prominent']
+- link_url: 'https://github.com/minima-ds/minima-design-system'
+  link_content: 'ادامه مطلب'
+  link_icon: 'arrow-forward'
+  link_modifiers: ['prominent']
+  is_rtl: true
+- link_url: 'https://github.com/minima-ds/minima-design-system'
+  link_content: 'ادامه مطلب'
+  link_icon: 'arrow-forward'
+  link_icon_mirror_rtl: true
+  link_modifiers: ['prominent']
+  is_rtl: true

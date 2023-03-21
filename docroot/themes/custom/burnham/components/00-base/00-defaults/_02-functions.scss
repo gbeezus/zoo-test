@@ -1,0 +1,141 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:meta';
+
+/// Fetch nested keys
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Keys to fetch
+/// @return {*}
+
+@function map-deep-get($map, $keys...) {
+  $arg-type: meta.type-of($map);
+
+  @if ($arg-type != map) {
+    // stylelint-disable-next-line
+    @error "A valid sass map is required as the first argument. Argument #{$map} is type #{$arg-type}";
+  }
+
+  @each $key in $keys {
+    @if (map-has-key($map, $key)) {
+      $map: map.get($map, $key);
+    } @else {
+      // stylelint-disable-next-line
+      @warn "Key `#{$key}` not found in map";
+    }
+  }
+  @return $map;
+}
+
+/// Convert values to rem.
+// @param {Number} $value - Value to convert. Can be px, em, or rem.
+//   If unitless, pixels are assumed. If ems, size will be converted using
+//   the same base (so 0.5em is equal to 0.5rem). If you want to convert using
+//   a different font size, do rem(px($emValue, $emBase), $remBase).
+// @param {Number} $base - Base font size in pixels.
+// @return {Number} - Value in rems.
+
+@function rem($value, $base: 16px) {
+  @if (type-of($base) != 'number' or unit($base) != 'px') {
+    // stylelint-disable-next-line
+    @error "Base font size must be in pixels.";
+  }
+  @if ($value == 0) {
+    @return 0;
+  }
+  @if (type-of($value) == 'number' and unit($value) != 'rem') {
+    @if (unit($value) != 'px') {
+      $value: px($value, $base);
+    }
+    @return math.div($value, $base) * 1rem;
+  }
+  @return $value;
+}
+
+// Retrieve main theme key
+@function theme-get-map($map-key, $keys...) {
+  @return map-deep-get($theme, $map-key, $keys...);
+}
+
+// Get breakpoint values
+@function minima-breakpoint($keys...) {
+  @return theme-get-map(breakpoints, $keys...);
+}
+
+// Get constrains value
+@function minima-constrains($keys...) {
+  @return theme-get-map(constrains, $keys...);
+}
+
+// Get border values
+@function minima-box-border($keys...) {
+  @return unquote(theme-get-map(box-border, $keys...));
+}
+
+// Get box shadow values
+@function minima-box-shadow($keys...) {
+  @return unquote(theme-get-map(box-shadow, $keys...));
+}
+
+// Get border radius value
+@function minima-border-radius($keys...) {
+  @return rem(theme-get-map(border-radius, $keys...));
+}
+
+// Get grayscale color values
+@function minima-grayscale($keys...) {
+  @return unquote(theme-get-map(palette, grayscale, $keys...));
+}
+
+// Get base font value
+@function minima-base-font-size() {
+  @return rem(theme-get-map(typography, base-font-size));
+}
+
+// Get base font value
+@function minima-font-family($key) {
+  @return unquote(theme-get-map(typography, font-family, $key, stack));
+}
+
+// Get line height value
+@function minima-line-height($keys...) {
+  @return theme-get-map(typography, line-height, $keys...);
+}
+
+// Get font size value
+@function minima-font-size($keys...) {
+  @return rem(theme-get-map(typography, font-size, $keys...));
+}
+
+// Get font weight value
+@function minima-font-weight($keys...) {
+  @return theme-get-map(typography, font-weight, $keys...);
+}
+
+// Get transitions ease value
+@function minima-ease($keys...) {
+  @return theme-get-map(transitions, ease, $keys...);
+}
+
+// Get transitions duration value
+@function minima-duration($keys...) {
+  @return theme-get-map(transitions, duration, $keys...);
+}
+
+// Get z index value
+@function minima-z-index($keys...) {
+  @return theme-get-map(z-index, $keys...);
+}
+
+// Get spacing value
+@function minima-space($keys...) {
+  @return theme-get-map(space, $keys...);
+}
+
+// Get opacity value
+@function minima-opacity($keys...) {
+  @return theme-get-map(opacity, $keys...);
+}
+
+@function minima-font-width($keys...) {
+  @return theme-get-map(typography, font-family, $keys...);
+}

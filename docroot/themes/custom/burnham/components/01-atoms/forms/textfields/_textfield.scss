@@ -1,0 +1,80 @@
+$icon-space: minima-space(500);
+
+/**
+ * Clear the browser default cancel search button
+ * https://blog.maximerouiller.com/post/remove-the-x-from-internet-explorer-and-chrome-input-type-search/
+ */
+// Use the browser-based search cancel button instead
+//input[type='search'] {
+//  /* Internet Explorer */
+//  &::-ms-clear,
+//  &::-ms-reveal {
+//    display: none;
+//    width: 0;
+//    height: 0;
+//  }
+//
+//  /* Chrome / webkit */
+//  &::-webkit-search-decoration,
+//  &::-webkit-search-cancel-button,
+//  &::-webkit-search-results-button,
+//  &::-webkit-search-results-decoration {
+//    display: none;
+//  }
+//}
+
+input[type='text'],
+input[type='email'],
+input[type='search'] {
+  @include minimum-touch-target;
+}
+
+.form-item__textfield {
+  @include clearfix;
+}
+
+.form-item__textfield--error {
+  @include semantic-message(error);
+}
+
+/** .textfield--input-wrapper is used to position the button next to the input */
+.textfield--wrapper {
+  align-items: stretch;
+  display: flex;
+  justify-content: flex-start;
+
+  button {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+/** textfield--input-wrapper is used to position an icon inside the input box */
+.textfield--input-wrapper {
+  flex-shrink: 10;
+  position: relative;
+
+  @include xs {
+    max-width: calc(
+      100% - 5rem
+    ); // 2.5 rem for the icon, 2rem for padding (1rem each side) + .5 padding on the right
+  }
+
+  input {
+    max-width: 100%;
+  }
+}
+
+.form-item__textfield--icon {
+  .icon {
+    @include square-container(minima-space(250));
+
+    position: absolute;
+    left: minima-space(100);
+    top: minima-space(150);
+  }
+
+  input {
+    padding-left: $icon-space;
+  }
+}

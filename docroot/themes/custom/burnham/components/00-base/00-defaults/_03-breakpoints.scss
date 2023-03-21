@@ -1,0 +1,100 @@
+/**
+ * Breakpoint Configuration
+ * @see https://github.com/Team-Sass/breakpoint/wiki
+ *
+ */
+
+/////////////////////
+// Global Breakpoints
+
+// Avoid using in favor of atomic, content-specific, breakpoints.
+// These should be used for generic code, like layouts and typography, only.
+// Breakpoints should be consistent with README.md and design tokens.
+$xs: minima-breakpoint(xs);
+$small: minima-breakpoint(sm);
+$medium: minima-breakpoint(md);
+$large: minima-breakpoint(lg);
+$xl: minima-breakpoint(xl);
+
+// The max-width breakpoint is used when the design should be applied at whatever the
+// largest breakpoint is regardless of actual pixel value. e.g. removing outer margin on body wrapper
+$max-width: minima-breakpoint(max);
+
+@mixin breakpoint($breakpoint) {
+  @media (min-width: #{$breakpoint}) {
+    @content;
+  }
+}
+
+/// Mixin - xs Breakpoint
+/// Allows easier @include xs {} syntax
+@mixin xs {
+  @include breakpoint($xs) {
+    @content;
+  }
+}
+
+/// Mixin - small Breakpoint
+/// Allows easier @include small {} syntax
+@mixin small {
+  @include breakpoint($small) {
+    @content;
+  }
+}
+
+/// Mixin - medium Breakpoint
+/// Allows easier @include medium {} syntax
+@mixin medium {
+  @include breakpoint($medium) {
+    @content;
+  }
+}
+
+/// Mixin - large Breakpoint
+/// Allows easier @include large {} syntax
+@mixin large {
+  @include breakpoint($large) {
+    @content;
+  }
+}
+
+/// Mixin - xl Breakpoint
+/// Allows easier @include xl {} syntax
+@mixin xl {
+  @include breakpoint($xl) {
+    @content;
+  }
+}
+
+/// Mixin - max-width Breakpoint
+/// Allows easier @include max-width {} syntax
+@mixin max-width {
+  @include breakpoint($max-width) {
+    @content;
+  }
+}
+
+/// Breakpoints described by devices alias ones described by screen sizes
+@mixin mobile {
+  @include breakpoint($xs) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @include breakpoint($xs) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include breakpoint($small) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include breakpoint($large) {
+    @content;
+  }
+}

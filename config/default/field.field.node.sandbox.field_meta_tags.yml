@@ -1,0 +1,28 @@
+uuid: d9010df3-198c-4b0e-8712-c7f1c0024fa7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.sandbox
+  module:
+    - custom_add_another
+    - metatag
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: x9CH2LmyFGXWwElN38e3KAakhPywQeZtSnmZXcmE0wE
+id: node.sandbox.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: sandbox
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

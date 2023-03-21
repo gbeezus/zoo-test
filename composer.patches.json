@@ -1,0 +1,7 @@
+{
+  "patches": {
+    "drupal/entity_reference_revisions": {
+      "Non-translatable fields can only be changed when updating the current revision": "./patches/drupal/entity_reference_revisions/3150084-non-translatable-fields-revision.patch"
+    }
+  }
+}

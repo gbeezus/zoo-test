@@ -1,0 +1,12 @@
+- label: Captain's log
+  textarea_description: Stardate will be automatically calculated.
+  textarea_value: 'We encountered another humanoid species with strange bumps on their heads and faces.'
+- label: Justification for travelling on transporter with pet
+  textarea_attributes:
+    {
+      placeholder: 'Write up to 250 words addressing why Federation policy on interplanetary travel of pets should be waived.',
+      required: true,
+    }
+  error: 'Your reason is not good enough.'
+- label: Federation use only
+  textarea_attributes: { disabled: true, id: fedaration-use-only }

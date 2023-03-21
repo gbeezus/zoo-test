@@ -1,0 +1,22 @@
+uuid: b036513d-b900-413d-b2b8-27cd83aec345
+langcode: en
+status: true
+dependencies:
+  module:
+    - gin_login
+id: config_sync.module.gin_login
+snapshotSet: config_sync
+extensionType: module
+extensionName: gin_login
+items:
+  -
+    collection: ''
+    name: gin_login.settings
+    data:
+      logo:
+        use_default: 1
+      brand_image:
+        use_default: 0
+        path: ''
+      _core:
+        default_config_hash: KcdD2G04xh_7ww_FPq0TEFt3InAcq5UgHRkcA9tXCgc

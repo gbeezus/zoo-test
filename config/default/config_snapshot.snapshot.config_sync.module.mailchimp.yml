@@ -1,0 +1,23 @@
+uuid: e777c78f-c9b3-404e-8138-d6f05de17e34
+langcode: en
+status: true
+dependencies:
+  module:
+    - mailchimp
+id: config_sync.module.mailchimp
+snapshotSet: config_sync
+extensionType: module
+extensionName: mailchimp
+items:
+  -
+    collection: ''
+    name: mailchimp.settings
+    data:
+      api_key: ''
+      api_timeout: 10
+      cron: false
+      batch_limit: 100
+      api_classname: Mailchimp\Mailchimp
+      test_mode: false
+      _core:
+        default_config_hash: ViXe1Mhsdfc0AY1y-5R7vwxUoVItsnRfbQbQYzQGEEs

@@ -1,0 +1,17 @@
+uuid: f2f4646c-66de-4247-b3ef-a2b3b9e822b7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: puY9GtaV3kR5OGjB1s-UbwxwcpkF0kB_4e_VMCT82cY
+name: scale_387w
+label: 'Scale width 387'
+effects:
+  5b7db8a6-a6c4-477b-a161-6f299d1b81c7:
+    uuid: 5b7db8a6-a6c4-477b-a161-6f299d1b81c7
+    id: image_scale
+    weight: 1
+    data:
+      width: 387
+      height: null
+      upscale: false

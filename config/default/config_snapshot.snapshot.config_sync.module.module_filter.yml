@@ -1,0 +1,18 @@
+uuid: 6dc6f5ee-cac0-489e-8f78-ba849ab0c3e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - module_filter
+id: config_sync.module.module_filter
+snapshotSet: config_sync
+extensionType: module
+extensionName: module_filter
+items:
+  -
+    collection: ''
+    name: module_filter.settings
+    data:
+      tabs: true
+      _core:
+        default_config_hash: G_8GHBI3-9ngC2R-uyRQpMWndFTfL1soDJCz8Rsgl0s

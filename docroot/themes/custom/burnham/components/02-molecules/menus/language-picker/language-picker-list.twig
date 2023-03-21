@@ -1,0 +1,11 @@
+{% set ul_base_class = base_class %}
+{% set ul_modifiers = [] %}
+{% set ul_blockname = '' %}
+
+<ul {{ bem(ul_base_class, ul_modifiers, ul_blockname) }} aria-label="language-picker--label">
+  {% block list_content %}
+    {% for link in links %}
+      {% include "@molecules/menus/language-picker/_language_picker-item.twig" %}
+    {% endfor %}
+  {% endblock %}
+</ul>

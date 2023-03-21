@@ -1,0 +1,17 @@
+uuid: afbe8156-97c1-4523-9c7d-6ac0b1c5bbfe
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yF2o3qGpWcRjzh1F3ubmWCaF9MVSNM2XaTc1AR1liA0
+name: scale_675w
+label: 'Scale width 675'
+effects:
+  8518560e-b70b-4c56-a015-c142b4cfd838:
+    uuid: 8518560e-b70b-4c56-a015-c142b4cfd838
+    id: image_scale
+    weight: 1
+    data:
+      width: 675
+      height: null
+      upscale: false

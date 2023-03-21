@@ -1,0 +1,209 @@
+@use 'sass:map';
+
+// Sass map to define colors. Each set should have a "Dark" variation when required.
+// e.g. `default` and `default-dark`. Or `purple` and `purple-dark`.
+$button-colors: (
+  primary: (
+    text: var(--color--component--button--default--text),
+    bg: var(--color--primary--p-100),
+    text-hover: var(--color--component--button--default--text-hover),
+    bg-hover: var(--color--primary--p-125),
+  ),
+  secondary: (
+    text: var(--color--component--button--secondary--text),
+    bg: var(--color--secondary--p-100),
+    text-hover: var(--color--component--button--secondary--text-hover),
+    bg-hover: var(--color--secondary--p-125),
+  ),
+  tertiary: (
+    text: var(--color--component--button--tertiary--text),
+    bg: var(--color--component--button--tertiary--background),
+    text-hover: var(--color--component--tertiary--secondary--text-hover),
+    bg-hover: var(--color--component--tertiary--secondary--background-hover),
+  ),
+  danger: (
+    text: var(--color--component--button--danger--text),
+    bg: var(--color--component--button--danger--background),
+    text-hover: var(--color--component--button--danger--text-hover),
+    bg-hover: var(--color--component--button--danger--background-hover),
+  ),
+);
+
+// Mixin to define colors for one or more schemes.
+// Simply pass the color scheme to the mixin to get the colors defined in the map.
+// e.g. @include buttonColors(default) will get all of the colors defined in the "default" section.
+
+@mixin button-colors($scheme, $palette: map.get($button-colors, $scheme)) {
+  background-color: map.get($palette, bg);
+  color: map.get($palette, text);
+  fill: map.get($palette, text);
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &:visited {
+    color: map.get($palette, text);
+  }
+
+  &:hover:not(:disabled) {
+    background-color: map.get($palette, bg-hover);
+    color: map.get($palette, text-hover);
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(
+      --color--component--button--default--background-active
+    );
+  }
+
+  @include focus-style();
+}
+
+// The button-base mixin contains styles that apply to all buttons
+// regardless of color or size.
+@mixin button-base {
+  border: 0;
+  border-radius: minima-border-radius(0);
+  cursor: pointer;
+  display: inline-block;
+  font-family: minima-font-family(secondary);
+  font-variation-settings: 'wght' 550, 'wdth' 100;
+  font-weight: 550;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  min-height: 44px;
+  min-width: 44px;
+
+  @include large {
+    min-height: initial;
+    min-width: initial;
+  }
+}
+
+// Button color variations
+// Note how we include dark mode options for each
+@mixin button-color-primary {
+  @include button-colors(primary);
+}
+
+@mixin button-color-secondary {
+  @include button-colors(secondary);
+}
+
+@mixin button-color-tertiary {
+  @include button-colors(tertiary);
+
+  border: 2px solid var(--color--component--button--tertiary--border);
+
+  &--disabled {
+    border-color: var(--color--component--button--tertiary--border-disabled);
+  }
+}
+
+@mixin button-color-danger {
+  @include button-colors(danger);
+}
+
+// Button size variations
+@mixin button-medium {
+  font-size: minima-font-size(20);
+  padding: 0.5em 0.55em;
+}
+
+@mixin button-small {
+  font-size: minima-font-size(10);
+  padding: 0.25em;
+}
+
+@mixin button-large {
+  font-size: minima-font-size(30);
+  padding: 0.5em;
+}
+
+@mixin button-icon {
+  display: inline-flex;
+  margin-left: 0.25em;
+
+  .icon {
+    height: 0.97em;
+    width: 0.97em;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
+  &[dir='rtl'] {
+    margin-left: 0;
+    margin-right: 0.25em;
+  }
+}
+
+.button {
+  @include button-base;
+  @include button-medium;
+
+  &--primary {
+    @include button-color-primary;
+  }
+
+  &--secondary {
+    @include button-color-secondary;
+  }
+
+  &--tertiary {
+    @include button-color-tertiary;
+  }
+
+  &--danger {
+    @include button-color-danger;
+  }
+
+  &--small {
+    @include button-small;
+  }
+
+  &--medium {
+    @include button-medium;
+  }
+
+  &--large {
+    @include button-large;
+  }
+
+  &--has-icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  &__icon {
+    @include button-icon;
+
+    &:only-child {
+      margin: 0;
+    }
+  }
+
+  &--disabled {
+    background-color: var(--color--component--button--default--border);
+    color: var(--color--component--button--default--text-disabled);
+
+    &:hover {
+      background-color: var(--color--component--button--default--border);
+      color: var(--color--component--button--default--text-disabled);
+      cursor: default;
+    }
+  }
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  // stylelint-disable-next-line property-no-vendor-prefix
+  -webkit-appearance: button-bevel;
+}

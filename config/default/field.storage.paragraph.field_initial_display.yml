@@ -1,0 +1,32 @@
+uuid: 5147ab9e-c80a-4ca5-ab75-cd0e2aee5d81
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: 1w_FTZB4WM2pYo18GunPiZztn6Uv9j939W6pff2C_QY
+id: paragraph.field_initial_display
+field_name: field_initial_display
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: collapsed
+      label: 'Collapse all'
+    -
+      value: expand_first
+      label: 'Expand first item'
+    -
+      value: expanded
+      label: 'Expand all'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

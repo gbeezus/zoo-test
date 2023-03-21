@@ -1,0 +1,5 @@
+button_base_class: 'button'
+button_content: 'Secondary button'
+button_theme: 'secondary'
+button_size: 'medium'
+button_is_disabled: false

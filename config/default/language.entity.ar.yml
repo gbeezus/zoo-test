@@ -1,0 +1,11 @@
+uuid: 61f5c20e-4045-4331-a368-19ece5bf1b6d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hOQzymIrsWQRVJaOmeOxW166BiUjI8U2Ub06HIL1QMk
+id: ar
+label: Arabic
+direction: rtl
+weight: -10
+locked: false

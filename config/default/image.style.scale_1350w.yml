@@ -1,0 +1,17 @@
+uuid: 35908281-e6eb-44bf-81ef-61da67ea28c6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: GsCNVO6PcAOgmGWA_Xs4mYSz-5n-9kUNJWtxywMP4Dw
+name: scale_1350w
+label: 'Scale width 1350'
+effects:
+  86dc2647-3710-4bf9-a310-1756827880aa:
+    uuid: 86dc2647-3710-4bf9-a310-1756827880aa
+    id: image_scale
+    weight: 1
+    data:
+      width: 1350
+      height: null
+      upscale: false

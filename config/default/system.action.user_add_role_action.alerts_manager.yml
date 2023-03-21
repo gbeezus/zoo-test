@@ -1,0 +1,16 @@
+uuid: d64dd2b1-3c40-4331-83dc-572667977606
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.alerts_manager
+  module:
+    - user
+_core:
+  default_config_hash: khpdE4WjRUk-G5ZQCfB2WxBoUb3Sy1K0eJMn91Z6rQw
+id: user_add_role_action.alerts_manager
+label: 'Add the Alerts manager role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: alerts_manager

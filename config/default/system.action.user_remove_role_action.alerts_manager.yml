@@ -1,0 +1,16 @@
+uuid: 0646857f-d3d2-4497-859e-ba3822b89bb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.alerts_manager
+  module:
+    - user
+_core:
+  default_config_hash: JYag73ngwk0QdQn2v3K4H4eTO0zGNKq3T_cZJeUgYik
+id: user_remove_role_action.alerts_manager
+label: 'Remove the Alerts manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: alerts_manager

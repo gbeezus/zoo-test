@@ -1,0 +1,12 @@
+uuid: 42c6aad3-bc1c-4b9a-888e-90dc80ba8b23
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: gcnWBqcGVMEtCl_2tzun5y5x3y5TqJtyQQVs67fdjfM
+id: tabs
+label: Tabs
+icon_uuid: null
+icon_default: null
+description: 'Allows entering a set of tabs that reveal additional content when clicked.'
+behavior_plugins: {  }

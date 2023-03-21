@@ -1,0 +1,5 @@
+shield_enable: true
+credential_provider: shield
+print: ''
+allow_cli: true
+whitelist: ''

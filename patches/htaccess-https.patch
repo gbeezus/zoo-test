@@ -1,0 +1,21 @@
+diff --git a/.htaccess b/.htaccess
+index 7dd1d14c9f..31ec1f96fb 100644
+--- a/docroot/.htaccess
++++ b/docroot/.htaccess
+@@ -61,6 +61,16 @@ DirectoryIndex index.php index.html index.htm
+ <IfModule mod_rewrite.c>
+   RewriteEngine on
+ 
++  # Redirect all HTTP traffic to HTTPS except on local development environments.
++  # This rule must come before other rewrites/redirects in order to implement
++  # the HSTS policy.
++  RewriteCond %{HTTPS} off
++  RewriteCond %{HTTP:X-Forwarded-Proto} !https
++  RewriteCond %{HTTP_HOST} !localhost [NC]
++  RewriteCond %{HTTP_HOST} !ddev\.site [NC]
++  RewriteCond %{HTTP_HOST} !^web [NC]
++  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
++
+   # Set "protossl" to "s" if we were accessed via https://.  This is used later
+   # if you enable "www." stripping or enforcement, in order to ensure that
+   # you don't bounce between http and https.

@@ -1,0 +1,13 @@
+diff --git a/entity_reference_revisions.module b/entity_reference_revisions.module
+index 82c3cd73a820dc47b7769b4100151a37e5947f63..ada0526d819798a258245fcdcd94c96b952a4bbd 100644
+--- a/entity_reference_revisions.module
++++ b/entity_reference_revisions.module
+@@ -275,7 +275,7 @@ function entity_reference_revisions_entity_revision_create(ContentEntityInterfac
+               $target_entity->addTranslation($active_langcode, $target_entity->toArray());
+             }
+             $target_entity = $item->entity->getTranslation($active_langcode);
+-            $revised_entity = $target_storage->createRevision($target_entity, $new_revision->isDefaultRevision(), $keep_untranslatable_fields);
++            $revised_entity = $target_storage->createRevision($target_entity, TRUE, $keep_untranslatable_fields);
+ 
+             // Restore the revision ID.
+             $revision_key = $revised_entity->getEntityType()->getKey('revision');

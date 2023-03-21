@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Theme override for a 'textarea' #type form element.
+ *
+ * Available variables
+ * - textarea_attributes: attributes for the textarea element
+ * - textarea_base_class: the base class for the textarea
+ * - textarea_description: descriptive text to help the user
+ *
+ * - wrapper_attributes: A list of HTML attributes for the wrapper element.
+ * - attributes: A list of HTML attributes for the textarea element.
+ * - resizable: An indicator for whether the textarea is resizable.
+ * - required: An indicator for whether the textarea is required.
+ * - textarea_value: The textarea content.
+ *
+ * @see template_preprocess_textarea()
+ */
+#}
+{% set textarea_base_class = textarea_base_class|default('textarea') %}
+{% set textarea_attributes = textarea_attributes|default({}) %}
+{% set textarea_modifiers = textarea_modifiers|default([]) %}
+{% if error %}
+  {% set textarea_modifiers = textarea_modifiers|merge(['error']) %}
+{% endif %}
+
+{% if not textarea_attributes.id %}
+  {% set textarea_attributes = textarea_attributes|merge({ "id": 'textarea-' ~ random() }) %}
+{% endif %}
+
+{% set textarea_attributes_string = '' %}
+{% for key,value in textarea_attributes %}
+  {% set textarea_attributes_string = textarea_attributes_string ~ key ~ '="' ~ value ~ '" ' %}
+{% endfor %}
+
+<div {{ bem(textarea_base_class, textarea_modifiers, 'form-item', ['form-item']) }}>
+  <label for="{{ textarea_attributes.id }}">
+    {{ label }}{% if textarea_attributes.required %}<span class="form-item--required-indicator">*</span>{% endif %}
+  </label>
+  {% if textarea_description %}
+    <div {{ bem(textarea_base_class, ['description'], 'form-item', ['form-item--description']) }}>{{ textarea_description }}</div>
+  {% endif %}
+  <textarea {{ textarea_attributes_string }}>{{ textarea_value }}</textarea>
+  {% if error %}
+    <div {{ bem(textarea_base_class, ['error-text'], 'form-item', ['form-item--error-text']) }}>{{ error }}</div>
+  {% endif %}
+</div>

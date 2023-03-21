@@ -1,0 +1,20 @@
+uuid: 0fd98fbc-40eb-4f0d-a53a-c6a92d1b23fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.call_to_action
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: E777AQ5NcLSHVGjaX9Wi2gpSXAYAr_SINWiAyVtJPyQ
+id: paragraph.call_to_action
+target_entity_type_id: paragraph
+target_bundle: call_to_action
+default_langcode: site_default
+language_alterable: true

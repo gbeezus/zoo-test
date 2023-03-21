@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: zIOT386gzAriRxHmFydkvYqs9B_EDfl9LMmscslEnIQ
+configured: true
+untrusted_roles:
+  - anonymous
+log: true

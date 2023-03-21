@@ -1,0 +1,13 @@
+uuid: 500eb8b7-d452-459c-af3f-ac298a553e42
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cPXKZRztJXFfpHOFOsc3E-_-ZDLP3nURFyCErUOzMII
+machine: production
+description: null
+name: Production
+url: 'https://enterpriseprod.prod.acquia-sites.com'
+weight: null
+fg_color: '#ffffff'
+bg_color: '#ff0000'

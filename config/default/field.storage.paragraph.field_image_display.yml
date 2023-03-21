@@ -1,0 +1,42 @@
+uuid: d8e88bdc-90da-4b26-915c-1478e1f71ff0
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - options
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: vcjq1qsfg9Dd9S_syvhAjxbK9DdworqTLS-NR5jCcug
+id: paragraph.field_image_display
+field_name: field_image_display
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: full_content
+      label: 'Full width of content column'
+    -
+      value: left_50
+      label: 'Half width of content, left aligned'
+    -
+      value: right_50
+      label: 'Half width of content, right aligned'
+    -
+      value: left_33
+      label: 'One-third width of content, left aligned'
+    -
+      value: right_33
+      label: 'One-third width of content, right aligned'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: 84eb5e20-b9b8-4b1c-a0eb-4be02ebe13d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action
+_core:
+  default_config_hash: Rc0GOhppIkRacA_56NiTdvZ82H_o_hlsHHbS6t2daLA
+id: block_content.call_to_action.status
+field_name: status
+entity_type: block_content
+bundle: call_to_action
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

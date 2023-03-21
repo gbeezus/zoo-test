@@ -1,0 +1,228 @@
+/*
+ * Generic header styles:
+ * All arguments are optional. If not defined, the defaults below will be used
+*/
+
+$color-heading: var(--color--core--text);
+
+@mixin heading-link($color-link: inherit, $color-link-hover: inherit) {
+  color: $color-link;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--color--core--text);
+
+  &:hover {
+    color: $color-link-hover;
+  }
+}
+
+@mixin heading-xl(
+  $font-family: minima-font-family(secondary),
+  $font-size: 2rem,
+  $line-height: 1.4,
+  $color: $color-heading,
+  $font-weight: 650,
+  $margin: 0 0 0.5em
+) {
+  color: $color;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-variation-settings: 'wght' $font-weight;
+  font-style: normal;
+  font-size: $font-size;
+  letter-spacing: normal;
+  line-height: $line-height;
+  margin: $margin;
+  width: auto;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  &__link {
+    @include heading-link;
+  }
+}
+
+@mixin heading-large(
+  $font-family: minima-font-family(secondary),
+  $font-size: 1.8rem,
+  $line-height: 1.4,
+  $color: $color-heading,
+  $font-weight: 650,
+  $margin: 0 0 0.5em
+) {
+  color: $color;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-variation-settings: 'wght' $font-weight;
+  font-style: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: $margin;
+  width: auto;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  &__link {
+    @include heading-link;
+  }
+}
+
+@mixin heading-medium(
+  $font-family: minima-font-family(secondary),
+  $font-size: 1.4rem,
+  $line-height: 1.6,
+  $color: $color-heading,
+  $font-weight: 650,
+  $margin: 0 0 0.5em
+) {
+  color: $color;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-variation-settings: 'wght' $font-weight;
+  font-style: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: $margin;
+  width: auto;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  &__link {
+    @include heading-link;
+  }
+}
+
+@mixin heading-small(
+  $font-family: minima-font-family(secondary),
+  $font-size: 1.2rem,
+  $line-height: 1.6,
+  $color: $color-heading,
+  $font-weight: 550,
+  $margin: 0 0 0.5em
+) {
+  color: $color;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-variation-settings: 'wght' $font-weight;
+  font-style: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: $margin;
+  width: auto;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  &__link {
+    @include heading-link;
+  }
+}
+
+@mixin heading-xs(
+  $font-family: minima-font-family(secondary),
+  $font-size: 1.1rem,
+  $line-height: 2,
+  $color: $color-heading,
+  $font-weight: 550,
+  $margin: 0 0 0.5em
+) {
+  color: $color;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-variation-settings: 'wght' $font-weight;
+  font-style: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: $margin;
+  width: auto;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  &__link {
+    @include heading-link;
+  }
+}
+
+.h1,
+%h1 {
+  @include heading-xl;
+}
+
+.h2,
+%h2 {
+  @include heading-large;
+}
+
+.h3,
+%h3 {
+  @include heading-medium;
+}
+
+.h4,
+%h4 {
+  @include heading-small;
+}
+
+.h5,
+%h5 {
+  @include heading-xs;
+}
+
+.h6,
+%h6 {
+  @include heading-xs;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+// HTML element universal styling
+h1 {
+  @extend %h1;
+
+  a {
+    @include heading-link;
+  }
+}
+
+/* TODO: BEM selectors should be applied to wysiwyg-created content */
+
+// HTML elements within long text fields
+.text-long {
+  h2 {
+    @extend %h2;
+
+    a {
+      @include heading-link;
+    }
+  }
+
+  h3 {
+    @extend %h3;
+
+    a {
+      @include heading-link;
+    }
+  }
+
+  h4 {
+    @extend %h4;
+
+    a {
+      @include heading-link;
+    }
+  }
+
+  h5 {
+    @extend %h5;
+
+    a {
+      @include heading-link;
+    }
+  }
+
+  h6 {
+    @extend %h6;
+
+    a {
+      @include heading-link;
+    }
+  }
+}

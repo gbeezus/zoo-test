@@ -1,0 +1,10 @@
+uuid: f8cbf578-9741-46b7-aa67-d11772f16d92
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: TXZZT_PayWRuNo6WNnmxf0OxnWLxA5mxrvzrQ94vW70
+id: celebrated_venue
+label: 'Celebrated Venue'
+revision: 0
+description: 'Venue to highlight in the global Metro Brand footer'

@@ -1,0 +1,11 @@
+uuid: daad09d0-4fe7-4dc3-a2b8-ab75bca89a3f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: uHPetpI4UeTuY4sEvj1zQvwCHHvppgcAOEdQiWqZTmc
+id: vi
+label: Vietnamese
+direction: ltr
+weight: -5
+locked: false

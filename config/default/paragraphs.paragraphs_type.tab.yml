@@ -1,0 +1,12 @@
+uuid: cca7f998-1562-447d-aa14-ab2fa5d5e93d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: EDmZFUT0zDvlajvXe3xx2KCC6lsteteBwOooT76RZAg
+id: tab
+label: Tab
+icon_uuid: null
+icon_default: null
+description: 'Allows entering tab title and additional components for use as an item in a larger tabbed content paragraph.'
+behavior_plugins: {  }

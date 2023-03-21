@@ -1,0 +1,26 @@
+uuid: c6389c89-4c1d-41d5-9c53-943f02ea333d
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - media
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: z5mzzse5bM3RtRzxSG6r1dGFQHEB81gQTSfhh-FTiQs
+id: paragraph.field_document
+field_name: field_document
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

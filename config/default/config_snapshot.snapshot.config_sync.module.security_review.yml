@@ -1,0 +1,21 @@
+uuid: e4b6efaf-7872-4a9e-924d-91ae9a57eab9
+langcode: en
+status: true
+dependencies:
+  module:
+    - security_review
+id: config_sync.module.security_review
+snapshotSet: config_sync
+extensionType: module
+extensionName: security_review
+items:
+  -
+    collection: ''
+    name: security_review.settings
+    data:
+      configured: true
+      untrusted_roles:
+        - anonymous
+      log: true
+      _core:
+        default_config_hash: zIOT386gzAriRxHmFydkvYqs9B_EDfl9LMmscslEnIQ

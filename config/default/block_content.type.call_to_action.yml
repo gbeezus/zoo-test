@@ -1,0 +1,10 @@
+uuid: 8699038b-e81b-49b6-9325-3fe8fd4d9131
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: kzSp3RBzUu_mmamDMSnSO7mkbATBURC_EQA8dEc1Peo
+id: call_to_action
+label: 'Call to action (CTA)'
+revision: 1
+description: 'This content block allows placing a CTA paragraph wherever blocks are allowed. Specifically this provides a block wrapper around the CTA design component to allow more flexibility on where the CTA is placed on the site.'

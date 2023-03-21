@@ -1,0 +1,12 @@
+uuid: bf5990f2-4643-4c74-8b7d-c8357ed777d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - webform
+_core:
+  default_config_hash: _E2o8FTV81xfTTwpW7tTi807edvENtHPETJkWIZO1rs
+id: webform_submission.token
+label: Token
+targetEntityType: webform_submission
+cache: true

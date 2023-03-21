@@ -1,0 +1,20 @@
+uuid: e9666565-9aae-48b3-84d7-4ff4c8075a74
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.blockquote
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: DI4-nETISDPkAa4nNqCBXjjnnC8kocIEUHko5K3RqL4
+id: paragraph.blockquote
+target_entity_type_id: paragraph
+target_bundle: blockquote
+default_langcode: site_default
+language_alterable: true

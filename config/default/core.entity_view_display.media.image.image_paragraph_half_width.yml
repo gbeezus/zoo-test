@@ -1,0 +1,72 @@
+uuid: d7728013-94c5-4d1a-b9d6-9f056a75b0b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.image_paragraph_half_width
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_credit
+    - field.field.media.image.field_credit_link
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.image_paragraph_half_width
+  module:
+    - layout_builder
+    - link
+    - responsive_image
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: w5mwcSiQcygV6_Q_wzQbF6p0AgQQ3gWnuDw1P5dA3Ss
+id: media.image.image_paragraph_half_width
+targetEntityType: media
+bundle: image
+mode: image_paragraph_half_width
+content:
+  field_caption:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_credit:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_credit_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_media_image:
+    type: responsive_image
+    label: hidden
+    settings:
+      responsive_image_style: image_paragraph_half_width
+      image_link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

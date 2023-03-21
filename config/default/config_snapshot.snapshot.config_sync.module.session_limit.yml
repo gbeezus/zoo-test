@@ -1,0 +1,23 @@
+uuid: 8518a7cf-a266-463c-ac56-42776b7a9983
+langcode: en
+status: true
+dependencies:
+  module:
+    - session_limit
+id: config_sync.module.session_limit
+snapshotSet: config_sync
+extensionType: module
+extensionName: session_limit
+items:
+  -
+    collection: ''
+    name: session_limit.settings
+    data:
+      session_limit_max: 1
+      session_limit_masquerade_ignore: false
+      session_limit_behaviour: 0
+      session_limit_logged_out_message_severity: warning
+      session_limit_roles: {  }
+      session_limit_admin_inclusion: 0
+      _core:
+        default_config_hash: E99p-j2YC4tVqQ7Gz4-I4cALOq2a8XHkvlQnxoV5EWY

@@ -1,0 +1,24 @@
+uuid: 5912643a-c039-42c3-bd5e-32f679f82351
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.gallery
+_core:
+  default_config_hash: 0-p4UsYy2zwnp1lvBl4Z85JU19H1X-9o9HSh0MJX8hs
+id: paragraph.gallery.status
+field_name: status
+entity_type: paragraph
+bundle: gallery
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

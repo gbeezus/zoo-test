@@ -1,0 +1,28 @@
+uuid: 174c0ac1-a8f1-411e-8d73-d695f48fa64c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action
+    - field.field.block_content.call_to_action.field_call_to_action
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: xV9syL2CyrpDiMWkudu8JiAigHIqR7lPgXbEWj-iQmo
+id: block_content.call_to_action.default
+targetEntityType: block_content
+bundle: call_to_action
+mode: default
+content:
+  field_call_to_action:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,12 @@
+uuid: eaabd10e-b302-4a9d-84ed-d01622d980ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - webform
+_core:
+  default_config_hash: Qxy8yGkzNdc2TLisseMluE5j6lZspeqPcVmeI_M-3og
+id: webform.token
+label: Token
+targetEntityType: webform
+cache: true

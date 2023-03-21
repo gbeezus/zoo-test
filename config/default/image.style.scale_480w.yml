@@ -1,0 +1,17 @@
+uuid: 451ac6a2-bd04-43da-a326-05c0748046d6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: nCfsujovitQQi3Rk6GgNivFJa85sgbNp2rq8_Iyqx5Q
+name: scale_480w
+label: 'Scale width 480'
+effects:
+  62e5f1b5-86f6-42fc-8404-de7f550aaf86:
+    uuid: 62e5f1b5-86f6-42fc-8404-de7f550aaf86
+    id: image_scale
+    weight: 1
+    data:
+      width: 480
+      height: null
+      upscale: false

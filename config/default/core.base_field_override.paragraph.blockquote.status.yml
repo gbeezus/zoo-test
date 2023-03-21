@@ -1,0 +1,24 @@
+uuid: cdd83d10-a079-4362-be14-42ca445752b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.blockquote
+_core:
+  default_config_hash: nPSQQ3r59OFDNj5RJVF0SR4V8dzC7yuz_Gy7fQNf4zU
+id: paragraph.blockquote.status
+field_name: status
+entity_type: paragraph
+bundle: blockquote
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

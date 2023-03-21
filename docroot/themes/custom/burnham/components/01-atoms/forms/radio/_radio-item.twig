@@ -1,0 +1,31 @@
+{% set radio_item_disabled = radio_item_disabled|default(false) %}
+{% set radio_base_class = radio_base_class|default('radio') %}
+{% set radio_modifiers = radio_modifiers|default([]) %}
+
+{% set radio_modifiers = radio_modifiers|merge(['control']) %}
+{% if radio_item_disabled %}
+  {% set radio_modifiers = radio_modifiers|merge(['disabled']) %}
+{% endif %}
+
+<li {{ bem( radio_base_class, ['item'], 'form-item') }}">
+<label for="radio-{{ key }}">
+  <input id="radio-{{ key }}" name="radio" type="radio"
+         {% if radio_item_checked %}checked="{{ radio_item_checked }}"{% endif %}
+    {% if radio_item_disabled %} disabled{% endif %} {{ bem( radio_base_class, radio_modifiers, 'form-item', ['unprocessed']) }} >
+  <span {{ bem( radio_base_class, ['pseudo-control-unchecked'], 'form-item') }}>
+        {% include '@atoms/icons/_icon.twig' with {
+          icon_name: 'radio-button-unchecked',
+          icon_modifiers: [],
+          icon_decorative: true,
+        } %}
+  </span>
+  <span {{ bem( radio_base_class, ['pseudo-control-checked'], 'form-item') }}>
+        {% include '@atoms/icons/_icon.twig' with {
+          icon_name: 'radio-button-checked',
+          icon_modifiers: [],
+          icon_decorative: true,
+        } %}
+  </span>
+  <span {{ bem( radio_base_class, ['description'], 'form-item')}}>{{ radio_item }}</span>
+</label>
+</li>

@@ -1,0 +1,19 @@
+uuid: bcd57498-47d7-4946-babe-352e26beed1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: MTnRMXoVKgHpACVQk8M9XG-RzNXZb5Wkf926yahpkFE
+name: 'Page (basic)'
+type: page
+description: 'A basic page is used for evergreen content.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

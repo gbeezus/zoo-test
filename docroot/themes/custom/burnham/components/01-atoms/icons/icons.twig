@@ -1,0 +1,37 @@
+<hr>
+
+{% macro iconcategory(title = "Icons", ymlname) %}
+
+  <h3 class="icons-demo__title">{{ title }}</h3>
+  <div class="icons-demo" id="icons-{{ title | lower | replace({' ': '-'}) }}">
+    {% for item in ymlname %}
+      <div class="icons-demo__item">
+        {% include "@atoms/icons/_icon.twig" with {
+          icon_name: item.value,
+          icon_title: item.name,
+          icon_desc: item.desc,
+          icon_decorative: item.decorative,
+          icon_use_rtl: item.use_rtl,
+        } %}
+        <div class="icon-name-wrapper">
+          <span class="icon-name">{{ item.value }}</span>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}
+
+{% import _self as categories %}
+
+{{ categories.iconcategory('Accessibility', accessibility) }}
+<br>
+{{ categories.iconcategory('Messages', messages) }}
+<br>
+{{ categories.iconcategory('User interface', ui) }}
+<br>
+{{ categories.iconcategory('File types', files) }}
+<br>
+{{ categories.iconcategory('Social media', sharing) }}
+<br>
+{{ categories.iconcategory('Misc', misc) }}
+<br>

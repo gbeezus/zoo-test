@@ -1,0 +1,61 @@
+@mixin minimum-touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  @include large {
+    min-height: inherit;
+    min-width: inherit;
+  }
+}
+
+.form-item {
+  font-family: minima-font-family(secondary);
+}
+
+input,
+select,
+textarea {
+  border: minima-box-border(dark);
+  border-radius: 0;
+  font-weight: 500;
+  padding: 0.5em 0.75em;
+
+  &[disabled] {
+    background-color: var(--color--component--form--background);
+    color: currentColor;
+  }
+
+  @include focus-style();
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* TODO: cleanup bem later so we only need half of these classes */
+.form-item__required-indicator,
+.form-item--required-indicator {
+  color: var(--color--semantic--error);
+  display: inline;
+}
+
+.form-item__description,
+.form-item--description,
+.form-item__error-text,
+.form-item--error-text {
+  font-size: minima-font-size(15);
+  display: block;
+  margin: 0 0 5px;
+}
+
+.form-item__error-text,
+.form-item--error-text {
+  color: var(--color--semantic--error);
+  font-family: minima-font-family(primary);
+}
+
+.form-fieldset--errors {
+  border: 2px solid var(--color--semantic--error);
+  padding: 10px;
+}

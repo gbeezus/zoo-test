@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    0:
+      label: 'Cвернуть все'
+    2:
+      label: 'Развернуть все'

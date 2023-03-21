@@ -1,0 +1,14 @@
+uuid: 5452011f-0cbd-475e-b260-de600050c1e7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FTLLq6Me0wm-fzTBno7arXecQ3iNO2BUQjyJCkmDUPM
+id: default
+entity_type_id: null
+entity_id: null
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 0
+redirect_fallback_action: null

@@ -1,0 +1,12 @@
+uuid: 4bb8595d-2fc8-44f7-a55e-0560ee3b608d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Vg89ZK6xXG6_osIBYxmA0-RTobwwtnztmUrszV_oO4c
+id: gallery
+label: Gallery
+icon_uuid: null
+icon_default: null
+description: 'Display multiple images or videos in a grid with pop-up slideshow.'
+behavior_plugins: {  }

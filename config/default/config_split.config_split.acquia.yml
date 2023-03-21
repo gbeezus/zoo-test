@@ -1,0 +1,29 @@
+uuid: 20213a7a-5115-4628-9e2b-9b162f23d6b6
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: Yn-jp8VmO0lFc_qcMD3vC_TRX2eeZZKHI8-LYz-zVNA
+id: acquia
+label: Acquia
+description: 'Configuration split for Acquia environments.'
+weight: 0
+stackable: false
+storage: folder
+folder: ../config/acquia
+module:
+  acquia_connector: 0
+  acquia_purge: 0
+  acquia_search: 0
+  clamav: 0
+  purge: 0
+  purge_queuer_coretags: 0
+  syslog: 0
+theme: {  }
+complete_list:
+  - acquia_search.settings
+  - automated_cron.settings
+partial_list:
+  - search_api.index.content
+  - search_api.server.acquia_search_server
+  - search_api_attachments.admin_config

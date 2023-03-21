@@ -1,0 +1,21 @@
+uuid: cdef8b2a-2a76-49e5-92c4-bf34b57b4fd0
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api
+id: config_sync.module.search_api
+snapshotSet: config_sync
+extensionType: module
+extensionName: search_api
+items:
+  -
+    collection: ''
+    name: search_api.settings
+    data:
+      default_cron_limit: 50
+      cron_worker_runtime: 15
+      default_tracker: default
+      tracking_page_size: 100
+      _core:
+        default_config_hash: n7m4vlCPoB3_1C7l13LKYsifmLur4QR71mOD7S_5hSE

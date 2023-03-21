@@ -1,0 +1,18 @@
+uuid: 3c735a3f-0cce-4cfe-95c3-624fc16e69b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.celebrated_venue
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: C9GP9_lHaPNjAX2KDtUSo82qTv3LGsbqWPAzcmEN_Ow
+id: block_content.celebrated_venue
+target_entity_type_id: block_content
+target_bundle: celebrated_venue
+default_langcode: site_default
+language_alterable: true

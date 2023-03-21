@@ -1,0 +1,37 @@
+uuid: b4274984-86ba-46f2-9d6d-16adedf9b00d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_transcript
+    - media.type.document
+    - media.type.video_url
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: ivLiFDf9hCSQfAwMRRlsiQrghfhBom-A6nESHtrUhAg
+id: media.video_url.field_media_transcript
+field_name: field_media_transcript
+entity_type: media
+bundle: video_url
+label: Transcript
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

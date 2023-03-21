@@ -1,0 +1,30 @@
+uuid: 681cc538-b39c-47e3-882a-a6662e480f9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_credit_link
+    - media.type.image
+  module:
+    - custom_add_another
+    - link
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: oOVv8tACq44lEl0IliU-LaI3gtDCS3iHaixG3ojmOqo
+id: media.image.field_credit_link
+field_name: field_credit_link
+entity_type: media
+bundle: image
+label: 'Credit link'
+description: 'Optional link for image credit'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

@@ -1,0 +1,12 @@
+uuid: af853038-7c08-4dc2-a524-787dbc542123
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: A5Vki1I6GJ3Rq4n18tCL_ShBLcQArpeXJzUWesyDWOg
+id: default
+label: Style
+multiselect: multiple
+form_type: checkboxes
+required: false
+weight: 100

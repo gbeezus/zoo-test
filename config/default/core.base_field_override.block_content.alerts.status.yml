@@ -1,0 +1,24 @@
+uuid: dd924aaa-dfa9-46d9-9b08-fdd53a5e7118
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alerts
+_core:
+  default_config_hash: FQP4_f9j8U6Z4oXt8jUMBqAyZZHKiGVofKvy0aAs0RM
+id: block_content.alerts.status
+field_name: status
+entity_type: block_content
+bundle: alerts
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

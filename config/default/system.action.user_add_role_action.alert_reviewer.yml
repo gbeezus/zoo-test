@@ -1,0 +1,16 @@
+uuid: 78cf7faa-9aa1-474f-971d-5ee4955ebfdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.alert_reviewer
+  module:
+    - user
+_core:
+  default_config_hash: qaE0TUBB6C4y6kBnKr-BtddT8axOaLmPNGib2pOHh1A
+id: user_add_role_action.alert_reviewer
+label: 'Add the Alert reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: alert_reviewer

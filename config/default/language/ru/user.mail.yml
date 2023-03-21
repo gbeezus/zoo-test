@@ -1,0 +1,2 @@
+register_admin_created:
+  subject: 'Администратор сайта «[site:name]» создал для вас учётную запись'

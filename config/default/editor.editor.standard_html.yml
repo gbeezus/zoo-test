@@ -1,0 +1,62 @@
+uuid: 959575b0-6035-4bc6-99b9-1dd2264df3de
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.standard_html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: '-gENaDS9_xv1T-vf8gPkzF1Ga6TAg8jCXJao9e_iYZ4'
+format: standard_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Format
+            - Styles
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Tools
+          items:
+            - PasteFromWord
+            - RemoveFormat
+            - Maximize
+            - Source
+            - SpecialChar
+        -
+          name: Drafting
+          items:
+            - Undo
+            - Redo
+  plugins:
+    drupallink:
+      linkit_enabled: false
+      linkit_profile: ''
+    stylescombo:
+      styles: 'a.link--prominent|Prominent Link'
+    customconfig:
+      ckeditor_custom_config: "specialChars = [\"Á\", \"á\", \"É\", \"é\", \"Í\", \"í\", \"Ó\", \"ó\", \"Ú\", \"ú\", \"ñ\", \"&copy;\", \"&trade;\"]\r\nfillEmptyBlocks = false"
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

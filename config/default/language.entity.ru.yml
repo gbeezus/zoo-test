@@ -1,0 +1,11 @@
+uuid: 85491f89-7563-4743-a100-cad85a7cc722
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 93-C6EyFSiOc1kFOPTWfTfIYQFgLaGAjlmJVhYWK3tY
+id: ru
+label: Russian
+direction: ltr
+weight: -7
+locked: false

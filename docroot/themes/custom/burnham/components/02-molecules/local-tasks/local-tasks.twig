@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Theme override to display primary and secondary local tasks.
+ *
+ * Available variables:
+ * - primary: HTML list items representing primary tasks.
+ * - secondary: HTML list items representing primary tasks.
+ *
+ * Each item in these variables (primary and secondary) can be individually
+ * themed in menu-local-task.html.twig.
+ */
+#}
+
+{# Drupal Specific #}
+{% if primary %}
+  <h2 class="visually-hidden">{{ 'Primary local-tasks'|t }}</h2>
+  <ul class="local-tasks__nav local-tasks__nav--local-tasks">{{ primary }}</ul>
+{% endif %}
+{% if secondary %}
+  <h2 class="visually-hidden">{{ 'Secondary local-tasks'|t }}</h2>
+  <ul>{{ secondary }}</ul>
+{% endif %}
+
+{# Component Library Specific (javascript version) #}
+{% if not primary %}
+{{ attach_library('minima/local-tasks') }}
+  <div id="local-tasks" class="local-tasks no-js">
+    <ul class="local-tasks__nav">
+      {% for key, local_task in local_tasks %}
+        {% include "@molecules/local-tasks/_local-task.twig" with {
+          local_task_link: "#local-task-" ~ key,
+          local_task_text: local_task.local_task_text,
+        } %}
+      {% endfor %}
+    </ul>
+    {% for key, local_task in local_tasks %}
+      <div class="local-tasks__local-task{% if key == 0 %} is-active{% endif %}">
+        <div id="local-task-{{ key }}" class="local-tasks__content">
+          <p>{{ local_task.local_task_content }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

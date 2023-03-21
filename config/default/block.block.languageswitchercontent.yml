@@ -1,0 +1,22 @@
+uuid: 78f96e77-a1b3-4cc0-b574-476a36fed84b
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - minima
+_core:
+  default_config_hash: 6uBPW1vmqlXORD45UCeGVHzUP6-tt2buPzcJDHj53-I
+id: languageswitchercontent
+theme: minima
+region: header
+weight: -5
+provider: null
+plugin: 'language_block:language_content'
+settings:
+  id: 'language_block:language_content'
+  label: 'Language switcher (Content)'
+  label_display: '0'
+  provider: language
+visibility: {  }

@@ -1,0 +1,26 @@
+uuid: 2b90a1af-4675-49dc-8862-42b72120762f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.document.field_document
+    - paragraphs.paragraphs_type.document
+  module:
+    - media_library
+_core:
+  default_config_hash: w7iXxjh1CYCdWNcwIGKDiLyuWMk2myo-JhkUyta3g_E
+id: paragraph.document.default
+targetEntityType: paragraph
+bundle: document
+mode: default
+content:
+  field_document:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

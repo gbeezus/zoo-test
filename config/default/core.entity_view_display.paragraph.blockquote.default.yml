@@ -1,0 +1,32 @@
+uuid: 726bb042-13c0-4f4f-88db-325f66969255
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockquote.field_quote
+    - field.field.paragraph.blockquote.field_source
+    - paragraphs.paragraphs_type.blockquote
+_core:
+  default_config_hash: hsmtbCUsON8R3ht5gQAbYQ6bbJGS9MBSn8sDy-1mHQg
+id: paragraph.blockquote.default
+targetEntityType: paragraph
+bundle: blockquote
+mode: default
+content:
+  field_quote:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_source:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,101 @@
+$checkbox-size: calc(15em / 16);
+$checkbox-margin: calc((15em / -16) - 1px);
+
+.form-item--checkboxes {
+  @include list-reset;
+}
+
+.form-item__checkbox--item,
+.form-item__toggle--item {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
+  @include large {
+    align-items: flex-start;
+  }
+}
+
+input[type='checkbox'] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+
+  &:checked + .form-item__checkbox--pseudo-control {
+    background-color: var(--color--primary--p-100);
+  }
+
+  &:disabled + .form-item__checkbox--pseudo-control {
+    border-color: var(--color--border--light);
+  }
+
+  &:disabled:checked + .form-item__checkbox--pseudo-control {
+    background-color: var(--color--component--form--background);
+  }
+}
+
+.form-item__checkbox:focus-within {
+  .form-item__checkbox--pseudo-control::before {
+    content: ' ';
+    border: 0;
+    border-radius: 0.125em;
+    box-shadow: 0 0 0 0.125em var(--color--ui--focus);
+    height: 1.25em;
+    width: 1.25em;
+    position: absolute;
+    top: -0.25em;
+    left: -0.25em;
+  }
+}
+
+.form-item__checkbox--checkmark {
+  color: var(--color--core--background);
+  display: inline-block;
+  height: $checkbox-size;
+  width: $checkbox-size;
+  margin: 0;
+  position: absolute;
+  top: -0.375em;
+  left: -1px;
+}
+
+.form-item__checkbox--pseudo-control {
+  align-self: center;
+  border: 2px solid currentColor;
+  display: flex;
+  height: 1em;
+  margin: 0;
+  position: relative;
+  width: 1em;
+}
+
+.form-item__checkbox label,
+.form-item__toggle label {
+  @include minimum-touch-target;
+
+  z-index: 10;
+  position: relative;
+  display: inline-flex;
+  flex-basis: 100%;
+  align-items: center;
+  padding-left: 2em;
+  margin: 0 0 0 -1.5em;
+}
+
+.form-item__description--checkbox {
+  margin: 0 0 0 1.5em;
+}
+
+[dir='rtl'] {
+  .form-item__checkbox label {
+    padding-left: 0;
+    padding-right: 2em;
+    margin: 0 -1.5em 0 0;
+  }
+
+  .form-item__description--checkbox {
+    margin: 0 1.5em 0 0;
+  }
+}

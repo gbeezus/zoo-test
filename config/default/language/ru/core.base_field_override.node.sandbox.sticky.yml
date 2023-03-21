@@ -1,0 +1,4 @@
+label: 'Закреплять вверху списков'
+settings:
+  on_label: Вкл
+  off_label: Выкл

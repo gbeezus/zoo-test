@@ -1,0 +1,34 @@
+uuid: c0f4d05a-00a0-4ab7-9ccc-a6aee08c776a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    standard_html: standard_html
+    expert_html: expert_html
+    plain_text: plain_text
+    alerts: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: LKCxJah2R_7ZYQytiGJkRanSh1D5ZvVrNtQRqPwmBCQ
+id: paragraph.accordion_item.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: accordion_item
+label: Body
+description: 'The formatted text, displayed when the accordion item is expanded.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

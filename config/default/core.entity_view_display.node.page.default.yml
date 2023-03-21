@@ -1,0 +1,63 @@
+uuid: c74fdc93-08f1-429e-803a-9f382b44d3b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.field_metatag_image
+    - field.field.node.page.field_paragraphs
+    - field.field.node.page.field_primary_image
+    - field.field.node.page.field_show_feedback_form
+    - field.field.node.page.field_summary
+    - node.type.page
+  module:
+    - entity_reference_revisions
+    - user
+_core:
+  default_config_hash: hcywRo1FCuZ5hcIlMnHh00GDDx1X1IxGW5SB7xwTd-U
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_paragraphs:
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_primary_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: image_paragraph_full_width
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_summary:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  content_moderation_control: true
+  field_metatag_image: true
+  field_show_feedback_form: true
+  langcode: true
+  search_api_excerpt: true

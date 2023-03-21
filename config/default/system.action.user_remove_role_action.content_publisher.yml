@@ -1,0 +1,16 @@
+uuid: 2fe7712a-437f-449f-a2cf-b41954a6e25a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_publisher
+  module:
+    - user
+_core:
+  default_config_hash: slAVtKIWeHwVIssfSCjloPit08YPNO3-G3mYjflwSks
+id: user_remove_role_action.content_publisher
+label: 'Remove the Content publisher role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: content_publisher

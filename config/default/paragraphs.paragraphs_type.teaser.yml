@@ -1,0 +1,12 @@
+uuid: 9828051c-f0b1-4f77-b414-147455850b53
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cjOFEyY6_MV-thxnXoOolSOfhz9pAxw92Muv0uX6Tm0
+id: teaser
+label: 'Teaser / single featured item'
+icon_uuid: null
+icon_default: null
+description: 'Stub for teaser / single featured item paragraph type.'
+behavior_plugins: {  }

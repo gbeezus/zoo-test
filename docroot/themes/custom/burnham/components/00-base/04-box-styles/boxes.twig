@@ -1,0 +1,24 @@
+{% set boxes_base_class = "minima-demo" %}
+
+<div {{ bem('boxes', '', boxes_base_class) }}>
+  {% include "@atoms/text/headings/_heading.twig" with {
+    heading_level: 2,
+    heading: boxes_heading,
+  } %}
+
+  {% for variable in variables %}
+    {% set variable_machine = variable.variable_heading|lower|replace({' ': '-'}) %}
+    {% include "@atoms/text/headings/_heading.twig" with {
+      heading_level: 3,
+      heading: variable.variable_heading,
+    } %}
+    <ul {{ bem('list', [variable_machine], boxes_base_class) }} data-theme="{{ variable_machine }}">
+      {% for style in variable.styles %}
+        {% set style_machine = style.name|lower|replace({' ': '-'}) %}
+        <li {{ bem("box", [variable_machine ~ '-' ~ style_machine], boxes_base_class) }}>
+          <span {{ bem("title", '', boxes_base_class) }}>{{ style.name }}</span> <br/>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</div>

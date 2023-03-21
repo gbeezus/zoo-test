@@ -1,0 +1,12 @@
+_core:
+  default_config_hash: 3rzyFo6g2_hf85LjwJFBU7aR__VaLC_iz1Xs599CUIM
+site_key: 'this is stored in the secrets file'
+secret_key: 'this is stored in the secrets file'
+verify_hostname: false
+use_globally: false
+widget:
+  theme: light
+  type: image
+  size: ''
+  tabindex: 0
+  noscript: false

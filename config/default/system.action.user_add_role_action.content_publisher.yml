@@ -1,0 +1,16 @@
+uuid: 67f2efe5-4e81-41b7-b6ca-62a7067e13ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_publisher
+  module:
+    - user
+_core:
+  default_config_hash: uLfXFFP-qAYZouLQOExTFP0Et0yncoYgfJxLEn7lwOQ
+id: user_add_role_action.content_publisher
+label: 'Add the Content publisher role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: content_publisher

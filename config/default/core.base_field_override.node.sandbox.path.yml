@@ -1,0 +1,22 @@
+uuid: 5499b4fc-cb28-4f90-b262-b269ba1899b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sandbox
+  module:
+    - path
+_core:
+  default_config_hash: kjAfN5TE-W5a7iYu0Xhm589jBm5edYp4fHL6YQbxyhA
+id: node.sandbox.path
+field_name: path
+entity_type: node
+bundle: sandbox
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

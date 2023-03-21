@@ -1,0 +1,19 @@
+uuid: d82d46e9-04c9-4182-8e46-853b3f195599
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sandbox
+  module:
+    - content_translation
+    - node
+_core:
+  default_config_hash: U5y8eIgDAS-dpO37BvgUZ9aDWlpa43-qMgp_2Z4-HKg
+id: content_publisher
+label: 'Content publisher'
+weight: 5
+is_admin: null
+permissions:
+  - 'revert sandbox revisions'
+  - 'translate editable entities'
+  - 'use standard transition publish'

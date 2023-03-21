@@ -1,0 +1,20 @@
+uuid: 1ade9379-b6d7-42f1-9cc9-9ca426948391
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.sign_up_form
+_core:
+  default_config_hash: Fhbj9S2w8ItFq3bm3zI2SY1W1fy0JW8uPdSBXpVN2m8
+id: paragraph.sign_up_form.created
+field_name: created
+entity_type: paragraph
+bundle: sign_up_form
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

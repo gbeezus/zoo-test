@@ -1,0 +1,12 @@
+uuid: e77fa6f7-a0a5-453d-93c2-be2714bc7665
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: 0T_4X9Ql8k4oWjD1m0VxdG8BaH7fyv1Uhwt981cN1x4
+id: paragraph.cta_image
+label: 'CTA Image'
+targetEntityType: paragraph
+cache: true

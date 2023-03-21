@@ -1,0 +1,76 @@
+{% for name, item in theme.typography['font-family'] %}
+
+  {% set stack = item.stack|replace({'/\\/' : ""})  %}
+  {% set font_family = 'font-family: ' ~ stack ~ ';' %}
+
+  <div class="minima-storybook-font">
+    <h3 class="minima-storybook-font__family" style='{{font_family}}'>
+      {{item.name}}
+    </h3>
+
+    {% for key, weight in theme.typography['font-weight'] %}
+      {% set font_weight = 'font-weight: ' ~ weight ~ ';' %}
+
+      {% set preview_style = 'font-style: normal;' ~ font_weight ~ font_family %}
+
+      <div class="minima-storybook-font__item">
+        <div class="minima-storybook-font__preview-character" style='{{preview_style}}'>AaBbCc</div>
+        <div class="minima-storybook-font__preview" style='{{preview_style}}'>
+          {{ example_characters }}
+        </div>
+        <div class="minima-storybook-font__preview-meta">
+          <div class="minima-storybook-font__name">{{item.name }}</div>
+          <div class="minima-storybook-font__weight">
+            <span class="minima-storybook-font__label">Weight:</span>
+            {{ weight }}
+          </div>
+          <div class="minima-storybook-font__style">
+            <span class="minima-storybook-font__label">Style:</span>
+            {{ stack }}
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
+    {% if item.expanded > 100 %}
+      {% set expanded_style = 'font-style: normal; font-weight: normal;' ~ font_family ~ 'font-stretch: semi-expanded; font-variation-settings: "wdth" ' ~ item.expanded %}
+      <div class="minima-storybook-font__item">
+        <div class="minima-storybook-font__preview-character" style='{{expanded_style}}'>AaBbCc</div>
+        <div class="minima-storybook-font__preview" style='{{expanded_style}}'>
+          {{ example_characters }}
+        </div>
+        <div class="minima-storybook-font__preview-meta">
+          <div class="minima-storybook-font__name">{{item.name }}</div>
+          <div class="minima-storybook-font__weight">
+            <span class="minima-storybook-font__label">Width:</span>
+            {{ item.expanded }}
+          </div>
+          <div class="minima-storybook-font__style">
+            <span class="minima-storybook-font__label">Style:</span>
+            {{ stack }}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    {% if item.condensed < 100 %}
+      {% set condensed_style = 'font-style: normal; font-weight: normal;' ~ font_family ~ 'font-stretch: semi-condensed; font-variation-settings: "wdth" ' ~ item.condensed %}
+      <div class="minima-storybook-font__item">
+        <div class="minima-storybook-font__preview-character" style='{{condensed_style}}'>AaBbCc</div>
+        <div class="minima-storybook-font__preview" style='{{condensed_style}}'>
+          {{ example_characters }}
+        </div>
+        <div class="minima-storybook-font__preview-meta">
+          <div class="minima-storybook-font__name">{{item.name }}</div>
+          <div class="minima-storybook-font__weight">
+            <span class="minima-storybook-font__label">Width:</span>
+            {{ item.condensed }}
+          </div>
+          <div class="minima-storybook-font__style">
+            <span class="minima-storybook-font__label">Style:</span>
+            {{ stack }}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endfor %}

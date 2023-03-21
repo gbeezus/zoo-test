@@ -1,0 +1,42 @@
+display:
+  default:
+    display_title: Máster
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+          tags:
+            previous: ‹‹
+            next: ››
+      fields:
+        field_title:
+          label: Título
+        status:
+          settings:
+            format_custom_true: Publicado
+            format_custom_false: 'Sin publicar'
+        langcode:
+          label: Idioma
+        changed:
+          label: Actualizado
+        operations:
+          label: Operaciones
+      filters:
+        field_title_value:
+          expose:
+            label: Título
+        langcode:
+          expose:
+            label: Idioma
+  page_1:
+    display_title: Página

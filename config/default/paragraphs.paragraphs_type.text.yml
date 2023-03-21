@@ -1,0 +1,12 @@
+uuid: c4b98ae1-8324-4469-9492-11cb31b548d0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: WZG4pU8WawQz4fLtsg8jTxUxkRIZZPqyUTIfjpzMpQU
+id: text
+label: Text
+icon_uuid: null
+icon_default: null
+description: 'Allows entering text via a rich text editor.'
+behavior_plugins: {  }

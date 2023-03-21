@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - is_rtl: true if we are viewing a page in a RTL language.
+ * - links: Breadcrumb trail items.
+ */
+#}
+{% set breadcrumb__base_class = 'breadcrumb' %}
+{% if links %}
+  <nav aria-labelledby='system-breadcrumb' {% if is_rtl %}dir="rtl"{% endif %}>
+    <h2 {{ bem('visually-hidden') }} id='system-breadcrumb'>{{ 'Breadcrumb'|t }}</h2>
+    <ol {{ bem(breadcrumb__base_class) }}>
+      {% for link in links %}
+        <li {{ bem('item', [], breadcrumb__base_class) }}>
+          {{ link }}
+        </li>
+      {% endfor %}
+    </ol>
+  </nav>
+{% endif %}

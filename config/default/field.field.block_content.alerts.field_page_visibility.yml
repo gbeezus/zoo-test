@@ -1,0 +1,30 @@
+uuid: 7fd4a403-3d84-486a-b41d-49abc220a0f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alerts
+    - field.storage.block_content.field_page_visibility
+  module:
+    - custom_add_another
+    - link
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: Oebv36QcHQkAtNfMjBIxVBsOhY3-omNBb-u4mqypAac
+id: block_content.alerts.field_page_visibility
+field_name: field_page_visibility
+entity_type: block_content
+bundle: alerts
+label: Pages
+description: 'Enter <front> to display on the front page only.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 1
+field_type: link

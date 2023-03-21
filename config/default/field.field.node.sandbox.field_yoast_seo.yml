@@ -1,0 +1,28 @@
+uuid: 9d7fe6e4-a9bb-4658-a402-6ab9e6689104
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yoast_seo
+    - node.type.sandbox
+  module:
+    - custom_add_another
+    - yoast_seo
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: nFiIMqKPp91Q1QlaJ697LYyUSOz9ZLE-VQdaOdELCso
+id: node.sandbox.field_yoast_seo
+field_name: field_yoast_seo
+entity_type: node
+bundle: sandbox
+label: 'Real-time SEO'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

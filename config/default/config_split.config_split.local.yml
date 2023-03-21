@@ -1,0 +1,29 @@
+uuid: 7c1c3482-9202-4adf-a36f-d4c62a9af46f
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: j9lScWp41sT6HpsNv4umA-PIX3T6KoN0Fl-N014V_XU
+id: local
+label: Local
+description: 'Configuration split for local environments.'
+weight: 0
+stackable: false
+storage: folder
+folder: ../config/local
+module:
+  dblog: 0
+  devel: 0
+  search_api_solr_admin: 0
+  stage_file_proxy: 0
+  search_api_solr_devel: 0
+theme: {  }
+complete_list:
+  - automated_cron.settings
+  - dblog.settings
+  - system.logging
+  - system.performance
+partial_list:
+  - search_api.index.content
+  - search_api.server.docker
+  - search_api_attachments.admin_config

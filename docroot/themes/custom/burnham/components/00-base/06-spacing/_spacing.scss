@@ -1,0 +1,46 @@
+.v-spacing--standard {
+  margin-bottom: minima-space(400);
+  margin-top: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include small {
+    margin-bottom: minima-space(500);
+  }
+}
+
+%minima-spacing-demo {
+  background-color: var(--color--primary--p-100);
+
+  display: block;
+}
+
+@each $key, $value in theme-get-map('space') {
+  .minima-spacing-demo--#{$key} {
+    @extend %minima-spacing-demo;
+    @include square-container(minima-space($key));
+  }
+}
+
+.minima-spacing-demo--standard {
+  @extend %minima-spacing-demo;
+
+  @include square-container(minima-space(400));
+
+  @include small {
+    @include square-container(minima-space(500));
+  }
+}
+
+.minima-spacing-demo--table {
+  td,
+  th {
+    @include border-style();
+
+    margin: 0;
+    padding: minima-space(50);
+    text-align: left;
+  }
+}

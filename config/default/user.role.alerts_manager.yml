@@ -1,0 +1,30 @@
+uuid: ccc67396-6180-42a0-b724-c0769e255f49
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.alerts
+    - node.type.sandbox
+  module:
+    - block_content_permissions
+    - filter
+    - node
+    - system
+_core:
+  default_config_hash: h5AT0xovvqYfTt8oKhPKm8K1IRHC1uzsdCeh63UyblI
+id: alerts_manager
+label: 'Alerts manager'
+weight: 3
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'create alerts block content'
+  - 'update any alerts block content'
+  - 'use alerts transition archive_unpublish_'
+  - 'use alerts transition ask_for_review'
+  - 'use alerts transition create_new_draft'
+  - 'use alerts transition publish'
+  - 'use text format alerts'
+  - 'view all revisions'
+  - 'view sandbox revisions'

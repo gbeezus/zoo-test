@@ -1,0 +1,82 @@
+/* local-task Navigation */
+.local-tasks__nav {
+  @include list-reset;
+
+  border-bottom: 1px solid var(--color--border--light);
+
+  @include large {
+    border-left: 1px solid var(--color--border--light);
+    display: flex;
+  }
+}
+
+/* local-task Content (hidden only in full #local-tasks js version) */
+.local-tasks__local-task {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+.local-tasks__content {
+  padding: 1.5rem;
+}
+
+/* No-js fallback */
+.local-tasks.no-js {
+  .local-tasks__local-task.is-active {
+    display: block;
+  }
+}
+
+/* Drupal Local Tasks variant */
+.local-tasks__nav--local-tasks {
+  padding: 0;
+}
+
+.local-tasks__link,
+.local-tasks__link--local-tasks {
+  background-color: var(--color--component--local-tasks--background);
+  border: 1px solid var(--color--border--extra-light);
+  border-bottom: 0;
+  color: var(--color--core--text);
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1em 2.4em;
+  //   padding: 0.3em 1.5em; ?
+  text-align: center;
+  text-decoration: none;
+  transition: color minima-duration(shortest) minima-ease(ease-in-out);
+
+  @include large {
+    border-bottom: 1px solid var(--color--border--extra-light);
+    border-left: 0;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.6em 1.7em;
+    position: relative;
+    top: 1px;
+    width: auto;
+  }
+
+  &:hover {
+    background-color: var(--color--component--local-tasks--background);
+    color: var(--color--ui--hover);
+  }
+
+  &.is-active {
+    background-color: var(--color--core--text);
+    border: 1px solid var(--color--core--text);
+    color: var(--color--core--text-reversed-out);
+
+    @include large {
+      background-color: var(--color--component--local-tasks--background-large);
+      border: 1px solid var(--color--border--extra-light);
+      border-bottom: 1px solid var(--color--border--extra-light);
+      border-left: 0;
+      color: var(--color--core--text);
+    }
+  }
+}

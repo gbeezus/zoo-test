@@ -1,0 +1,36 @@
+uuid: ce20a92c-5387-48c3-837b-44a2d1c3753f
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+id: config_sync.module.focal_point
+snapshotSet: config_sync
+extensionType: module
+extensionName: focal_point
+items:
+  -
+    collection: ''
+    name: crop.type.focal_point
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: focal_point
+      label: 'Focal point'
+      description: 'Crop type used by Focal point module.'
+      aspect_ratio: ''
+      soft_limit_width: null
+      soft_limit_height: null
+      hard_limit_width: null
+      hard_limit_height: null
+      _core:
+        default_config_hash: WMpvWBAte0ZbTumYA46YSXn2rXF01xLV6TTbRxlcYRI
+  -
+    collection: ''
+    name: focal_point.settings
+    data:
+      crop_type: focal_point
+      default_value: '50,50'
+      _core:
+        default_config_hash: 8JOAPEbjHMB4rDFCsu3EXEx6L2UDQ5SSDyN0d7S0Ic0

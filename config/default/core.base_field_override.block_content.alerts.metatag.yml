@@ -1,0 +1,20 @@
+uuid: 157d7a30-d87a-4294-a021-8c8c84faf3c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alerts
+_core:
+  default_config_hash: RUGWlKLeh9HtCTkxBYyLqtt0Dgz75G3n_-rVMIaB0h8
+id: block_content.alerts.metatag
+field_name: metatag
+entity_type: block_content
+bundle: alerts
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

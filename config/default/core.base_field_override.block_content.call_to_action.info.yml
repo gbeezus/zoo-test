@@ -1,0 +1,20 @@
+uuid: 891b1e82-f015-401e-9437-4dd7ca43e38b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action
+_core:
+  default_config_hash: rovlixRPIR8OhOjFh9Ktcr8jHxk_IHq6fWnGOGNgR08
+id: block_content.call_to_action.info
+field_name: info
+entity_type: block_content
+bundle: call_to_action
+label: 'Block description'
+description: 'Give this block a description that tells content creators exactly what it is.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,27 @@
+uuid: 8c4fe057-8a69-4d01-a41a-d99bb17d9d22
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.metro-brand-menu
+  module:
+    - system
+  theme:
+    - minima
+_core:
+  default_config_hash: HzfgCggcv18mjAN97Q1kcjFXtZ0suWr-ORwj1HI5D64
+id: metrobrandmenu
+theme: minima
+region: global_footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:metro-brand-menu'
+settings:
+  id: 'system_menu_block:metro-brand-menu'
+  label: 'Metro Brand Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

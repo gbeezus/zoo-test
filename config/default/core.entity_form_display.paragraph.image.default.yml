@@ -1,0 +1,57 @@
+uuid: 1680138f-ce2d-47e6-b26c-61ab15f437a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image.field_alt_text
+    - field.field.paragraph.image.field_caption
+    - field.field.paragraph.image.field_image_display
+    - field.field.paragraph.image.field_media
+    - paragraphs.paragraphs_type.image
+  module:
+    - media_library
+    - text
+_core:
+  default_config_hash: AVgBs3X4RPk2_jVkYlaLDBRsbftxnTf8PHcZmvXombs
+id: paragraph.image.default
+targetEntityType: paragraph
+bundle: image
+mode: default
+content:
+  field_alt_text:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_caption:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_image_display:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_media:
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

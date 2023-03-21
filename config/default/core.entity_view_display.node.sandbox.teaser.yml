@@ -1,0 +1,46 @@
+uuid: 46387a66-06b0-4b8f-9688-5087982ed709
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sandbox.body
+    - field.field.node.sandbox.field_meta_tags
+    - field.field.node.sandbox.field_paragraphs
+    - field.field.node.sandbox.field_yoast_seo
+    - node.type.sandbox
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: B8kP7GTbTAOeCzP0NFubdARZuhRAGzccLeV3CuNB7Yk
+id: node.sandbox.teaser
+targetEntityType: node
+bundle: sandbox
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_meta_tags: true
+  field_paragraphs: true
+  field_yoast_seo: true
+  langcode: true
+  search_api_excerpt: true

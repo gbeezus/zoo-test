@@ -1,0 +1,30 @@
+uuid: 240da23e-32fe-4ac0-85de-b28c51fb11a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_alignment
+    - paragraphs.paragraphs_type.call_to_action
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: UPshvkOdsbBIqlqiXTjgAgDlgOp0ztZxwtU-SDBaGhg
+id: paragraph.call_to_action.field_cta_alignment
+field_name: field_cta_alignment
+entity_type: paragraph
+bundle: call_to_action
+label: Alignment
+description: "Alignment for the text of the CTA, left or center.\r\n\r\nFor full-width blocks, a **right** alignment will move the text of the CTA to the right of the image, and the text will stay left-aligned."
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

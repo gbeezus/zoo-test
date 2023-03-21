@@ -1,0 +1,30 @@
+uuid: 04994aed-bef7-41ca-be8a-bbb39962296f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_style
+    - paragraphs.paragraphs_type.call_to_action
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: O-Yclk1WY6u04tFnKhSuuAGLhcFRX3L_QDam9XlrpFA
+id: paragraph.call_to_action.field_cta_style
+field_name: field_cta_style
+entity_type: paragraph
+bundle: call_to_action
+label: 'CTA style'
+description: 'A Standard-style CTA will have an image above the text. A Full-style CTA will have the text floating on top of a large image or to the right hand side of it.'
+required: false
+translatable: false
+default_value:
+  -
+    value: standard
+default_value_callback: ''
+settings: {  }
+field_type: list_string

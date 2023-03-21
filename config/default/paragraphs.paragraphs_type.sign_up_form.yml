@@ -1,0 +1,12 @@
+uuid: 82fc2220-e0bb-49ea-852b-6aab11bda61a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: bNpWufDo2aDbCcSVZKeA8lUTksNidxq2N6QJWsj_3vc
+id: sign_up_form
+label: 'Sign-up form'
+icon_uuid: null
+icon_default: null
+description: 'Stub for sign-up form paragraph type.'
+behavior_plugins: {  }

@@ -1,0 +1,20 @@
+uuid: e1d5bac5-16d7-4953-b193-d6000044d0ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sandbox
+_core:
+  default_config_hash: goqCiS7Wh-gRWt_NGit25g3jAXlbMwVeqbDm6WGc8EA
+id: node.sandbox.created
+field_name: created
+entity_type: node
+bundle: sandbox
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

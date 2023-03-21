@@ -1,0 +1,65 @@
+uuid: 89a5d567-dc96-4392-a224-cfd63b2b033f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.call_to_action.field_body
+    - field.field.paragraph.call_to_action.field_cta_alignment
+    - field.field.paragraph.call_to_action.field_cta_media
+    - field.field.paragraph.call_to_action.field_cta_style
+    - field.field.paragraph.call_to_action.field_header
+    - field.field.paragraph.call_to_action.field_link
+    - field.field.paragraph.call_to_action.field_link_style
+    - paragraphs.paragraphs_type.call_to_action
+  module:
+    - entity_reference_revisions
+    - link
+    - text
+_core:
+  default_config_hash: XKGqNn6yF4r41cH-W4f-Pyoe5xSjcixf4EDMZ7xbwSY
+id: paragraph.call_to_action.default
+targetEntityType: paragraph
+bundle: call_to_action
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cta_media:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: cta_image
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_header:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_cta_alignment: true
+  field_cta_style: true
+  field_link_style: true
+  search_api_excerpt: true

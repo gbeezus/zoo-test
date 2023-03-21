@@ -1,0 +1,66 @@
+{#
+/**
+ * Available variables:
+ * - icon_base_class - base class name
+ * - icon_modifiers - modifiers for icons (array)
+ * - icon_blockname - blockname prepended to the base classname
+ * - icon_name - the name of the icon
+ * - icon_mirror_rtl - true if the icon should be mirrored in RTL language direction
+ * - icon_title - a11y title
+ * - icon_desc - a11y description
+ * - icon_decorative - boolean to designate that the icon is decorative
+ * - icon_focusable - boolean to set focusable attribute for windows browsers
+ */
+#}
+{% set icon_base_class = icon_base_class|default('icon') %}
+{# If `directory` is defined, set the path relative for Drupal.
+ # Otherwise, set the path relative to the Component Library. #}
+{% set icon_url = components_directory ? '/' ~components_directory ~ '/dist/' %}
+{% set icon_mirror_rtl = icon_mirror_rtl|default(false) %}
+
+{% if icon_modifiers is not iterable %}
+  {% set icon_modifiers=[] %}
+{% endif %}
+
+{% if (icon_mirror_rtl) %}
+  {% set icon_modifiers = icon_modifiers|merge(['mirror-icon']) %}
+{% endif %}
+
+{% set focusable = icon_focusable ? "true" : "false" %}
+
+{# IE 11 support for SVG use - remove if not needed.
+## See also minima.libraries.yml to remove library.
+#}
+{{ attach_library('minima/sprite') }}
+
+{% set title_id = 'title-' ~ icon_name|unique_id %}
+{% set desc_id = 'desc-' ~ icon_name|unique_id %}
+
+<svg {{ bem(icon_base_class, icon_modifiers, icon_blockname, icon_extra_class) }} viewBox="0 0 100 100" focusable="{{ focusable }}"
+
+  {% if is_rtl %}
+    dir="rtl"
+  {% endif %}
+
+  {% if icon_decorative %}
+    aria-hidden="true" role="presentation"
+  {% else %}
+    role="img"
+  {% endif %}
+
+  {% if icon_title %}
+    aria-labelledby="{{ title_id }}"
+  {% endif %}
+
+  {% if icon_desc %}
+    aria-describedby="{{ desc_id }}"
+  {% endif %}
+>
+  {% if icon_title %}
+    <title id="{{ title_id }}">{{ Drupal.t(icon_title) }}</title>
+  {% endif %}
+  {% if icon_desc %}
+    <desc id="{{ desc_id }}">{{ Drupal.t(icon_desc) }}</desc>
+  {% endif %}
+  <use href="{{ icon_url }}icons.svg#{{ icon_name }}"></use>
+</svg>

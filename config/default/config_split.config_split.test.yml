@@ -1,0 +1,20 @@
+uuid: 2f1fb0e3-6c24-40bb-ba62-f2a929eb446e
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: Cw5SH3MbDz2yupQLH1ci2BCsacv78JHIKe8HCpOP6xg
+id: test
+label: Test
+description: 'Configuration split for test environments.'
+weight: 0
+stackable: false
+storage: folder
+folder: ../config/test
+module:
+  shield: 0
+theme: {  }
+complete_list:
+  - system.logging
+  - system.performance
+partial_list: {  }

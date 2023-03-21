@@ -1,0 +1,3 @@
+textfield_label: Default date field
+textfield_attributes: { type: 'date', placeholder: 'MM/DD/YYYY', id: unique_id }
+textfield_description: 'This help text is very useful.'

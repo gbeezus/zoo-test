@@ -1,0 +1,36 @@
+{% set footer_base_class = 'global-footer' %}
+
+<footer {{ bem(footer_base_class) }}>
+  <div {{ bem('top', [], footer_base_class) }}>
+    {{ "Hello, we&rsquo;re Metro"|t }}
+  </div>
+  <div {{ bem('bottom', [], footer_base_class) }}>
+    <div {{ bem('logo', [], footer_base_class) }}>
+      {% block logo %}
+        {% include '@molecules/site-logo/site-logo.twig' with {
+          'logo_link_url':'https://www.oregonmetro.gov/',
+          'logo_src': 'metro-logo-solid.svg',
+          'logo_alt_text': 'Metro',
+          'logo_blockname': 'metro-brand-footer'
+        } %}
+      {% endblock %}
+    </div>
+    <nav {{ bem('menu', [], footer_base_class) }}>
+      {% block menu %}
+        {{ metro_brand_menu }}
+      {% endblock %}
+    </nav>
+    <div {{ bem('venue', [], footer_base_class) }}>
+      {% block venue %}
+        {% if global_footer_venue_url %}
+          <a href="{{ global_footer_venue_url }}">
+            {{ global_footer_venue_name }}
+          </a>
+        {% else %}
+          {{ global_footer_venue_name }}
+        {% endif %}
+      {% endblock %}
+    </div>
+  </div>
+
+</footer>

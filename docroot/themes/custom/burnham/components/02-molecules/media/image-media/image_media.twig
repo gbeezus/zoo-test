@@ -1,0 +1,19 @@
+{#
+  /**
+   * Available variables:
+   * - image_paragraph_alignment (string) - the alignment of the component
+   * - image_paragraph_width (string) - the width of the component, relative to the container
+   * - caption_visible (boolean): whether to print the caption or not
+   * - credit_visible (boolean): whether to print the credit or not
+  */
+#}
+
+{% extends '@atoms/images/figure.twig' %}
+
+{% set figure_base_class = 'image' %}
+{% set figure_modifiers = [image_paragraph_alignment, image_paragraph_width] %}
+{% set figure_blockname = 'media' %}
+
+{% block figure_figcaption %}
+  {% include '@atoms/images/image/_caption.twig' %}
+{% endblock %}

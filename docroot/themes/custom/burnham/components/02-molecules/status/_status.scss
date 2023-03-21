@@ -1,0 +1,27 @@
+.status__list {
+  @include list-reset;
+
+  margin-bottom: minima-base-font-size();
+}
+
+.status {
+  display: block;
+  margin-bottom: minima-space(100);
+  padding: minima-space(100);
+  text-align: center;
+
+  &--warning {
+    color: var(--color--core--text);
+    background-color: var(--color--semantic--warning);
+  }
+
+  &--error {
+    color: var(--color--core--text);
+    background-color: var(--color--semantic--error);
+  }
+
+  &--status {
+    color: var(--color--core--text);
+    background-color: var(--color--semantic--message);
+  }
+}

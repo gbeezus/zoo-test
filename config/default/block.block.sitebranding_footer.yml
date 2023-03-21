@@ -1,0 +1,25 @@
+uuid: 821c8f97-abb0-4062-a9aa-79ea7470fa38
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - minima
+_core:
+  default_config_hash: t09p_ZWJxDUuYnbG_zGNSpxSiptbKSX7f1vY67GGi88
+id: sitebranding_footer
+theme: minima
+region: footer
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

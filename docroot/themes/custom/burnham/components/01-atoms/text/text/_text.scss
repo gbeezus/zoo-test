@@ -1,0 +1,47 @@
+/* Create a mixin for paragraph styles that can be implemented
+ * in components with other classnames.
+*/
+@mixin paragraph($margin: 0 0 1em 0) {
+  margin: $margin;
+  letter-spacing: 0.005rem;
+}
+
+.paragraph,
+p {
+  @include paragraph;
+
+  color: var(--color--core--text);
+
+  &--large {
+    font-size: minima-font-size(30);
+    line-height: minima-line-height(loose);
+  }
+
+  &--small {
+    color: var(--color--component--text--small);
+    font-size: minima-font-size(15);
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+}
+
+.hr,
+hr {
+  @include border-style(standard);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+pre {
+  font-family: minima-font-family(monospace);
+  font-weight: 300;
+}

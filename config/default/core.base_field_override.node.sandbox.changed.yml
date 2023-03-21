@@ -1,0 +1,20 @@
+uuid: 77224971-3466-4ba1-8a0b-dc8522779734
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sandbox
+_core:
+  default_config_hash: TC2XwbJGID2lVwp4stn0xR94EVUhTQjg_ogUNOcNWZs
+id: node.sandbox.changed
+field_name: changed
+entity_type: node
+bundle: sandbox
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

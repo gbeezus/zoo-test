@@ -1,0 +1,12 @@
+uuid: fed5fd46-d349-4f36-bb4b-3ae8ba8147d7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rRjLzKUGF-hmEbGL5-QfP21QffUz8hmNk_sVCPXWuu8
+id: call_to_action
+label: 'Call to action (CTA)'
+icon_uuid: null
+icon_default: null
+description: 'A CTA provides the ability for editors to combine text, related imagery (optional), and an action link or button to provide an enticement for the visitor to take an action.'
+behavior_plugins: {  }

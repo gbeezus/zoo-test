@@ -1,0 +1,36 @@
+- media:
+    output_image_tag: false
+    image_srcset: 'https://placebear.com/200/200 400w, https://placebear.com/287/87 575w, https://placebear.com/383/383 767w, https://placebear.com/450/450 991w, https://placebear.com/600/600 1200w, https://placebear.com/700/700 1400w'
+    image_sizes: '100vw'
+    image_src: 'https://placebear.com/400/180'
+    image_alt: 'A bear at 100% width, a picture tag'
+    image_loading: lazy
+  caption_content: Bears can smell you, even if they aren't looking at you. That's probably why they stay away from us humans.
+  credit:
+    link_content: some website
+- image_paragraph_alignment: left
+  image_paragraph_width: half
+  media:
+    output_image_tag: true
+    image_srcset: 'https://placebear.com/200/200 400w, https://placebear.com/287/87 575w, https://placebear.com/383/383 767w, https://placebear.com/450/450 991w, https://placebear.com/600/600 1200w, https://placebear.com/700/700 1400w'
+    image_sizes: '100vw'
+    image_src: 'https://placebear.com/400/180'
+    image_alt: 'A bear, an half-width and to the right'
+    image_loading: lazy
+  caption_content: Bears at Metro parks are often looking for the Volunteer break room. It is a little known fact that Metro's volunteer bears eagerly consume piles of magazines left behind by staff.
+  credit:
+    link_content: Placebear.com
+    link_url: https://www.placebear.com
+- image_paragraph_alignment: right
+  image_paragraph_width: third
+  media:
+    output_image_tag: false
+    image_srcset: 'https://placebear.com/150/150 400w, https://placebear.com/200/200 575w, https://placebear.com/260/260 767w, https://placebear.com/350/350 991w, https://placebear.com/400/400 1200w, https://placebear.com/500/500 1400w'
+    image_sizes: '100vw'
+    image_src: 'https://placebear.com/400/180'
+    image_alt: 'A bear, this time with the famous picture tag third-width and to the left'
+    image_loading: lazy
+  caption_content: These bears' image deserves a credit, but we aren't printing it just this one time.
+  credit:
+    link_content: Placebear.com
+  credit_visible: false

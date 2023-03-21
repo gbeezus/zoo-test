@@ -1,0 +1,27 @@
+uuid: 7ac00454-bef7-44e4-82d5-e8d23a9f569d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.summary_box
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: e96zWw7Gs9Djxnqney9nfOid5YyLI62eExuT9jAoN08
+id: paragraph.summary_box.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: summary_box
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

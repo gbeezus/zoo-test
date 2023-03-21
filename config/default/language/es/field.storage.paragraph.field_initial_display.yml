@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    0:
+      label: 'Ocultar todo'
+    2:
+      label: 'Expandir todo'

@@ -1,0 +1,29 @@
+uuid: 1c06dfca-2af2-422e-8175-e7e147963faa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alerts
+    - field.storage.block_content.field_visibility
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: i0HEDRCYZ1tKAKDSCwxYchbGRvL_EZY7FG3qGDlf74c
+id: block_content.alerts.field_visibility
+field_name: field_visibility
+entity_type: block_content
+bundle: alerts
+label: Visibility
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '*'
+default_value_callback: ''
+settings: {  }
+field_type: string_long

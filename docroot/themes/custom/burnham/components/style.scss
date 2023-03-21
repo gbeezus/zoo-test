@@ -1,0 +1,13 @@
+// Leaving .scss extensions in place here for globbing
+// stylelint-disable scss/at-import-partial-extension-blacklist
+
+// Libraries
+@import '~normalize.css/normalize';
+
+// Components
+@import 'design-tokens.artifact';
+@import '00-base/**/*.scss';
+@import '01-atoms/**/*.scss';
+@import '02-molecules/**/*.scss';
+@import '03-organisms/**/*.scss';
+@import '04-templates/**/*.scss';

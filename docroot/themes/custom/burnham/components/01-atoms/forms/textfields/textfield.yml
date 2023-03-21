@@ -1,0 +1,34 @@
+- textfield_label: Default input field
+  textfield_attributes:
+    { type: 'text', placeholder: 'Placeholder example', id: unique_id }
+  textfield_description: 'This help text is very useful.'
+- textfield_label: Text field, required,  with placeholder
+  textfield_attributes:
+    {
+      type: 'text',
+      placeholder: 'This field has a placeholder and it is required',
+      required: true,
+    }
+- textfield_label: Disabled Label
+  textfield_attributes:
+    { type: 'text', placeholder: 'Placeholder example', disabled: true }
+- textfield_label: Error Message Field
+  textfield_attributes: { type: 'text', value: 'Entered text' }
+  textfield_modifiers: ['error']
+  textfield_error_text: There was a problem.
+- textfield_label: This field has an icon
+  textfield_attributes: { type: 'text', placeholder: 'Take me to your leader' }
+  textfield_icon: home
+  textfield_icon_title: An icon showing a house
+- textfield_label: This field has an icon and a button
+  textfield_attributes: { type: 'email', placeholder: 'Your email' }
+  textfield_button: Subscribe
+  textfield_icon: email
+  textfield_icon_title: An icon showing an envelope
+- textfield_label: This field has an icon and an error and a button.
+  textfield_attributes: { type: 'text', placeholder: 'Take me to your leader' }
+  textfield_button: Subscribe
+  textfield_icon: email
+  textfield_icon_title: An icon showing an envelope
+  textfield_modifiers: ['error']
+  textfield_error_text: There was a problem.

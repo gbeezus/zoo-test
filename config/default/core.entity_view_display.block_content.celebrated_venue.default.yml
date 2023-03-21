@@ -1,0 +1,31 @@
+uuid: 486299b8-8967-4eac-8fe6-a6f1803f9c02
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.celebrated_venue
+    - field.field.block_content.celebrated_venue.field_link
+  module:
+    - link
+_core:
+  default_config_hash: 2193x4U4cV8Cq-dunDMnXRoLoHQItoi0BDhrzpY70xM
+id: block_content.celebrated_venue.default
+targetEntityType: block_content
+bundle: celebrated_venue
+mode: default
+content:
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

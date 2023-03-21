@@ -1,0 +1,28 @@
+/*
+ * General Variables
+ * Note: colors should go into
+ * and breakpoint related vars into
+ * components/00-base/base/_breakpoints.css
+*/
+
+// From https://github.com/SorkinType/Merriweather/tree/master/fonts/variable
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/Merriweather[opsz,wdth,wght].ttf') format('truetype');
+}
+// Serif italic font
+@font-face {
+  font-family: 'MerriweatherItalic';
+  src: url('../fonts/Merriweather-Italic[opsz,wdth,wght].ttf')
+    format('truetype');
+}
+// From https://github.com/impallari/Encode-Sans
+@font-face {
+  font-family: 'EncodeSans';
+  src: url('../fonts/EncodeSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+// from https://fonts.google.com/specimen/Fira+Code?preview.text_type=custom
+@font-face {
+  font-family: 'FiraCode';
+  src: url('../fonts/FiraCode-VariableFont_wght.ttf') format('truetype');
+}

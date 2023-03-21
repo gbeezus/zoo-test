@@ -1,0 +1,35 @@
+uuid: c526b296-a280-446f-b613-78187c47091e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_embed_code
+    - paragraphs.paragraphs_type.embed_code
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    script: script
+    alerts: '0'
+    standard_html: '0'
+    expert_html: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: Gg-TQNFH4DgWrTUjE97eE3v2zFmiOFh_KXs7y32O3RI
+id: paragraph.embed_code.field_embed_code
+field_name: field_embed_code
+entity_type: paragraph
+bundle: embed_code
+label: 'Embed code'
+description: 'Javascript or iframe embed code'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

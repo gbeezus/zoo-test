@@ -1,0 +1,12 @@
+uuid: 23f861e2-1e2c-4194-a6eb-a4ac48163284
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: BszTTMhpAMDpf2NZOd7OqYhpbgDaCsNnLOTqG4ezdjs
+id: media.image_paragraph_full_width
+label: 'Image Paragraph Full Width'
+targetEntityType: media
+cache: true

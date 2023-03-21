@@ -1,0 +1,15 @@
+uuid: b9660b62-a0bf-4807-a749-e1d3b752c802
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: WpAJD52eCmvkbie08bfUvuLJoIruXQoC81UrYPSH60c
+id: audio
+label: Audio
+description: 'Add an  audio file to the site’s library.'
+source: audio_file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_audio_file
+field_map: {  }

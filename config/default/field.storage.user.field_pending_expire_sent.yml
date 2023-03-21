@@ -1,0 +1,25 @@
+uuid: dcf26080-a16f-4ca5-b975-4302db990e9d
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  enforced:
+    module:
+      - password_policy
+_core:
+  default_config_hash: Duf8OwwFzV6ovc-JGNOWb5KykG9Q6XrQiLw6wYEcxZc
+id: user.field_pending_expire_sent
+field_name: field_pending_expire_sent
+entity_type: user
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: true
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

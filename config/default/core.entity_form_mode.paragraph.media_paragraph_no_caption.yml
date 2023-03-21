@@ -1,0 +1,12 @@
+uuid: 0de91108-08d6-4f49-bb64-d4f469f8b0fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: oJzcOQ9Y6qFYu1tKo3tnddYu6gza9NX2EXVcYRR7JCc
+id: paragraph.media_paragraph_no_caption
+label: 'Media paragraph (no caption)'
+targetEntityType: paragraph
+cache: true

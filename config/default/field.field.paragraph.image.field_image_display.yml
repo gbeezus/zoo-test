@@ -1,0 +1,30 @@
+uuid: 206c9aff-3884-40f5-ae95-76be811dadef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_display
+    - paragraphs.paragraphs_type.image
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: A6zw8_3RiKVKiRERdWgFP6NPRJx1mD0WJUkCVp8UqHs
+id: paragraph.image.field_image_display
+field_name: field_image_display
+entity_type: paragraph
+bundle: image
+label: 'Image display'
+description: 'Select how the image should be displayed.'
+required: true
+translatable: false
+default_value:
+  -
+    value: full_content
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: IRYe3o3gy50dQ_5ZEMtNiSBQO-FRs25W6CxuebjRoyk
+features:
+  node_user_picture: true
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: 0
+logo:
+  use_default: 0
+  path: profiles/galaxy/themes/custom/minima/images/logo.svg
+favicon:
+  use_default: 0
+  path: ''

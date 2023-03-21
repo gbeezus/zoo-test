@@ -1,0 +1,20 @@
+uuid: b4da11fd-5d19-4619-a7a6-8793d024d43e
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.feedback_form
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: WoKR4QkvWWfDEDm1Xv-8BvRuCY3rf5MjmiDgyfX4yJg
+id: paragraph.feedback_form
+target_entity_type_id: paragraph
+target_bundle: feedback_form
+default_langcode: site_default
+language_alterable: true

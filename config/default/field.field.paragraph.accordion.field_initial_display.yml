@@ -1,0 +1,30 @@
+uuid: 8091d942-1ecb-4be3-981b-a6d1d81c0dc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_initial_display
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: Aezs9ZoTgirZeBAP470vIdB0y4S2mJ03ErL32PrIe1g
+id: paragraph.accordion.field_initial_display
+field_name: field_initial_display
+entity_type: paragraph
+bundle: accordion
+label: 'Initial display'
+description: 'Set the default state for this accordion when a page is first loaded.'
+required: true
+translatable: false
+default_value:
+  -
+    value: expanded
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,61 @@
+// These styles only affect the object/box styles demo page in the component library
+.minima-demo__boxes .minima-demo__list li {
+  margin: 0 2rem 2rem 0;
+}
+
+.minima-demo__box {
+  @extend %minima-demo-item;
+
+  align-items: flex-end;
+  display: flex;
+}
+
+// Style Box-border demos
+$box-border-styles: (
+  light: light,
+  standard: standard,
+  dark---form-field: dark,
+  primary-bold---cta: primary-bold,
+);
+
+@each $name, $value in $box-border-styles {
+  .minima-demo__box--box-border {
+    &-#{$name} {
+      border: minima-box-border($value);
+    }
+  }
+}
+
+// Style Box-shadow demos
+$box-shadow-styles: (
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+);
+
+@each $name, $value in $box-shadow-styles {
+  .minima-demo__box--box-shadow {
+    &-#{$name} {
+      box-shadow: minima-box-shadow($value);
+    }
+  }
+}
+
+// Style Border radius demos
+$border-radius-styles: (
+  minima-standard-0: 0,
+  small: sm,
+  medium: md,
+  large: lg,
+);
+
+@each $name, $value in $border-radius-styles {
+  .minima-demo__box--border-radius {
+    &-#{$name} {
+      border-radius: minima-border-radius($value);
+    }
+  }
+}

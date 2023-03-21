@@ -1,0 +1,44 @@
+uuid: 134174aa-e8ca-46e3-9340-3c09f77b28ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - addtoany
+id: config_sync.module.addtoany
+snapshotSet: config_sync
+extensionType: module
+extensionName: addtoany
+items:
+  -
+    collection: ''
+    name: addtoany.settings
+    data:
+      buttons_size: 32
+      additional_html: "<a class=\"a2a_button_email\"></a>\r\n<a class=\"a2a_button_facebook\"></a>\r\n<a class=\"a2a_button_linkedin\"></a>\r\n<a class=\"a2a_button_twitter\"></a>"
+      additional_css: ''
+      additional_js: ''
+      universal_button: default
+      custom_universal_button: ''
+      universal_button_placement: before
+      entities:
+        media: 1
+        node: 1
+        comment: 1
+        block_content: 0
+        entity_embed_fake_entity: 0
+        file: 0
+        menu_link_content: 0
+        path_alias: 0
+        redirect: 0
+        search_api_task: 0
+        shortcut: 0
+        taxonomy_term: 0
+        user: 0
+        webform_submission: 0
+        content_moderation_state: 0
+        crop: 0
+        scheduled_transition: 0
+        paragraph: 0
+      no_3p: true
+      _core:
+        default_config_hash: tv5HVpGuLTAz9-KIhF2cKfLe4hvXDsV0WazFEUSZwcg

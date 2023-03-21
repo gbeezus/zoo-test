@@ -1,0 +1,20 @@
+uuid: d6aeb9d2-9793-487f-97bd-522c17cae0ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alerts
+_core:
+  default_config_hash: FE1mw5942XRhmf5pdYMpLtnZAAGghGVciNm7Ipoa5d8
+id: block_content.alerts.changed
+field_name: changed
+entity_type: block_content
+bundle: alerts
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

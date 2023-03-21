@@ -1,0 +1,30 @@
+uuid: f7cba21d-46c6-4d04-a2a1-fb0306b153fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_style
+    - paragraphs.paragraphs_type.call_to_action
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: lKDlJoK17cBAxG2QlsEaM0LP2oy73WHcOk7fC1pL5-0
+id: paragraph.call_to_action.field_link_style
+field_name: field_link_style
+entity_type: paragraph
+bundle: call_to_action
+label: 'Link style'
+description: 'Select whether the CTA link should be displayed as button or link.'
+required: true
+translatable: false
+default_value:
+  -
+    value: link
+default_value_callback: ''
+settings: {  }
+field_type: list_string

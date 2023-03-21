@@ -1,0 +1,20 @@
+uuid: 08a41f2d-70a5-4932-8bf3-75cf6714b092
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.video
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: e2EL2oAu1f6hhouxbcjedO5hokEgWEv7bNA-IhFB77A
+id: paragraph.video
+target_entity_type_id: paragraph
+target_bundle: video
+default_langcode: site_default
+language_alterable: true

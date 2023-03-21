@@ -1,0 +1,24 @@
+uuid: 35ff15f6-44cd-4dec-b6ea-7994999e0719
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.sign_up_form
+_core:
+  default_config_hash: sQF4BnJP5aqB77yLAdaqlxY-yMajGOcZ50_rOOTY0xk
+id: paragraph.sign_up_form.status
+field_name: status
+entity_type: paragraph
+bundle: sign_up_form
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

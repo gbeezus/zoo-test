@@ -1,0 +1,18 @@
+uuid: 72e36408-3f2a-431d-bac0-597548db767b
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_ignore
+id: config_sync.module.config_ignore
+snapshotSet: config_sync
+extensionType: module
+extensionName: config_ignore
+items:
+  -
+    collection: ''
+    name: config_ignore.settings
+    data:
+      ignored_config_entities: {  }
+      _core:
+        default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

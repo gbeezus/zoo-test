@@ -1,0 +1,34 @@
+uuid: 4ee8bf97-7cfd-4ca7-bc7c-dfe595db5847
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.summary_box
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    standard_html: standard_html
+    plain_text: plain_text
+    alerts: '0'
+    expert_html: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: FvtkUY_S_uDlHLuVCuWbbqXIDiZ5suEYdayUTc1giVk
+id: paragraph.summary_box.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: summary_box
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

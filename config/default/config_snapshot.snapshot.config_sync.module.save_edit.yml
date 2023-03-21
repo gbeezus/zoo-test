@@ -1,0 +1,24 @@
+uuid: acf241e6-40bc-442e-8184-75c3ed6c3d4a
+langcode: en
+status: true
+dependencies:
+  module:
+    - save_edit
+id: config_sync.module.save_edit
+snapshotSet: config_sync
+extensionType: module
+extensionName: save_edit
+items:
+  -
+    collection: ''
+    name: save_edit.settings
+    data:
+      button_value: 'Save & Edit'
+      button_weight: '-1'
+      dropbutton: '1'
+      hide_default_save: '0'
+      unpublish: '0'
+      unpublish_new_only: '0'
+      node_types: {  }
+      _core:
+        default_config_hash: nNcqzC75Ga_iQShU0PBJRKk48eiw1ArP7A3xAL5Lveg

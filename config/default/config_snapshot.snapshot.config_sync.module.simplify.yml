@@ -1,0 +1,24 @@
+uuid: d597c0b3-4f6a-466f-bf04-e816700d2e8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - simplify
+id: config_sync.module.simplify
+snapshotSet: config_sync
+extensionType: module
+extensionName: simplify
+items:
+  -
+    collection: ''
+    name: simplify.global
+    data:
+      simplify_admin: false
+      simplify_nodes_global: {  }
+      simplify_users_global: {  }
+      simplify_comments_global: {  }
+      simplify_taxonomies_global: {  }
+      simplify_blocks_global: {  }
+      simplify_profiles_global: {  }
+      _core:
+        default_config_hash: omWr4s_-ZB9DeG-rP5oY4s3Pm2uiK-guRhGg0_DHHpM

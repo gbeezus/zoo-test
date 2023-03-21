@@ -1,0 +1,10 @@
+uuid: 2933cf1b-1d20-4bbd-921b-1dec99c79650
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: GpCmVB78oc4IFjprqYOZi3npdhWlPGeOjFP6rI5YC1E
+id: metro-brand-menu
+label: 'Metro Brand Menu'
+description: 'Metro brand menu appearing in the global footer'
+locked: false

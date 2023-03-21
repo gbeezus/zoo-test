@@ -1,0 +1,36 @@
+uuid: 2c68ff7d-d846-44a4-8744-46b510f59feb
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs_type_permissions
+    - system
+_core:
+  default_config_hash: d9PHWktzHfAmKWEu_XeIxV6ENw2K3tcNookDStGvYcs
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'use search_api_autocomplete for search_content'
+  - 'view media'
+  - 'view paragraph content accordion'
+  - 'view paragraph content accordion_item'
+  - 'view paragraph content audio'
+  - 'view paragraph content blockquote'
+  - 'view paragraph content call_to_action'
+  - 'view paragraph content document'
+  - 'view paragraph content dynamic_list'
+  - 'view paragraph content embed_code'
+  - 'view paragraph content feedback_form'
+  - 'view paragraph content gallery'
+  - 'view paragraph content image'
+  - 'view paragraph content sign_up_form'
+  - 'view paragraph content summary_box'
+  - 'view paragraph content tab'
+  - 'view paragraph content tabs'
+  - 'view paragraph content teaser'
+  - 'view paragraph content text'
+  - 'view paragraph content video'

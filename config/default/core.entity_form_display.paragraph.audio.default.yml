@@ -1,0 +1,26 @@
+uuid: bc7e4189-d501-40ba-88e1-7d9348260c5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.audio.field_audio_file
+    - paragraphs.paragraphs_type.audio
+  module:
+    - media_library
+_core:
+  default_config_hash: wpurpspm4JKrOvpydCjOP4WmfP7VAVXl_uM9A0VqOmQ
+id: paragraph.audio.default
+targetEntityType: paragraph
+bundle: audio
+mode: default
+content:
+  field_audio_file:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

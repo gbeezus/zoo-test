@@ -1,0 +1,24 @@
+uuid: 0bec271e-f8f8-48b4-8b93-93b5a7d1ea6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - vertical_tabs_config
+id: config_sync.module.vertical_tabs_config
+snapshotSet: config_sync
+extensionType: module
+extensionName: vertical_tabs_config
+items:
+  -
+    collection: ''
+    name: vertical_tabs_config.order
+    data:
+      vertical_tabs_config_options: 1
+      vertical_tabs_config_menu: 2
+      vertical_tabs_config_revision_information: 3
+      vertical_tabs_config_path_settings: 4
+      vertical_tabs_config_author: 5
+      vertical_tabs_config_book: 6
+      vertical_tabs_config_ds_switch_view_mode: 7
+      _core:
+        default_config_hash: 5pBXGrhCu5OEK8eoeKYjp2MSgWaJ1eDDN3gZYl_0JF0

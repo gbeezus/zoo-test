@@ -1,0 +1,27 @@
+uuid: e00b322e-d3a7-4262-9f70-33273e976c8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_source
+    - paragraphs.paragraphs_type.blockquote
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: DCMiCdkv20axsDtZz67LlY1Bh5B4mG6nYx_VjykPBTE
+id: paragraph.blockquote.field_source
+field_name: field_source
+entity_type: paragraph
+bundle: blockquote
+label: Source
+description: 'Optionally, attribute the quote to a source.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

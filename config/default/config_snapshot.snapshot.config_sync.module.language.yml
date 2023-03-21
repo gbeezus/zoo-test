@@ -1,0 +1,137 @@
+uuid: f1824eed-ad18-4741-a1f2-9dec434da81a
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+id: config_sync.module.language
+snapshotSet: config_sync
+extensionType: module
+extensionName: language
+items:
+  -
+    collection: ''
+    name: language.entity.en
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: en
+      label: English
+      direction: ltr
+      weight: -8
+      locked: false
+      _core:
+        default_config_hash: 26bybtWoBbqmCnBdPRPTW2XI2Aibh3OD4xp-cql1DHo
+  -
+    collection: ''
+    name: language.entity.und
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: und
+      label: 'Not specified'
+      direction: ltr
+      weight: 5
+      locked: true
+      _core:
+        default_config_hash: m1xTwHIuhDLYKaPoFmYoFBW-INbnbacdHftgBwmArxc
+  -
+    collection: ''
+    name: language.entity.zxx
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      id: zxx
+      label: 'Not applicable'
+      direction: ltr
+      weight: 6
+      locked: true
+      _core:
+        default_config_hash: pc4359d1gvMZyBPDbjdW8_4XgoNAYWYKXbFSZeL-YiA
+  -
+    collection: ''
+    name: language.mappings
+    data:
+      map:
+        'no': nb
+        pt: pt-pt
+        zh: zh-hans
+        zh-tw: zh-hant
+        zh-hk: zh-hant
+        zh-mo: zh-hant
+        zh-cht: zh-hant
+        zh-cn: zh-hans
+        zh-sg: zh-hans
+        zh-chs: zh-hans
+      _core:
+        default_config_hash: EMWe7Yu4Q5eD-NUfNuQAWGBvYUNZPIinztEtONSmsDc
+  -
+    collection: ''
+    name: language.negotiation
+    data:
+      session:
+        parameter: language
+      url:
+        source: path_prefix
+        prefixes:
+          en: ''
+          es: es
+          zh-hans: zh-hans
+          ru: ru
+          vi: vi
+          ar: ar
+          '': null
+        domains:
+          en: ''
+          es: ''
+          zh-hans: ''
+          ru: ''
+          vi: ''
+          ar: ''
+      selected_langcode: site_default
+      _core:
+        default_config_hash: tCXuI1-A1iCZ0H8lbI1TFf45H5vZwHfX02oirxexZd8
+  -
+    collection: ''
+    name: language.types
+    data:
+      all:
+        - language_interface
+        - language_content
+        - language_url
+      configurable:
+        - language_interface
+        - language_content
+      negotiation:
+        language_url:
+          enabled:
+            language-url: 0
+            language-url-fallback: 1
+        language_interface:
+          enabled:
+            language-user-admin: -20
+            language-selected: -15
+          method_weights:
+            language-user-admin: -20
+            language-url: -19
+            language-session: -18
+            language-browser: -17
+            language-user: -16
+            language-selected: -15
+        language_content:
+          enabled:
+            language-url: -20
+            language-selected: -14
+          method_weights:
+            language-url: -20
+            language-interface: -19
+            language-content-entity: -18
+            language-session: -17
+            language-browser: -16
+            language-user: -15
+            language-selected: -14
+      _core:
+        default_config_hash: jOuXFzTBkGcs3XnlWcLBp3vUCoJV4LvszJjlCiC1Eqg

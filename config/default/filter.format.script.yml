@@ -1,0 +1,19 @@
+uuid: a4f7650c-6649-4ba4-a290-359509db02b4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: H-tCrBKhrOT_y0GbrLZnQZ-396Z44TOSyiJqTTaex3Y
+name: Script
+format: script
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<iframe allow allowfullscreen height loading name referrerpolicy sandbox src srcdoc width> <script async crossorigin defer integrity nomodule referrerpolicy src type> <noscript>'
+      filter_html_help: false
+      filter_html_nofollow: false

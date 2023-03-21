@@ -1,0 +1,15 @@
+{% set li_base_class = 'item' %}
+{% set li_modifiers = item_modifiers %}
+{% set li_blockname = base_class %}
+{% set aria_labelledby_id = current_language.langcode ~ '-' ~ link.langcode %}
+{% set link_attributes = link.attributes|default( {} )|merge({ 'aria-labelledby': aria_labelledby_id, 'lang': link.langcode }) %}
+
+{% extends "@atoms/lists/_list-item.twig" %}
+  {% block list_item_content %}
+    {% include "@atoms/links/link/link.twig" with {
+      'link_content': link.text,
+      'link_url': link.link_url,
+      'link_attributes': link_attributes,
+    } %}
+    <span id="{{ aria_labelledby_id }}" {{ bem(li_blockname, ['local-language-description'], '') }} lang="{{ current_language.langcode }}">{{ link.local_label }}</span>
+  {% endblock %}

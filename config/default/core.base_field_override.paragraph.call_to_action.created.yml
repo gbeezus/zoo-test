@@ -1,0 +1,20 @@
+uuid: e80d44b1-2dc8-4b6e-a28d-0fea0b968aa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.call_to_action
+_core:
+  default_config_hash: VAYbsY9PCMxQ7N8yfe_wLZQnyOW9TEg_64NbHXcuL6Q
+id: paragraph.call_to_action.created
+field_name: created
+entity_type: paragraph
+bundle: call_to_action
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

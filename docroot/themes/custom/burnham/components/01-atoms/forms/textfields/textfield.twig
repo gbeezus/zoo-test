@@ -1,0 +1,89 @@
+{#
+/**
+* Textfields
+*
+* Available variables:
+* - textfield_base_class (string) - the root of the textfield''s CSS class
+* - textfield_modifiers (array) - An array of modifiers for the textfield
+* - textfield_description (string) - A description of the field
+* - textfield_error_text (string) - Error text
+* - textfield_label (string) - Label text
+* - textfield_attributes (object hash) - a hash of attributes for the textfield
+* - label_attributes (object hash) - a hash of attributes for the textfield's label
+* - textfield_button_aria_label (string) - the aria label for a button
+*
+* Available blocks:
+* - ???
+*/
+#}
+
+{% set textfield_base_class = textfield_base_class|default('textfield') %}
+{% set textfield_modifiers = textfield_modifiers|default([]) %}
+{% set textfield_description = textfield_description|default('') %}
+{% set textfield_label = textfield_label|default('') %}
+{% set textfield_attributes = textfield_attributes|default({'autocomplete': 'off'})|merge({}) %}
+{% set label_attributes = label_attributes|default({}) %}
+
+{# Use element id as for attribute in label #}
+{% if not textfield_attributes.id %}
+  {% set textfield_attributes = textfield_attributes|merge({ "id": 'textfield-' ~ random() }) %}
+{% endif %}
+{% set label_attributes = label_attributes|merge({ for: textfield_attributes.id }) %}
+
+{# Add modifiers if the field is required or disabled #}
+{% if textfield_attributes.required %}
+  {% set textfield_modifiers = textfield_modifiers|merge(['required']) %}
+{% endif %}
+{% if textfield_attributes.disabled %}
+  {% set textfield_modifiers = textfield_modifiers|merge(['disabled']) %}
+{% endif %}
+{% if textfield_icon %}
+  {% set textfield_modifiers = textfield_modifiers|merge(['icon', 'icon-' ~ textfield_icon]) %}
+{% endif %}
+
+{# |map is not available in twig.js and add_attributes() was throwing errors for non-string values #}
+{% set label_attributes_string = '' %}
+{% for key,value in label_attributes %}
+  {% set label_attributes_string = label_attributes_string ~ key ~ '="' ~ value ~ '" ' %}
+{% endfor %}
+
+{% set textfield_attributes_string = '' %}
+{% for key,value in textfield_attributes %}
+  {% set textfield_attributes_string = textfield_attributes_string ~ key ~ '="' ~ value ~ '" ' %}
+{% endfor %}
+
+{% set textfield_postscript = textfield_postscript|default() %}
+
+<div {{ bem(textfield_base_class, textfield_modifiers, 'form-item', ['form-item']) }}>
+  <label {{ label_attributes_string }} >
+    {{ textfield_label }}
+    {% if textfield_attributes.required %}
+      <span class="form-item--required-indicator">*</span>
+    {% endif %}
+  </label>
+  <span class="textfield--wrapper">
+    <span {{ bem(textfield_base_class, ['input-wrapper']) }}>
+      {% if textfield_icon %}
+        {% include '@atoms/icons/_icon.twig' with {
+          icon_name: textfield_icon,
+          icon_title: textfield_icon_title
+        } %}
+      {% endif %}
+      <input {{ textfield_attributes_string }} >
+      {{ textfield_postscript }}
+    </span>
+    {% if textfield_button %}
+      {% include '@atoms/buttons/twig/button.twig' with {
+        button_content: textfield_button,
+        button_aria_label: textfield_button_aria_label,
+      } %}
+    {% endif %}
+  </span>
+
+  {% if textfield_description %}
+    <span {{ bem(textfield_base_class, ['description'], 'form-item', ['form-item--description']) }}>{{ textfield_description }}</span>
+  {% endif %}
+  {% if textfield_error_text %}
+    <span {{ bem(textfield_base_class, ['error-text'], 'form-item', ['form-item--error-text']) }}>{{ textfield_error_text }}</span>
+  {% endif %}
+</div>

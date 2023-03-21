@@ -1,0 +1,26 @@
+.social-menu {
+  @include list-reset;
+
+  &__item {
+    margin-bottom: minima-space(50);
+  }
+
+  &__link {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color--core--text);
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: minima-space(100);
+    fill: currentColor;
+  }
+
+  &__text {
+    font-weight: bold;
+  }
+}

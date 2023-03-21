@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    -
+      label: 按钮
+    -
+      label: 链接

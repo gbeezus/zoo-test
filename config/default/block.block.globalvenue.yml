@@ -1,0 +1,23 @@
+uuid: 5f9f687e-e6b2-4958-b093-b252a101dbd7
+langcode: en
+status: true
+dependencies:
+  theme:
+    - minima
+_core:
+  default_config_hash: us29Je2XEtB7tNI6868cH_joqpin5u1pohxuc4A2_ys
+id: globalvenue
+theme: minima
+region: global_footer
+weight: 0
+provider: null
+plugin: 'block_content:8b1edf19-e7b6-4b74-8087-f6c0ba4e2016'
+settings:
+  id: 'block_content:8b1edf19-e7b6-4b74-8087-f6c0ba4e2016'
+  label: 'Global venue'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

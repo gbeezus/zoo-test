@@ -1,0 +1,7 @@
+type_settings:
+  states:
+    draft:
+      label: 草稿
+  transitions:
+    publish:
+      label: 发布

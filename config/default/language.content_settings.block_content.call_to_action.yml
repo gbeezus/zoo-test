@@ -1,0 +1,20 @@
+uuid: b8b42010-b19b-489f-8a25-58ad507e1941
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: k446FItzcHPRM70xRTnbd44_koeCF1JxDcX0fM1aMdQ
+id: block_content.call_to_action
+target_entity_type_id: block_content
+target_bundle: call_to_action
+default_langcode: site_default
+language_alterable: true

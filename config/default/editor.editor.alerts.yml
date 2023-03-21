@@ -1,0 +1,33 @@
+uuid: 2a95083c-6c14-46f0-9708-d466222fdd71
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.alerts
+  module:
+    - ckeditor
+_core:
+  default_config_hash: _QmxsniBz4Vf0ZizDoV0qc94exyYruAHSbIh_xJ4MNI
+format: alerts
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+  plugins:
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: ''
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

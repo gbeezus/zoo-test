@@ -1,0 +1,5 @@
+radios:
+  - title: 'Phasers'
+    checked: 'checked'
+  - title: 'Photon torpedoes'
+  - title: 'Warp core overload'

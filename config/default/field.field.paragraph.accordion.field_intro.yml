@@ -1,0 +1,34 @@
+uuid: 440ced88-64cc-441b-806b-52ffba081154
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_intro
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    standard_html: standard_html
+    expert_html: expert_html
+    plain_text: plain_text
+    alerts: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: '-ZSKYMdBsojh_CmWQgfdY7GO3iKofRRHJaNjMmP9Mf0'
+id: paragraph.accordion.field_intro
+field_name: field_intro
+entity_type: paragraph
+bundle: accordion
+label: Intro
+description: 'Formatted text, displayed to the user.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

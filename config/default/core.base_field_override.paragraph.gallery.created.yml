@@ -1,0 +1,20 @@
+uuid: 9f5c8576-9b40-4f67-99ca-d9658d9e1038
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.gallery
+_core:
+  default_config_hash: 6ttm6BdDhxUHkFFKhOp9o0mLlqrMBiuiB40-MDYKboo
+id: paragraph.gallery.created
+field_name: created
+entity_type: paragraph
+bundle: gallery
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

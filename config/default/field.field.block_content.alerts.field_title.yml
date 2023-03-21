@@ -1,0 +1,27 @@
+uuid: f7492f2a-0fe2-4a63-bf92-3e97b4145150
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alerts
+    - field.storage.block_content.field_title
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: EqLELWQFGaHnYC8NCRu2AH3fw-6cuyZX9pnAZ6QMje4
+id: block_content.alerts.field_title
+field_name: field_title
+entity_type: block_content
+bundle: alerts
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

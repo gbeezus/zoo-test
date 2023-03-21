@@ -1,0 +1,12 @@
+description: This is the description for a set of checkboxes (fieldset).
+checkboxes:
+  - title: Earth
+    checked: true
+    description: This is the description for the first checkbox.
+  - title: Qo'noS
+    required: true
+  - title: Romulus
+    disabled: true
+  - title: Vulcan
+    checked: 'checked'
+    disabled: true

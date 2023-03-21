@@ -1,0 +1,48 @@
+uuid: 94236c4a-547a-4709-bb44-796705d0a8ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.video_url
+    - node.type.sandbox
+  module:
+    - block_content_permissions
+    - content_translation
+    - entity_clone
+    - entity_reference_revisions
+    - google_tag
+    - layout_builder
+    - media
+    - node
+    - redirect
+    - taxonomy
+_core:
+  default_config_hash: _vZj0eD9wGx9C0NZ5DBe5j6pIqKQB7vYJdjTpOTvFSM
+id: content_manager
+label: 'Content manager'
+weight: 6
+is_admin: null
+permissions:
+  - 'administer google tag manager'
+  - 'administer redirect settings'
+  - 'administer redirects'
+  - 'administer taxonomy'
+  - 'clone block entity'
+  - 'clone taxonomy_term entity'
+  - 'configure any layout'
+  - 'create and edit custom blocks'
+  - 'create call_to_action block content'
+  - 'delete any alerts block content'
+  - 'delete any audio media'
+  - 'delete any call_to_action block content'
+  - 'delete any document media'
+  - 'delete any image media'
+  - 'delete any sandbox content'
+  - 'delete any video_url media'
+  - 'delete content translations'
+  - 'delete orphan revisions'
+  - 'revert all revisions'
+  - 'update any call_to_action block content'

@@ -1,0 +1,12 @@
+- output_image_tag: true
+  image_srcset: 'https://placebear.com/400/400 400w, https://placebear.com/575/575 575w, https://placebear.com/767/767 767w, https://placebear.com/991/991 991w, https://placebear.com/1200/1200 1200w, https://placebear.com/1400/1400 1400w'
+  image_sizes: '100vw'
+  image_src: 'https://placebear.com/400/180'
+  image_alt: 'An image of a bear in an image tag.'
+  image_loading: lazy
+- output_image_tag: false
+  image_srcset: 'https://placebear.com/200/200 400w, https://placebear.com/287/87 575w, https://placebear.com/383/383 767w, https://placebear.com/450/450 991w, https://placebear.com/600/600 1200w, https://placebear.com/700/700 1400w'
+  image_sizes: '100vw'
+  image_src: 'https://placebear.com/400/180'
+  image_alt: 'An image of a bear in a picture tag.'
+  image_loading: lazy

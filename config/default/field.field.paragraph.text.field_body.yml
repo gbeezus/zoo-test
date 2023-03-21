@@ -1,0 +1,34 @@
+uuid: 0b4783bf-4aca-4133-8571-278d397d39f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.text
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    standard_html: standard_html
+    expert_html: expert_html
+    plain_text: plain_text
+    alerts: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: kCUceDl7tIro0qini-AOseNzomU-aaNxGxSeoj6q87U
+id: paragraph.text.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: text
+label: Body
+description: 'Formatted text, displayed to the user.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

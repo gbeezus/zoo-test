@@ -1,0 +1,5 @@
+button_base_class: 'button'
+button_content: 'Tertiary button'
+button_theme: 'tertiary'
+button_size: 'medium'
+button_is_disabled: false

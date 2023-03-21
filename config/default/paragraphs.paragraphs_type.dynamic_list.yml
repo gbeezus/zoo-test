@@ -1,0 +1,12 @@
+uuid: 381f422a-c97c-47db-b27b-250d7206dc46
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: solU8iK3iEx3GimgkzYQEQn0L1wVvSlQGK9cb1dh_i4
+id: dynamic_list
+label: 'Dynamic list'
+icon_uuid: null
+icon_default: null
+description: 'Stub for dynamic list paragraph type.'
+behavior_plugins: {  }

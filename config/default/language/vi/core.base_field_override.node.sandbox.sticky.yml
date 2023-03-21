@@ -1,0 +1,4 @@
+label: 'Đưa lên đầu danh sách'
+settings:
+  on_label: Bật
+  off_label: Tắt

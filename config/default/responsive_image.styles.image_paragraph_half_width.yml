@@ -1,0 +1,27 @@
+uuid: 240ae0c3-aa84-474c-854d-4f8cee722b3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.scale_387w
+    - image.style.scale_480w
+    - image.style.scale_675w
+    - image.style.scale_960w
+_core:
+  default_config_hash: 3bUN5nc1FY4K_qVZc_MeR8UTMJP5zqdMzDEE3PPNvBo
+id: image_paragraph_half_width
+label: 'Image Paragraph Half Width'
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '(max-width: 420px) 387px, (max-width: 512px) 480px, 387px'
+      sizes_image_styles:
+        - scale_387w
+        - scale_480w
+        - scale_675w
+        - scale_960w
+breakpoint_group: responsive_image
+fallback_image_style: scale_387w

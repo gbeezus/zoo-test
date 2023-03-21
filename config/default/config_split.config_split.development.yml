@@ -1,0 +1,22 @@
+uuid: 4a9d8128-81f2-4268-b222-2206822ba6fc
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: wmw4reAqP-BC3T7uaQiet8VohZyklrbEvneDp5CmNOw
+id: development
+label: Development
+description: 'Configuration split for development environments.'
+weight: 0
+stackable: false
+storage: folder
+folder: ../config/development
+module:
+  devel: 0
+  search_api_solr_admin: 0
+  search_api_solr_devel: 0
+  shield: 0
+theme: {  }
+complete_list:
+  - system.performance
+partial_list: {  }

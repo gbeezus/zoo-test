@@ -1,0 +1,18 @@
+{% set is_rtl = is_rtl|default(false) %}
+{% if not attributes %}
+<fieldset class="form-item form-item--radio" {% if is_rtl %}dir="rtl"{% endif %}>
+  <legend class="h3">Options as Radio Buttons</legend>
+  <ul class="form-item__radios">
+{% endif %}
+    {% for key, radio in radios %}
+      {% include "@atoms/forms/radio/_radio-item.twig" with {
+        radio_item: radio.title,
+        radio_item_checked: radio.checked,
+        radio_item_disabled: radio.disabled,
+        is_rtl: radio.is_rtl,
+      } %}
+    {% endfor %}
+{% if not attributes %}
+  </ul>
+</fieldset>
+{% endif %}

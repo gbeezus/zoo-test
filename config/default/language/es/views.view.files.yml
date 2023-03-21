@@ -1,0 +1,67 @@
+label: Archivos
+display:
+  default:
+    display_title: Máster
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtro
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+      fields:
+        filename:
+          label: Nombre
+        filemime:
+          label: 'Tipo MIME'
+        filesize:
+          label: Tamaño
+        status:
+          label: Estado
+          settings:
+            format_custom_false: Temporal
+            format_custom_true: Permanente
+        created:
+          label: 'Fecha de subida'
+        count:
+          label: 'Usado en'
+      filters:
+        filename:
+          expose:
+            label: 'Nombre de archivo'
+        filemime:
+          expose:
+            label: 'Tipo MIME'
+        status:
+          expose:
+            label: Estado
+      title: Archivos
+      empty:
+        area_text_custom:
+          content: 'No hay archivos disponibles.'
+  page_1:
+    display_options:
+      menu:
+        title: Archivos
+  page_2:
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+      fields:
+        count:
+          label: 'Recuento de uso'
+      arguments:
+        fid:
+          exception:
+            title: Todo(s)

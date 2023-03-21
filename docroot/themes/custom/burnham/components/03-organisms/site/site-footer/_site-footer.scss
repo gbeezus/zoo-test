@@ -1,0 +1,33 @@
+.footer {
+  background-color: var(--color--core--background);
+  padding: minima-base-font-size() 0;
+
+  &__inner {
+    @include wrapper;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    @include large {
+      flex-direction: row;
+    }
+  }
+}
+
+.footer__social {
+  margin-bottom: minima-base-font-size();
+
+  @include large {
+    flex: 0 1 30%;
+    margin-bottom: 0;
+    margin-right: minima-base-font-size();
+  }
+}
+
+.footer__menu {
+  @include large {
+    flex: 1 1 100%;
+    margin-left: auto;
+    text-align: right;
+  }
+}

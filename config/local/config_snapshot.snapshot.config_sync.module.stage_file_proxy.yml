@@ -1,0 +1,23 @@
+uuid: eb7abc4d-7517-4836-9f73-81601609de86
+langcode: en
+status: true
+dependencies:
+  module:
+    - stage_file_proxy
+id: config_sync.module.stage_file_proxy
+snapshotSet: config_sync
+extensionType: module
+extensionName: stage_file_proxy
+items:
+  -
+    collection: ''
+    name: stage_file_proxy.settings
+    data:
+      hotlink: false
+      origin: ''
+      origin_dir: ''
+      use_imagecache_root: true
+      verify: true
+      excluded_extensions: ''
+      _core:
+        default_config_hash: ttd8HXcqwSjGgp-fWA3gUA8q4TNvXB0a72pkFlnF56g

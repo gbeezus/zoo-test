@@ -1,0 +1,7 @@
+type_settings:
+  states:
+    draft:
+      label: Черновик
+  transitions:
+    publish:
+      label: Опубликовать

@@ -1,0 +1,27 @@
+uuid: e601779d-6366-4ffa-9c91-aca65eb05e6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.document.field_document
+    - paragraphs.paragraphs_type.document
+  module:
+    - media
+_core:
+  default_config_hash: LQyGxXb_DMzgmBQKZS2vn98enZE-Hkxf8RvZ8KgMiKo
+id: paragraph.document.default
+targetEntityType: paragraph
+bundle: document
+mode: default
+content:
+  field_document:
+    type: media_thumbnail
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

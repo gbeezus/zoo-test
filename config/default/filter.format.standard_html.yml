@@ -1,0 +1,38 @@
+uuid: d14804f0-b62b-4150-8793-5c9c374589ed
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OXu5z95ApTXO7lwsp6ehmvgnA6XnQ9LV6koGTcCOxEw
+name: 'Standard HTML'
+format: standard_html
+weight: -9
+filters:
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<em> <strong> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <a href hreflang class="link--prominent">'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }

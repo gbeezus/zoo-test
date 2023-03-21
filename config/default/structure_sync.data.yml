@@ -1,0 +1,77 @@
+_core:
+  default_config_hash: iVxRRhGscnB-mQc_FQUmqbC3GfYnsfLfYpWD-JYzgjk
+blocks:
+  -
+    info: 'Global venue'
+    langcode: en
+    uuid: 8b1edf19-e7b6-4b74-8087-f6c0ba4e2016
+    bundle: celebrated_venue
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_link:
+        -
+          uri: 'internal:#0'
+          title: 'The Celebrated Venue'
+          options: {  }
+menus:
+  -
+    menu_name: metro-brand-menu
+    title: 'Arts and event centers'
+    parent: null
+    uri: 'https://www.oregonmetro.gov/venues'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: f65ccda5-5de2-452c-8406-3efab6bc1c3c
+  -
+    menu_name: metro-brand-menu
+    title: 'Oregon Zoo'
+    parent: null
+    uri: 'http://www.oregonzoo.org/'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: a68f8219-f228-440c-be8a-19603445b134
+  -
+    menu_name: metro-brand-menu
+    title: 'Parks and nature'
+    parent: null
+    uri: 'https://www.oregonmetro.gov/metro-parks-and-natural-areas'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: dbb2046d-9774-489f-b529-7cc9c2dd2368
+  -
+    menu_name: metro-brand-menu
+    title: 'Garbage and recycling'
+    parent: null
+    uri: 'https://www.oregonmetro.gov/tools-living/garbage-and-recycling'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: fa080e89-d870-4cfb-84b8-09efd3ed03a1
+  -
+    menu_name: metro-brand-menu
+    title: 'Land and transportation'
+    parent: null
+    uri: 'https://www.oregonmetro.gov/tools-living/getting-around'
+    link_title: ''
+    description: null
+    enabled: '1'
+    expanded: '0'
+    weight: '0'
+    langcode: en
+    uuid: c962ca74-64fe-49c9-90a3-a8c387ec7447

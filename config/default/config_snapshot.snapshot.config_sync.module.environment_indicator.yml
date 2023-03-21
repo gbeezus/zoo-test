@@ -1,0 +1,20 @@
+uuid: 3e5b71ef-62f0-4af5-88a7-eafc0a306716
+langcode: en
+status: true
+dependencies:
+  module:
+    - environment_indicator
+id: config_sync.module.environment_indicator
+snapshotSet: config_sync
+extensionType: module
+extensionName: environment_indicator
+items:
+  -
+    collection: ''
+    name: environment_indicator.settings
+    data:
+      toolbar_integration:
+        toolbar: toolbar
+      favicon: true
+      _core:
+        default_config_hash: g1w9ISRDtOFVcYi5mbyujrMMxYiFIgpV9c4JnogvoRc

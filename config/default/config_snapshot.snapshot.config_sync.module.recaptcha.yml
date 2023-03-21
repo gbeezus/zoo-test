@@ -1,0 +1,27 @@
+uuid: fda74bbc-b53f-44e2-b315-b5d949da2532
+langcode: en
+status: true
+dependencies:
+  module:
+    - recaptcha
+id: config_sync.module.recaptcha
+snapshotSet: config_sync
+extensionType: module
+extensionName: recaptcha
+items:
+  -
+    collection: ''
+    name: recaptcha.settings
+    data:
+      site_key: 'this is stored in the secrets file'
+      secret_key: 'this is stored in the secrets file'
+      verify_hostname: false
+      use_globally: false
+      widget:
+        theme: light
+        type: image
+        size: ''
+        tabindex: 0
+        noscript: false
+      _core:
+        default_config_hash: 3rzyFo6g2_hf85LjwJFBU7aR__VaLC_iz1Xs599CUIM

@@ -1,0 +1,12 @@
+uuid: 4e1d5959-876a-4031-a2d5-63efc45e29ed
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _ZamAYplGY5Chox9rpbjiS5IT_XHdGTsBFZu6GOi7Z4
+id: document
+label: Document
+icon_uuid: null
+icon_default: null
+description: 'A file or document.'
+behavior_plugins: {  }

@@ -1,0 +1,45 @@
+figure {
+  margin: 0; /* override normalize */
+
+  img,
+  picture {
+    width: 100%;
+  }
+}
+
+.figure__caption {
+  font-style: normal;
+}
+
+/** Captions **/
+figure,
+.figure {
+  img,
+  picture {
+    margin-bottom: minima-space(300);
+
+    @include small() {
+      margin-bottom: minima-space(200);
+    }
+  }
+}
+
+.caption,
+.caption--inner {
+  clear: both;
+  font-family: minima-font-family(secondary);
+  line-height: 1.375;
+  margin-bottom: minima-space(200);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.credit,
+.image__credit {
+  font-family: minima-font-family(secondary);
+  font-size: 0.9375rem;
+  line-height: 1.375;
+  text-transform: uppercase;
+}

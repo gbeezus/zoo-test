@@ -1,0 +1,12 @@
+uuid: 81864c26-4439-43fc-98d4-d6f2d5f48ab2
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: sVOVICKlsyKe-bOVg5fLlByFAI0DgXw0ywAoMHooK-Q
+id: paragraph.media_paragraph__simple
+label: 'Media paragraph (simple)'
+targetEntityType: paragraph
+cache: true

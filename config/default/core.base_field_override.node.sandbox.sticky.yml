@@ -1,0 +1,24 @@
+uuid: 139d16f2-3bd9-423c-b2d5-2654df7f750b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sandbox
+_core:
+  default_config_hash: Njt_SCsKI0XaRnmbrh4HomMoMrVHpRA_vwFTLhndvXE
+id: node.sandbox.sticky
+field_name: sticky
+entity_type: node
+bundle: sandbox
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

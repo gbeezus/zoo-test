@@ -1,0 +1,26 @@
+uuid: 6482be1e-4af3-4d78-990c-ac4e4e06d599
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.alerts_block
+  module:
+    - views
+  theme:
+    - minima
+_core:
+  default_config_hash: pupSNLd5rFFn8-fdl6ttpul3HHK-n690V68jPAp4AxY
+id: alerts_view_block
+theme: minima
+region: header
+weight: -4
+provider: null
+plugin: 'views_block:alerts_block-block_1'
+settings:
+  id: 'views_block:alerts_block-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

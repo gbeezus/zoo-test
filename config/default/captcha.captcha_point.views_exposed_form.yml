@@ -1,0 +1,9 @@
+uuid: 27ae9734-48c5-4206-b59b-1bd381771fff
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: q9VmHdWHgnwXzlV-Y1DSpwjorYsqbG85OStMTQj_sEA
+formId: views_exposed_form
+captchaType: recaptcha/reCAPTCHA
+label: views_exposed_form

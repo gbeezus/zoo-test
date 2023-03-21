@@ -1,0 +1,22 @@
+- button_theme: 'primary'
+  button_size: 'medium'
+  button_icon: 'arrow-forward'
+  button_icon_mirror_rtl: true
+  button_aria_label: 'Go'
+  button_icon_title: An icon of an arrow pointing right
+- button_theme: 'primary'
+  button_size: 'medium'
+  button_icon: 'share'
+  button_icon_title: An icon of a network node connecting to two other nodes
+  button_aria_label: 'share'
+- button_theme: 'primary'
+  button_size: 'medium'
+  button_icon: 'play'
+  button_icon_mirror_rtl: true
+  button_aria_label: 'play'
+  button_icon_title: An icon of a triangle pointing to the right
+- button_theme: 'primary'
+  button_size: 'medium'
+  button_icon: 'search'
+  button_aria_label: 'Search'
+  button_icon_title: An icon of a magnifying glass

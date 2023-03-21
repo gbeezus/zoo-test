@@ -1,0 +1,73 @@
+uuid: ca61a040-8135-49df-9b92-3d05e8c0b051
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alerts
+  module:
+    - content_moderation
+_core:
+  default_config_hash: Xz_gVYQyaXx3Im49sxutFVl1cTgKsKUCTsb6cWQ5rR4
+id: alerts
+label: Alerts
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      label: Archived
+      weight: 1
+      published: false
+      default_revision: true
+    draft:
+      label: Draft
+      weight: -2
+      published: false
+      default_revision: false
+    needs_review:
+      label: 'Needs review'
+      weight: -1
+      published: false
+      default_revision: false
+    published:
+      label: Published
+      weight: 0
+      published: true
+      default_revision: true
+  transitions:
+    archive_unpublish_:
+      label: 'Archive (unpublish)'
+      from:
+        - archived
+        - published
+      to: archived
+      weight: 3
+    ask_for_review:
+      label: 'Ask for review'
+      from:
+        - archived
+        - draft
+        - needs_review
+      to: needs_review
+      weight: 2
+    create_new_draft:
+      label: 'Create new draft'
+      from:
+        - archived
+        - draft
+        - needs_review
+        - published
+      to: draft
+      weight: 0
+    publish:
+      label: Publish
+      from:
+        - draft
+        - needs_review
+        - published
+      to: published
+      weight: 1
+  entity_types:
+    block_content:
+      - alerts
+  default_moderation_state: draft
+  translation_default_moderation_state_behavior: default

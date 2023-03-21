@@ -1,0 +1,47 @@
+// These styles only affect demo grid pages in the component library
+.minima-demo {
+  padding: 1rem;
+}
+
+.minima-demo__list {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: minima-font-family(secondary);
+  font-variation-settings: 'wght' 550, 'wdth' 90;
+  font-weight: 500;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+.minima-demo__list li {
+  margin: 0 1rem 1rem 0;
+}
+
+%minima-demo-item {
+  display: block;
+  justify-content: center;
+  list-style: none;
+  max-width: 23%;
+  min-height: 100px;
+  min-width: 100px;
+  padding: 1rem 2rem;
+  transition: all 0.4s;
+  width: 100%;
+
+  @include border-style(standard);
+
+  &:last-child {
+    margin-right: 0 !important;
+  }
+}
+
+.minima-demo__label {
+  display: block;
+  text-align: center;
+}
+
+.minima-demo__swatch {
+  min-width: 100px;
+  min-height: 100px;
+  width: 100%;
+}

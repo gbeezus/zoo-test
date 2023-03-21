@@ -1,0 +1,5 @@
+content:
+  field_embed_code:
+    third_party_settings:
+      maxlength:
+        maxlength_js_label: '内容限制为 @limit 个字符，剩余：<strong>@remaining</strong>'

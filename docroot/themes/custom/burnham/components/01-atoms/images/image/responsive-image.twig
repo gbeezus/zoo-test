@@ -1,0 +1,40 @@
+{#
+ # Available variables:
+ # - image_alt (string): The alt text for the image.
+ # - image_loading (string): The loading attribute of the element; can be "lazy" or "eager".
+ # - image_srcset (string): The srcset attribute of the element.
+ # - image_sizes (string): The size attribute of the element.
+ # - image_src (string): The src attribute of the element.
+ # - img_element: The controlling image, with the fallback image in srcset. Overridden by image_* attributes.
+ # - output_image_tag (boolean): Whether or not to output an <img> tag instead of a <picture> tag. Defaults to true.
+ # - responsive_image_base_class (string): the base class for the element
+ # - responsive_image_blockname (string): the block name for the element
+ # - responsive_image_modifiers (array): a list of modifiers for the element to construct BEM classes
+#}
+
+{% set output_image_tag = output_image_tag ?? true %}
+{% set responsive_image_base_class = responsive_image_base_class|default('image') %}
+{% set image_loading = image_loading|default('lazy') %}
+{% set responsive_image_modifiers = responsive_image_modifiers|default([]) %}
+
+{% if output_image_tag %}
+  {% include "@atoms/images/image/_image.twig" with {
+    image_base_class: responsive_image_base_class,
+    image_modifiers: responsive_image_modifiers,
+    image_blockname: responsive_image_blockname,
+    image_srcset: image_srcset|default(img_element['#attributes'].srcset),
+    image_sizes: image_sizes|default(img_element['#attributes'].sizes),
+    image_src: image_src|default(img_element['#uri']),
+    image_alt: image_alt|default(img_element['#alt']),
+  } %}
+{% else %}
+  {% include "@atoms/images/image/_picture.twig" with {
+    picture_base_class: responsive_image_base_class,
+    picture_modifiers: responsive_image_modifiers,
+    picture_blockname: responsive_image_blockname,
+    image_srcset: image_srcset|default(img_element['#attributes'].srcset),
+    image_sizes: image_sizes|default(img_element['#attributes'].sizes),
+    image_src: image_src|default(img_element['#uri']),
+    image_alt: image_alt|default(img_element['#alt']),
+  } %}
+{% endif %}

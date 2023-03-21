@@ -1,0 +1,7 @@
+dist
+.out
+.coverage
+node_modules
+*.min.js
+generated-stories-entry.js
+storybook-init-framework-entry.js

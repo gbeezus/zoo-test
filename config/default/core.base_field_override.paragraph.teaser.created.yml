@@ -1,0 +1,20 @@
+uuid: 076f84e4-96a5-4919-9aea-9f4dc9b39ade
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.teaser
+_core:
+  default_config_hash: mtegN9GmBF7Ia8ePCvwkzHAbFowUcqk4ek1LKa32qsU
+id: paragraph.teaser.created
+field_name: created
+entity_type: paragraph
+bundle: teaser
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

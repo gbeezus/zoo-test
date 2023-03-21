@@ -1,0 +1,28 @@
+{#
+/**
+ * Available variables:
+ * - figure_base_class: the base class for the figure (defaults to figure)
+ * - figure_blockname: the block name for the figure
+ * - figure_caption: the objeect
+ * - figure_media: the figure content
+ *
+ * Available blocks:
+ * - figure_content: the content of the figure
+ * - figure_figcaption: the figcaption element
+ */
+#}
+{% set figure_base_class = figure_base_class|default('figure') %}
+{% set figure_blockname = figure_blockname|default('') %}
+{% set figure_modifiers = figure_modifiers|default([]) %}
+
+<figure {{ bem(figure_base_class, figure_modifiers, figure_blockname) }}>
+  {% block figure_content %}
+    {{ figure_media }}
+  {% endblock %}
+
+  {% block figure_figcaption %}
+    <figcaption {{ bem(figure_base_class, figure_modifiers, 'caption') }}>
+      {{ figure_caption}}
+    </figcaption>
+  {% endblock %}
+</figure>

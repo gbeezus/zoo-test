@@ -1,0 +1,19 @@
+uuid: d007967a-27d7-4c78-85f1-6f22300b1d32
+langcode: en
+status: true
+dependencies:
+  module:
+    - hreflang
+id: config_sync.module.hreflang
+snapshotSet: config_sync
+extensionType: module
+extensionName: hreflang
+items:
+  -
+    collection: ''
+    name: hreflang.settings
+    data:
+      x_default: true
+      defer_to_content_translation: false
+      _core:
+        default_config_hash: AP0rUkD9J76UrK28UKE15IsUXCzjSfCwJKBujS7ox1M

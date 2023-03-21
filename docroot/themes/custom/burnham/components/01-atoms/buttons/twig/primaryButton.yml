@@ -1,0 +1,4 @@
+button_base_class: 'button'
+button_content: 'Primary button'
+button_theme: 'primary'
+button_size: 'medium'

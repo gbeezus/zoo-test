@@ -1,0 +1,12 @@
+uuid: 3f9e9838-904a-4ffe-a958-d1e1b03cfe00
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: 2vXaGtVzK2trIFwe_p1A4qJuIRsrRAOBn-ZCrokr3N4
+id: media.image_paragraph_third_width
+label: 'Image Paragraph Third Width'
+targetEntityType: media
+cache: true

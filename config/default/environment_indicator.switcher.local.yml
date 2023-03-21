@@ -1,0 +1,13 @@
+uuid: ca9557d1-ab28-419f-babe-0c54335925e7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Q-kgRihflWZVTk5T3qteLa7a8KgteX3VD7nBpJmNCzI
+machine: local
+description: null
+name: Local
+url: 'https://localhost:8443'
+weight: null
+fg_color: '#ffffff'
+bg_color: '#8052ff'

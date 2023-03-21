@@ -1,0 +1,12 @@
+uuid: 4be67faa-a965-4ea5-8753-20068de76ac8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: DUeCem-nr0JxZ-ZAnIpdkPHHCgtbVqOde0t63SgZoEU
+id: audio
+label: Audio
+icon_uuid: null
+icon_default: null
+description: 'An audio file and related transcript.'
+behavior_plugins: {  }

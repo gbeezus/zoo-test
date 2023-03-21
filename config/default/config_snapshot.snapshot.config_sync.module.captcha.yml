@@ -1,0 +1,87 @@
+uuid: 9986b0ac-a7cb-45c4-ab3a-db0007266de5
+langcode: en
+status: true
+dependencies:
+  module:
+    - captcha
+id: config_sync.module.captcha
+snapshotSet: config_sync
+extensionType: module
+extensionName: captcha
+items:
+  -
+    collection: ''
+    name: captcha.captcha_point.contact_message_feedback_form
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      formId: contact_message_feedback_form
+      captchaType: default
+      label: null
+      _core:
+        default_config_hash: PyyDLMPg5L9uv6_5o4IkRnBGmMQ5VQZgUqszrQhrJTs
+  -
+    collection: ''
+    name: captcha.captcha_point.contact_message_personal_form
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      formId: contact_message_personal_form
+      captchaType: default
+      label: null
+      _core:
+        default_config_hash: fjDNUcdR_0Z9t-ri9MhD9h0uKDwDuGlFYAxvWDTmrSs
+  -
+    collection: ''
+    name: captcha.captcha_point.user_login_form
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      formId: user_login_form
+      captchaType: default
+      label: null
+      _core:
+        default_config_hash: Bjsbwa-vdlIXN26jx0x-jkrEqN4iUBnLvbr9MpIe9Os
+  -
+    collection: ''
+    name: captcha.captcha_point.user_pass
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      formId: user_pass
+      captchaType: default
+      label: null
+      _core:
+        default_config_hash: ncfo-350xwDF4NNXZ3Ar81G-6KyE6Xew8GKbFWKMKIQ
+  -
+    collection: ''
+    name: captcha.captcha_point.user_register_form
+    data:
+      langcode: en
+      status: true
+      dependencies: {  }
+      formId: user_register_form
+      captchaType: default
+      label: null
+      _core:
+        default_config_hash: e0OZEqnpI6TdaUQ3fUvMwr5icCTbf-3UgJ02gVWn09I
+  -
+    collection: ''
+    name: captcha.settings
+    data:
+      enabled_default: 1
+      default_challenge: recaptcha/reCAPTCHA
+      description: 'This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
+      administration_mode: false
+      allow_on_admin_pages: false
+      add_captcha_description: true
+      default_validation: 1
+      persistence: 1
+      enable_stats: false
+      log_wrong_responses: false
+      _core:
+        default_config_hash: OXvTbM7d7OldaN5CuqQwoqvSvWO85lQgmRHPrTTgQ5E

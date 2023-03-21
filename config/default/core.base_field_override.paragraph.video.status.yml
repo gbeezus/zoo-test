@@ -1,0 +1,24 @@
+uuid: a67845fc-96e1-47b8-8289-34e2aa86c8db
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.video
+_core:
+  default_config_hash: Hiz_L5qTmwo8MeD47tIKM6DFdDSvevLMFf9RmkNlFaQ
+id: paragraph.video.status
+field_name: status
+entity_type: paragraph
+bundle: video
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,49 @@
+{#
+/**
+ * Available variables:
+ * - caption_content (string): the content of the caption
+ * - caption_base_class (string): the base class for the caption element
+ * - caption_blockname (string) block name for caption element
+ * - caption_modifiers (array): array of modifiers
+ * - caption_visible (boolean): whether to print the caption or not
+ * - credit (string): who we are giving credit to
+ * - credit_base_class (string): the base class for the credit element
+ * - credit_blockname (string) block name for credit element
+ * - credit_modifiers (array): array of modifiers
+ * - credit_visible (boolean): whether to print the credit or not
+ */
+#}
+
+{% set caption_base_class = caption_base_class|default('caption') %}
+{% set caption_blockname = credit_blockname|default('') %}
+{% set caption_modifiers = credit_modifiers|default([]) %}
+{# If caption_content is set and caption_visible is true, the caption should be visible #}
+{# We use ?? to set the default for caption_visible because |default(true) doesn't work on booleans #}
+{% set caption_visible = caption_content and (caption_visible ?? true) %}
+
+{% set credit_base_class = credit_base_class|default('credit') %}
+{% set credit_blockname = credit_blockname|default('') %}
+{% set credit_modifiers = credit_modifiers|default([]) %}
+{# If credit is set and credit_visible is true, the credit should be visible #}
+{# We use ?? to set the default for credit_visible because |default(true) doesn't work on booleans #}
+{% set credit_visible = credit and (credit_visible ?? true) %}
+
+{% if caption_visible or credit_visible %}
+  <figcaption>
+    {% if caption_visible %}
+      <div {{ bem(caption_base_class, ['inner'], caption_blockname) }}>{{ caption_content }}</div>
+    {% endif %}
+
+    {% if credit_visible %}
+      <span {{ bem(credit_base_class, credit_modifiers, credit_blockname|default('image')) }}>
+        <span class="{{ credit_base_class }}--label">{{ 'credit'|t }}:</span>
+        <span class="{{ credit_base_class }}--authority">
+          {{ credit }}
+        </span>
+      </span>
+    {% endif %}
+
+  </figcaption>
+{% endif %}
+
+

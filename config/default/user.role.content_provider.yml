@@ -1,0 +1,127 @@
+uuid: 51b25144-360e-4d76-bd11-525f75a716a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.standard_html
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.video_url
+    - node.type.sandbox
+  module:
+    - block_content
+    - content_translation
+    - entity_clone
+    - file
+    - filter
+    - media
+    - node
+    - paragraphs
+    - paragraphs_type_permissions
+    - path
+    - save_edit
+    - scheduled_transitions
+    - simplify
+    - webform
+    - yoast_seo
+_core:
+  default_config_hash: jLkOMstViMpAI6Lcr51lZ2qYprckRzHR1l5pIg2vooc
+id: content_provider
+label: 'Content provider'
+weight: 4
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access files overview'
+  - 'access media overview'
+  - 'clone block_content entity'
+  - 'clone node entity'
+  - 'clone paragraph entity'
+  - 'clone webform entity'
+  - 'create audio media'
+  - 'create content translations'
+  - 'create document media'
+  - 'create image media'
+  - 'create media'
+  - 'create paragraph content accordion'
+  - 'create paragraph content accordion_item'
+  - 'create paragraph content audio'
+  - 'create paragraph content blockquote'
+  - 'create paragraph content call_to_action'
+  - 'create paragraph content document'
+  - 'create paragraph content dynamic_list'
+  - 'create paragraph content feedback_form'
+  - 'create paragraph content gallery'
+  - 'create paragraph content image'
+  - 'create paragraph content sign_up_form'
+  - 'create paragraph content summary_box'
+  - 'create paragraph content tab'
+  - 'create paragraph content tabs'
+  - 'create paragraph content teaser'
+  - 'create paragraph content text'
+  - 'create paragraph content video'
+  - 'create sandbox content'
+  - 'create url aliases'
+  - 'create video_url media'
+  - 'create webform'
+  - 'delete paragraph content accordion'
+  - 'delete paragraph content accordion_item'
+  - 'delete paragraph content audio'
+  - 'delete paragraph content blockquote'
+  - 'delete paragraph content call_to_action'
+  - 'delete paragraph content document'
+  - 'delete paragraph content dynamic_list'
+  - 'delete paragraph content feedback_form'
+  - 'delete paragraph content gallery'
+  - 'delete paragraph content image'
+  - 'delete paragraph content sign_up_form'
+  - 'delete paragraph content summary_box'
+  - 'delete paragraph content tab'
+  - 'delete paragraph content tabs'
+  - 'delete paragraph content teaser'
+  - 'delete paragraph content text'
+  - 'delete paragraph content video'
+  - 'edit any audio media'
+  - 'edit any document media'
+  - 'edit any image media'
+  - 'edit any sandbox content'
+  - 'edit any video_url media'
+  - 'edit own audio media'
+  - 'edit own webform'
+  - 'take_ownership_on_clone node entity'
+  - 'translate any entity'
+  - 'translate audio media'
+  - 'translate block_content'
+  - 'translate document media'
+  - 'translate image media'
+  - 'translate paragraph'
+  - 'translate video_url media'
+  - 'update any media'
+  - 'update content translations'
+  - 'update paragraph content accordion'
+  - 'update paragraph content accordion_item'
+  - 'update paragraph content audio'
+  - 'update paragraph content blockquote'
+  - 'update paragraph content call_to_action'
+  - 'update paragraph content document'
+  - 'update paragraph content dynamic_list'
+  - 'update paragraph content feedback_form'
+  - 'update paragraph content gallery'
+  - 'update paragraph content image'
+  - 'update paragraph content sign_up_form'
+  - 'update paragraph content summary_box'
+  - 'update paragraph content tab'
+  - 'update paragraph content tabs'
+  - 'update paragraph content teaser'
+  - 'update paragraph content text'
+  - 'update paragraph content video'
+  - 'use save and edit'
+  - 'use text format standard_html'
+  - 'use yoast seo'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view all scheduled transitions'
+  - 'view hidden fields'
+  - 'view sandbox revisions'
+  - 'view unpublished paragraphs'

@@ -1,0 +1,35 @@
+# Yarn/NPM
+node_modules/
+yarn.lock
+
+# Storybook
+.out
+
+# Token Assets
+_design-tokens.artifact.scss
+_design-tokens.artifact.yml
+
+# debug output
+build-storybook.log
+
+# System
+.DS_Store
+
+# Git deploy
+.publish
+
+# Composer
+composer.lock
+/vendor/
+
+# Jest
+.coverage
+
+# IDEs
+.idea
+
+# Chromatic environment variables
+.env
+
+# Compiled files
+dist/

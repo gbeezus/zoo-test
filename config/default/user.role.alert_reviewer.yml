@@ -1,0 +1,11 @@
+uuid: 22e686fd-ac86-4278-9d98-c3605cb5bd7d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Jj7qVXFgC44N9ZdAR4qGPMZ03nHZ4BC96g38Gt1Qr6s
+id: alert_reviewer
+label: 'Alert reviewer'
+weight: 8
+is_admin: null
+permissions: {  }

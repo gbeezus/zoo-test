@@ -1,0 +1,34 @@
+uuid: d4d4c203-608b-481b-9c20-337e18c49a75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gallery_introduction
+    - paragraphs.paragraphs_type.gallery
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    standard_html: standard_html
+    alerts: '0'
+    expert_html: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: Ymg13HpY_zRu45l6DObee_QhyfcLKRrP9nW-2o0ZfPs
+id: paragraph.gallery.field_gallery_introduction
+field_name: field_gallery_introduction
+entity_type: paragraph
+bundle: gallery
+label: Introduction
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

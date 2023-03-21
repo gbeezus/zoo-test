@@ -1,0 +1,5 @@
+button_base_class: 'button'
+button_content: 'Danger!'
+button_theme: 'danger'
+button_size: 'medium'
+button_is_disabled: false

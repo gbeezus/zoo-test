@@ -1,0 +1,7 @@
+type_settings:
+  states:
+    draft:
+      label: Borrador
+  transitions:
+    publish:
+      label: Publicar

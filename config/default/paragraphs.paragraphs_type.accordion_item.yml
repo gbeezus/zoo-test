@@ -1,0 +1,12 @@
+uuid: 760955f7-34c6-4341-9bf3-76b1d0f4e1fe
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: F24YnbfIl2RgeybBbXcE7csPrCyltxa3z6TvUdjP4II
+id: accordion_item
+label: 'Accordion Item'
+icon_uuid: null
+icon_default: null
+description: 'Allows entering a title and description for use as an item in a larger accordion paragraph.'
+behavior_plugins: {  }

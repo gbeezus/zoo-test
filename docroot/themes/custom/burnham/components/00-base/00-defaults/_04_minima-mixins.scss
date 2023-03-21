@@ -1,0 +1,181 @@
+/*
+ * General Mixins (put specific ones in component files where applicable)
+*/
+
+@mixin body-copy {
+  font-family: minima-font-family(primary);
+  font-size: 1rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+/**
+ * Mixin - Clearfix
+ * Adds clearfix based on http://bourbon.io/docs/#clearfix
+ * use example =   @include cleafix
+*/
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+$outer-container-break: $small;
+
+/// Mixin - Wrapper
+/// Outer container mixin for large screens
+@mixin wrapper(
+  $container-max-width: $max-width,
+  $outer-container-break: minima-breakpoint(sm),
+  $v-margin: 0,
+  $v-padding: 0,
+  $h-padding: minima-base-font-size(),
+  $h-padding-large: $h-padding
+) {
+  margin: #{$v-margin} auto;
+  max-width: #{$container-max-width};
+  padding: #{$v-padding} #{$h-padding};
+  width: 100%;
+
+  @include breakpoint($outer-container-break) {
+    padding: #{$v-padding} #{$h-padding-large};
+  }
+
+  @include breakpoint($container-max-width) {
+    padding-left: calc(
+      #{$h-padding-large} + calc(-50vw + calc(#{$container-max-width} / 2))
+    );
+    padding-right: calc(
+      #{$h-padding-large} + calc(-50vw + calc(#{$container-max-width} / 2))
+    );
+  }
+}
+
+// Mixin - Standard Margin
+@mixin margin {
+  margin-bottom: 1em;
+}
+
+@mixin no-bottom {
+  margin-bottom: 0;
+}
+
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/** Mixin - focus style
+ *
+ * Sets a the system focus style.
+ */
+@mixin focus-style() {
+  &:focus {
+    outline: 2px solid var(--color--ui--focus);
+    outline-offset: minima-space(50);
+    z-index: minima-z-index(ui-focus);
+  }
+}
+
+/** Mixin - no focus style
+ *
+ * Sets a the system focus style.
+ */
+@mixin no-focus-style() {
+  &:focus {
+    outline: none;
+    outline-offset: initial;
+  }
+}
+
+/** Mixin - font weight
+ *
+ * Sets a font weight for variable and fixed fonts.
+ */
+@mixin font-weight($weight) {
+  font-variation-settings: 'wght' $weight;
+  font-weight: $weight;
+}
+
+/**
+ * Mixin - Square container
+ *
+ * Sets the height and width of the element to the specified size.
+ *
+ * @param $size - the size of the square
+ *
+ * use example - @include square-container(44px);
+ */
+@mixin square-container($size) {
+  height: $size;
+  width: $size;
+}
+
+/**
+ * Mixin - Underline link
+ *
+ * Provides a thicker underline that can change on hover state.
+ *
+ * @param $hoverColor - the underline color for the element's hover state
+ * @param $defaultColor (optional) - the underline color for the element's default state
+ *
+ * use example - @include underline-link(white, purple));
+*/
+@mixin underline-link($hoverColor, $defaultColor: transparent) {
+  border-bottom: 2px solid $defaultColor;
+  display: inline;
+
+  &:hover {
+    border-bottom: 2px solid $hoverColor;
+  }
+}
+// Mixins spacing
+
+/*
+ * Use this on the outer wrapper of page-level elements.
+ * It ensures consistent spacing between elements on the page.
+ */
+@mixin space-stack-page {
+  margin-bottom: minima-space(400);
+}
+
+// Mixin minima standard box border styles
+// use instead of minima-box-border()
+// in order to include border radius
+
+@mixin border-style($style: standard) {
+  border: minima-box-border($style);
+  border-radius: minima-border-radius(0);
+}
+
+@mixin minimum-touch-target {
+  min-height: 44px;
+  min-width: 44px;
+
+  @include large {
+    min-height: inherit;
+    min-width: inherit;
+  }
+}
+
+@mixin semantic-message($message) {
+  input {
+    border: 2px solid var(--color--semantic--#{$message});
+  }
+}
+
+@mixin condensed($key) {
+  font-family: minima-font-family($key);
+  font-stretch: semi-condensed;
+  font-variation-settings: 'wdth' minima-font-width($key, condensed);
+}
+
+@mixin expanded($key) {
+  font-family: minima-font-family($key);
+  font-stretch: semi-expanded;
+  font-variation-settings: 'wdth' minima-font-width($key, expanded);
+}

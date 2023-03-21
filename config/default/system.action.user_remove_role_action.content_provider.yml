@@ -1,0 +1,16 @@
+uuid: 1a428194-6094-48e0-821e-fa24c4c7c7aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_provider
+  module:
+    - user
+_core:
+  default_config_hash: dOSqjxqILXTGN7ySduOgCDUyKtwHRDrxCxNPU9TpfV4
+id: user_remove_role_action.content_provider
+label: 'Remove the Content provider role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: content_provider

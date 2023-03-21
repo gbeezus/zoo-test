@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: rUrByPCPSh6sMvfe5KG8imFwqUoQ_iZ6NSAZIwMNOuQ
+name: 'Drush Site-Install'
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+mail_notification: ''
+uuid: 0bc9c1bb-bdc5-4332-a47f-3a4d09bc28b9

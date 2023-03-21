@@ -1,0 +1,34 @@
+uuid: 72dadac0-40b0-4c49-801a-be13e823e2f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_caption
+    - paragraphs.paragraphs_type.image
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    standard_html: standard_html
+    alerts: '0'
+    expert_html: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: 9pzJzJyyUZ_Fl8vu2mFx70VJbJSkuOrujD1P1PxYWa0
+id: paragraph.image.field_caption
+field_name: field_caption
+entity_type: paragraph
+bundle: image
+label: 'Caption override'
+description: 'Provide a caption to override the caption specified in the media library.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

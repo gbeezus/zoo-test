@@ -1,0 +1,15 @@
+uuid: 5e326a85-0217-445a-be71-3e4c20617aa2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: AhK6j_L4Ja99Xl02OM4Gm7sO1znOU1oZW5Tlf7gPFwA
+id: document
+label: Document
+description: ' Add a document to the site’s library.'
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_file
+field_map: {  }

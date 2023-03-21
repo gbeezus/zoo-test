@@ -1,0 +1,13 @@
+uuid: 699a28d3-ff44-45b6-9a3c-3649bb19e6b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - path_alias
+_core:
+  default_config_hash: edqcXOINtyX28uU6Nt23YTd0XzsHeZnb5ipl9E-Yu4E
+id: path_alias.path_alias
+target_entity_type_id: path_alias
+target_bundle: path_alias
+default_langcode: und
+language_alterable: false

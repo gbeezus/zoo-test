@@ -1,0 +1,12 @@
+uuid: 7987744d-66d0-42b3-acbf-20f0ba0aeae4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: nbkRerwR-F0wxrA9jjIyDfMlDGNBFaUvw96MeGK07QQ
+id: summary_box
+label: 'Summary box'
+icon_uuid: null
+icon_default: null
+description: 'The summary box typically appears at the top of content. It differs fro the *text* paragraph type in that it has a title field.'
+behavior_plugins: {  }

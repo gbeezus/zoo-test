@@ -1,0 +1,24 @@
+uuid: 93b3e2d3-e0b5-46e9-b103-c0dedb1c168c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.call_to_action
+_core:
+  default_config_hash: 8fc3yCwZXgxMn7zdnGHPnWFt9t_meQf5y3s84zcbHEw
+id: paragraph.call_to_action.status
+field_name: status
+entity_type: paragraph
+bundle: call_to_action
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

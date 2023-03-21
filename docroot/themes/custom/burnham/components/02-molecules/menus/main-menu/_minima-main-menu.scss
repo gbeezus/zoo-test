@@ -1,0 +1,92 @@
+/* Menu media */
+$main-menu-medium: $medium;
+
+/* Nav */
+.main-nav {
+  display: none;
+
+  @include medium {
+    display: block;
+  }
+
+  &--open {
+    background-color: var(--color--core--background);
+    display: block;
+    left: 0;
+    overflow-y: scroll;
+    position: absolute;
+    top: 134px;
+    right: 0;
+    width: 100%;
+  }
+}
+
+/* UL */
+.main-menu {
+  @include list-reset;
+
+  border-bottom: 1px solid;
+  position: relative;
+  z-index: 10;
+
+  @include medium {
+    border-bottom: 0;
+  }
+}
+
+/*
+ * Sub Navigation
+ */
+
+/* UL (Nested) */
+.main-menu--sub {
+  border-bottom: 0;
+  height: 0;
+  overflow: hidden;
+  background-color: var(--color--core--background);
+  width: 100%;
+
+  @include medium {
+    display: none;
+    height: auto;
+    left: 0;
+    overflow: visible;
+    padding: minima-base-font-size() 0;
+    position: absolute;
+    top: 55px;
+    width: 315px;
+    z-index: 1;
+    font-size: 0.9rem;
+    opacity: minima-opacity(60);
+  }
+
+  &:hover {
+    @include medium {
+      opacity: minima-opacity(10);
+      background-color: var(--color--core--background);
+      transition: all minima-duration(shortest) minima-ease(ease-in-out);
+
+      .main-menu__link--sub {
+        color: var(--color--core--text);
+
+        &.active,
+        &:active,
+        &:hover {
+          color: var(--color--core--background);
+          background-color: var(--color--core--background);
+        }
+      }
+    }
+  }
+
+  /* See main-menu.js */
+  &-open {
+    height: auto;
+  }
+}
+
+.main-menu--sub-2 {
+  @include medium {
+    display: none; /* Never shown on large screens */
+  }
+}

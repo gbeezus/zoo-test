@@ -1,0 +1,13 @@
+uuid: d841e3cf-113f-4519-96e5-90b0f6ac0690
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hp-L8Sax9PnLMceDGNvKzmGGEbkJQUbCCyPzlLsBpqI
+machine: staging
+description: null
+name: Staging
+url: 'https://enterprisestg.prod.acquia-sites.com'
+weight: null
+fg_color: '#000000'
+bg_color: '#f3eb12'

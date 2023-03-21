@@ -1,0 +1,61 @@
+// Define color groups for demo page
+
+$brand-primary-colors: (
+  primary-125-pct: var(--color--primary--p-125),
+  primary-100-pct: var(--color--primary--p-100),
+  primary-50-pct: var(--color--primary--p-50),
+  primary-25-pct: var(--color--primary--p-25),
+);
+
+$brand-secondary-colors: (
+  secondary-125-pct: var(--color--secondary--p-125),
+  secondary-100-pct: var(--color--secondary--p-100),
+  secondary-50-pct: var(--color--secondary--p-50),
+  secondary-25-pct: var(--color--secondary--p-25),
+  secondary-10-pct: var(--color--secondary--p-10),
+);
+
+$brand-accent-colors: (
+  accent-125-pct: var(--color--accent--p-125),
+  accent-100-pct: var(--color--accent--p-100),
+  accent-50-pct: var(--color--accent--p-50),
+  accent-25-pct: var(--color--accent--p-25),
+);
+
+$ui-colors: (
+  link: var(--color--ui--link),
+  hover: var(--color--ui--hover),
+  active: var(--color--ui--active),
+  visited: var(--color--ui--visited),
+  focus: var(--color--ui--focus),
+);
+
+$semantic-colors: (
+  success: var(--color--semantic--success),
+  error: var(--color--semantic--error),
+  warning: var(--color--semantic--warning),
+  warning-light: var(--color--semantic--warning-light),
+  message: var(--color--semantic--message),
+  message-light: var(--color--semantic--message-light),
+);
+
+$core-colors: (
+  background: var(--color--core--background),
+  text: var(--color--core--text),
+  text-inverse: var(--color--core--black),
+);
+
+$gray-colors: (
+  white-100: minima-grayscale(white),
+  gray-10: minima-grayscale(gray-10),
+  gray-20: minima-grayscale(gray-20),
+  gray-30: minima-grayscale(gray-30),
+  gray-40: minima-grayscale(gray-40),
+  gray-50: minima-grayscale(gray-50),
+  gray-60: minima-grayscale(gray-60),
+  gray-70: minima-grayscale(gray-70),
+  gray-80: minima-grayscale(gray-80),
+  gray-90: minima-grayscale(gray-90),
+  gray-95: minima-grayscale(gray-95),
+  black-0: minima-grayscale(black),
+);

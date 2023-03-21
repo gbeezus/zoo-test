@@ -1,0 +1,88 @@
+uuid: 94eff7cf-b79b-4d7f-afa1-bf415c992567
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gallery_media
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.video
+  module:
+    - custom_add_another
+    - entity_reference_revisions
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: 6eodxmEBEwuPGw5OygMTnLlqOA-FcXI2rbppYXkOYQw
+id: paragraph.gallery.field_gallery_media
+field_name: field_gallery_media
+entity_type: paragraph
+bundle: gallery
+label: Media
+description: 'Add up to 100 Image or Video paragraphs.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image: image
+      video: video
+    target_bundles_drag_drop:
+      accordion:
+        weight: 18
+        enabled: false
+      accordion_item:
+        weight: 19
+        enabled: false
+      audio:
+        weight: 20
+        enabled: false
+      blockquote:
+        weight: 21
+        enabled: false
+      call_to_action:
+        weight: 22
+        enabled: false
+      document:
+        weight: 23
+        enabled: false
+      dynamic_list:
+        weight: 24
+        enabled: false
+      feedback_form:
+        weight: 25
+        enabled: false
+      gallery:
+        weight: 26
+        enabled: false
+      image:
+        enabled: true
+        weight: 27
+      sign_up_form:
+        weight: 28
+        enabled: false
+      summary_box:
+        weight: 29
+        enabled: false
+      tab:
+        weight: 30
+        enabled: false
+      tabs:
+        weight: 31
+        enabled: false
+      teaser:
+        weight: 32
+        enabled: false
+      text:
+        weight: 33
+        enabled: false
+      video:
+        enabled: true
+        weight: 34
+field_type: entity_reference_revisions

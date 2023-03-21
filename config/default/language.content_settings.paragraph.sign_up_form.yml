@@ -1,0 +1,20 @@
+uuid: 722f95a5-5131-4d92-8272-404011210fc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.sign_up_form
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: 1G8LdCgxGu80Ep_rruQEPlVqGAZhdXvnGpbShpe9vAk
+id: paragraph.sign_up_form
+target_entity_type_id: paragraph
+target_bundle: sign_up_form
+default_langcode: site_default
+language_alterable: true

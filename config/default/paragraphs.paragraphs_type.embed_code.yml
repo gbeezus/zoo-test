@@ -1,0 +1,12 @@
+uuid: 4933bfe5-732f-4929-8c1a-94b5df69b844
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xVgXxQvuBMB97mfZXv-YCLPXE7GLY_vKuOy6YqniMZI
+id: embed_code
+label: 'Embed code'
+icon_uuid: null
+icon_default: null
+description: 'Iframe or javascript embed code.'
+behavior_plugins: {  }

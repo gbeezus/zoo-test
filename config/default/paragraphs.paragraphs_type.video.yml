@@ -1,0 +1,12 @@
+uuid: e4885e3f-2889-48b1-abb9-104619dae040
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: O4vHplKMeaNrWfxP3jwhWVSKea0SFVYHmpk5Dl4LkCc
+id: video
+label: Video
+icon_uuid: null
+icon_default: null
+description: 'Video media with optional transcript and audio description.'
+behavior_plugins: {  }

@@ -1,0 +1,64 @@
+uuid: 6aa81846-cbbe-41b3-8a52-fda28acafa21
+langcode: en
+status: true
+dependencies:
+  module:
+    - addtoany
+    - block
+    - block_content_permissions
+    - captcha
+    - crop
+    - embed
+    - image
+    - image_styles_mapping
+    - linkit
+    - login_history
+    - media
+    - metatag
+    - node
+    - password_policy
+    - path
+    - responsive_image
+    - simple_sitemap
+    - simplify
+    - smart_date
+    - system
+    - webform
+_core:
+  default_config_hash: DAYdxo7yCfFQ0OD0KxABaE_ytZmKDh1gEYly8IcXEf0
+id: site_administrator
+label: 'Site administrator'
+weight: 7
+is_admin: null
+permissions:
+  - 'access any webform configuration'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - access_image_styles_mapping_report
+  - 'administer CAPTCHA settings'
+  - 'administer addtoany'
+  - 'administer blocks'
+  - 'administer crop'
+  - 'administer crop types'
+  - 'administer embed buttons'
+  - 'administer image styles'
+  - 'administer linkit profiles'
+  - 'administer media'
+  - 'administer meta tags'
+  - 'administer nodes'
+  - 'administer responsive images'
+  - 'administer simplify'
+  - 'administer sitemap settings'
+  - 'administer smart date formats'
+  - 'administer url aliases'
+  - 'administer users'
+  - 'administer webform element access'
+  - 'administer webform submission'
+  - 'delete any media'
+  - 'delete any webform'
+  - 'delete any webform submission'
+  - 'edit any webform'
+  - 'manage password reset'
+  - 'select account cancellation method'
+  - 'view all login histories'
+  - 'view restricted block content'

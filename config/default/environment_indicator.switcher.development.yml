@@ -1,0 +1,13 @@
+uuid: 71397018-a8ec-4fda-81d0-556d83b30d82
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hZ10iYiZ2M4QG6tgKzoHtwxlT1JsBEj5dgPI8_W1Ius
+machine: development
+description: null
+name: Development
+url: 'https://enterprisedev.prod.acquia-sites.com'
+weight: null
+fg_color: '#ffffff'
+bg_color: '#0a8901'

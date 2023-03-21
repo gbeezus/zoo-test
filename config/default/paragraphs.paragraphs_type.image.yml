@@ -1,0 +1,12 @@
+uuid: a743e90a-6f59-4174-a257-8529a461b132
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: aF6duGQnxVdsRWx7GEpD8nbFoCqVSQP_Xp4Zot38F2s
+id: image
+label: Image
+icon_uuid: null
+icon_default: null
+description: 'Add a single image with a caption.'
+behavior_plugins: {  }
